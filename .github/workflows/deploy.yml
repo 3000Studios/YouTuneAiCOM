@@ -1,111 +1,200 @@
-name: Full Auto Merge, Build & Deploy YouTuneAI
+name: YouTuneAI WordPress Theme - Build & Deploy
 
 on:
   workflow_dispatch:
   push:
     branches:
       - main
-  schedule:
-    - cron: '0 * * * *' # Every hour
+      - develop
+  pull_request:
+    branches:
+      - main
+
+env:
+  NODE_VERSION: '20'
+  PHP_VERSION: '8.2'
 
 jobs:
-  merge-build-deploy:
+  lint-and-test:
+    name: Lint & Test
     runs-on: ubuntu-latest
-
+    
     steps:
-      # Checkout main repo
-      - name: Checkout main repo
+      - name: Checkout code
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          token: ${{ secrets.PAT_TOKEN }}
-
-      # Merge all external repos
-      - name: Merge external repos
-        run: |
-          git config user.name "AutoMergeBot"
-          git config user.email "automerge@youtuneai.com"
-
-          repos=(
-            "https://github.com/3000Studios/YouTuneAiV2.git"
-            "https://github.com/3000Studios/dipshit-ultimate-ai-bot.git"
-            "https://github.com/3000Studios/YouTuneAi-Project-Endless.git"
-            "https://github.com/3000Studios/YouTuneAi-Final-Version.git"
-            "https://github.com/3000Studios/Do-Not-Disturb-.git"
-            "https://github.com/3000Studios/Knotudae-Security-Software.git"
-            "https://github.com/3000Studios/GitHub-wCopilot.git"
-            "https://github.com/3000Studios/Infinitedrip.git"
-            "https://github.com/3000Studios/YouTuneAIapp.git"
-            "https://github.com/3000Studios/YouTuneAi-App.git"
-            "https://github.com/3000Studios/OBS-BEAST.git"
-            "https://github.com/3000Studios/AlwaysOnAi.git"
-            "https://github.com/3000Studios/CodeGPT.git"
-            "https://github.com/3000Studios/UltimateMindBot.git"
-            "https://github.com/3000Studios/3000-Studios-v1.0.git"
-            "https://github.com/3000Studios/YOUTUNEAI.git"
-            "https://github.com/3000Studios/turmex-video-face-swapper.git"
-            "https://github.com/3000Studios/TapRush.git"
-            "https://github.com/3000Studios/YoutuneaiRoot.git"
-          )
-
-          for repo in "${repos[@]}"; do
-            echo "🔄 Merging $repo..."
-            git remote add temp-remote $repo
-            git fetch temp-remote
-            git merge temp-remote/main --allow-unrelated-histories -m "Auto merge from $repo" || true
-            git remote remove temp-remote
-          done
-
-          git push origin main
-
-      # Setup Node.js
+        
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: ${{ env.NODE_VERSION }}
           cache: 'npm'
-
-      # Install dependencies
-      - name: Install dependencies
-        run: npm install || true
-
-      # Build project
-      - name: Build project
-        run: npm run build || true
-
-      # Setup SSH key for SFTP
-      - name: Setup SSH key
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/id_ed25519
-          chmod 600 ~/.ssh/id_ed25519
-          ssh-keyscan -p ${{ secrets.SFTP_PORT }} ${{ secrets.SFTP_HOST }} >> ~/.ssh/known_hosts
-
-      # Backup live site
-      - name: Backup live site
-        run: |
-          TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
-          ssh -p ${{ secrets.SFTP_PORT }} -i ~/.ssh/id_ed25519 ${{ secrets.SFTP_USER }}@${{ secrets.SFTP_HOST }} \
-          "mkdir -p ~/backups && cp -r /var/www/html ~/backups/html_$TIMESTAMP"
-
-      # Deploy to live server
-      - name: Deploy to Live Server via SFTP
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+          cache-dependency-path: wp-content/themes/youtuneai-theme/package-lock.json
+          
+      - name: Install theme dependencies
+        working-directory: wp-content/themes/youtuneai-theme
+        run: npm ci
+        
+      - name: Lint JavaScript
+        working-directory: wp-content/themes/youtuneai-theme
+        run: npm run lint
+        continue-on-error: true
+        
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
         with:
-          username: ${{ secrets.SFTP_USER }}
-          server: ${{ secrets.SFTP_HOST }}
-          ssh_private_key: ${{ secrets.DEPLOY_KEY }}
-          local_path: "./dist"
-          remote_path: "/var/www/html"
-          port: ${{ secrets.SFTP_PORT }}
-          sftp_only: true
+          php-version: ${{ env.PHP_VERSION }}
+          extensions: dom, curl, libxml, mbstring, zip
+          
+      - name: Validate PHP syntax
+        run: find wp-content -name "*.php" -exec php -l {} \;
 
-      # Post-deploy checks
-      - name: Run post-deploy checks
+  build:
+    name: Build Assets
+    needs: lint-and-test
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+          cache-dependency-path: wp-content/themes/youtuneai-theme/package-lock.json
+          
+      - name: Install dependencies
+        working-directory: wp-content/themes/youtuneai-theme
+        run: npm ci
+        
+      - name: Build production assets
+        working-directory: wp-content/themes/youtuneai-theme
+        run: npm run build
+        
+      - name: Create deployment artifact
         run: |
-          echo "✅ Deployment complete. Checking site..."
-          if curl -Is https://youtuneai.com | grep "200 OK" > /dev/null; then
-            echo "✅ Site is live."
+          mkdir -p deployment-package
+          
+          # Copy WordPress theme
+          cp -r wp-content/themes/youtuneai-theme deployment-package/youtuneai-theme
+          
+          # Copy MU plugins
+          mkdir -p deployment-package/mu-plugins
+          cp -r wp-content/mu-plugins/* deployment-package/mu-plugins/
+          
+          # Remove node_modules and dev files
+          find deployment-package -name "node_modules" -type d -exec rm -rf {} + 2>/dev/null || true
+          find deployment-package -name "*.map" -delete
+          find deployment-package -name ".git*" -delete
+          
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: wordpress-theme-${{ github.sha }}
+          path: deployment-package/
+          retention-days: 30
+
+  deploy:
+    name: Deploy to Production
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    environment: production
+    
+    steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: wordpress-theme-${{ github.sha }}
+          path: deployment-package/
+          
+      - name: Setup SFTP deployment
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y lftp
+          
+      - name: Deploy to IONOS hosting
+        env:
+          SFTP_HOST: ${{ secrets.IONOS_HOST }}
+          SFTP_USER: ${{ secrets.IONOS_USER }}
+          SFTP_PASS: ${{ secrets.IONOS_PASS }}
+        run: |
+          # Create release directory with timestamp
+          TIMESTAMP=$(date +%Y%m%d%H%M%S)
+          RELEASE_DIR="/releases/$TIMESTAMP"
+          
+          echo "🚀 Deploying to IONOS hosting..."
+          echo "📅 Release: $TIMESTAMP"
+          
+          lftp -u "$SFTP_USER","$SFTP_PASS" sftp://$SFTP_HOST <<EOF
+          set sftp:auto-confirm yes
+          set cmd:fail-exit yes
+          
+          # Create release directory
+          mkdir -p $RELEASE_DIR
+          
+          # Upload theme files
+          mirror -R --verbose deployment-package/youtuneai-theme $RELEASE_DIR/wp-content/themes/youtuneai-theme
+          
+          # Upload MU plugins
+          mirror -R --verbose deployment-package/mu-plugins $RELEASE_DIR/wp-content/mu-plugins
+          
+          # Atomic deployment - update current symlink
+          cd /
+          rm -f wp-content/themes/youtuneai-theme-current
+          ln -sf $RELEASE_DIR/wp-content/themes/youtuneai-theme wp-content/themes/youtuneai-theme-current
+          
+          # Update actual theme directory (fallback if symlinks not supported)
+          mirror -R --delete deployment-package/youtuneai-theme wp-content/themes/youtuneai-theme
+          mirror -R --delete deployment-package/mu-plugins wp-content/mu-plugins
+          
+          # Cleanup old releases (keep last 5)
+          cd /releases
+          ls -t | tail -n +6 | xargs -r rm -rf
+          
+          bye
+          EOF
+          
+      - name: Verify deployment
+        env:
+          SITE_URL: https://youtuneai.com
+        run: |
+          echo "🔍 Verifying deployment..."
+          
+          # Wait for site to respond
+          for i in {1..5}; do
+            if curl -sSf $SITE_URL > /dev/null; then
+              echo "✅ Site is responding"
+              break
+            else
+              echo "⏳ Waiting for site to respond (attempt $i/5)..."
+              sleep 10
+            fi
+          done
+          
+          # Check if deployment was successful
+          if curl -sSf $SITE_URL > /dev/null; then
+            echo "✅ Deployment verified successfully"
           else
-            echo "❌ Site check failed!" && exit 1
+            echo "❌ Deployment verification failed"
+            exit 1
+          fi
+
+  notify:
+    name: Notify Deployment
+    if: always()
+    needs: [build, deploy]
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Notify deployment status
+        run: |
+          if [[ "${{ needs.deploy.result }}" == "success" ]]; then
+            echo "✅ YouTuneAI deployment completed successfully!"
+            echo "🌐 Site: https://youtuneai.com"
+            echo "⏰ Deployed at: $(date)"
+          else
+            echo "❌ YouTuneAI deployment failed!"
+            echo "🔍 Check the logs for details"
           fi
