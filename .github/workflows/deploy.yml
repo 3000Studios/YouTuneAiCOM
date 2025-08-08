@@ -1,0 +1,41 @@
+name: Deploy to Live Server
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install || true
+
+      - name: Build project
+        run: npm run build || true
+
+      - name: Deploy to Live Server via SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+          server: access-5017098454.webspace-host.com
+          port: 22
+          username: a1747849
+          password: Gabby3000!!!
+          local_path: "./dist"
+          remote_path: "/"
+          sftp_only: true
+
+      - name: Run post-deploy checks
+        run: |
+          echo "✅ Deployment complete. Running live checks..."
+          curl -I https://youtuneai.com || exit 1
