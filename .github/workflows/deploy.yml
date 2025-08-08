@@ -1,4 +1,4 @@
-name: Deploy to Live Server
+name: Deploy to YouTuneAI Live Server
 
 on:
   push:
@@ -10,32 +10,51 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Step 1: Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # Step 2: Setup Node.js (version 18 for modern packages)
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
+          cache: 'npm'
 
+      # Step 3: Install dependencies
       - name: Install dependencies
-        run: npm install || true
+        run: npm install
 
+      # Step 4: Run build
       - name: Build project
-        run: npm run build || true
+        run: npm run build
 
+      # Step 5: Install SSH key for secure SFTP (Deploy Key stored in GitHub Secrets)
+      - name: Setup SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -p ${{ secrets.SFTP_PORT }} ${{ secrets.SFTP_HOST }} >> ~/.ssh/known_hosts
+
+      # Step 6: Deploy files via SFTP using SSH key (secure)
       - name: Deploy to Live Server via SFTP
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          server: access-5017098454.webspace-host.com
-          port: 22
-          username: a1747849
-          password: Gabby3000!!!
+          username: ${{ secrets.SFTP_USER }}
+          server: ${{ secrets.SFTP_HOST }}
+          ssh_private_key: ${{ secrets.DEPLOY_KEY }}
           local_path: "./dist"
           remote_path: "/"
+          port: ${{ secrets.SFTP_PORT }}
           sftp_only: true
 
+      # Step 7: Post-deploy verification
       - name: Run post-deploy checks
         run: |
           echo "✅ Deployment complete. Running live checks..."
-          curl -I https://youtuneai.com || exit 1
+          if curl -Is https://youtuneai.com | head -n 1 | grep "200" > /dev/null; then
+            echo "✅ Site is live and returning status 200."
+          else
+            echo "❌ Site check failed!" && exit 1
+          fi
