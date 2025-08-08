@@ -1,35 +1,63 @@
-name: Deploy to YouTuneAI Live Server
+name: Merge, Build & Deploy YouTuneAI
 
 on:
+  schedule:
+    - cron: '0 * * * *'   # Runs every hour
+  workflow_dispatch:      # Manual trigger
   push:
     branches:
       - main
 
 jobs:
-  build-and-deploy:
+  merge-build-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout repository
-      - name: Checkout repository
+      # Step 1: Checkout this repo
+      - name: Checkout main repo
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      # Step 2: Setup Node.js (version 18 for modern packages)
+      # Step 2: Merge in other repos automatically
+      - name: Merge external repos
+        run: |
+          git config user.name "AutoMergeBot"
+          git config user.email "automerge@youtuneai.com"
+          
+          # List all repos you want to merge in
+          repos=(
+            "https://github.com/USERNAME/Repo1.git"
+            "https://github.com/USERNAME/Repo2.git"
+            "https://github.com/USERNAME/Repo3.git"
+          )
+
+          for repo in "${repos[@]}"; do
+            echo "Merging $repo..."
+            git remote add temp-remote $repo
+            git fetch temp-remote
+            git merge temp-remote/main --allow-unrelated-histories -m "Auto merge from $repo"
+            git remote remove temp-remote
+          done
+
+          git push origin main
+
+      # Step 3: Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
           cache: 'npm'
 
-      # Step 3: Install dependencies
+      # Step 4: Install dependencies
       - name: Install dependencies
         run: npm install
 
-      # Step 4: Build project
+      # Step 5: Build project
       - name: Build project
         run: npm run build
 
-      # Step 5: Setup SSH key for SFTP (Deploy Key stored in GitHub Secrets)
+      # Step 6: Setup SSH key for secure SFTP
       - name: Setup SSH key
         run: |
           mkdir -p ~/.ssh
@@ -37,7 +65,14 @@ jobs:
           chmod 600 ~/.ssh/id_ed25519
           ssh-keyscan -p ${{ secrets.SFTP_PORT }} ${{ secrets.SFTP_HOST }} >> ~/.ssh/known_hosts
 
-      # Step 6: Deploy files via SFTP
+      # Step 7: Backup current live site before deploy
+      - name: Backup live site
+        run: |
+          TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
+          ssh -p ${{ secrets.SFTP_PORT }} -i ~/.ssh/id_ed25519 ${{ secrets.SFTP_USER }}@${{ secrets.SFTP_HOST }} \
+          "mkdir -p ~/backups && cp -r /var/www/html ~/backups/html_$TIMESTAMP"
+
+      # Step 8: Deploy new build
       - name: Deploy to Live Server via SFTP
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
@@ -45,11 +80,11 @@ jobs:
           server: ${{ secrets.SFTP_HOST }}
           ssh_private_key: ${{ secrets.DEPLOY_KEY }}
           local_path: "./dist"
-          remote_path: "/"
+          remote_path: "/var/www/html"
           port: ${{ secrets.SFTP_PORT }}
           sftp_only: true
 
-      # Step 7: Post-deploy verification
+      # Step 9: Post-deploy verification
       - name: Run post-deploy checks
         run: |
           echo "✅ Deployment complete. Running live checks..."
@@ -58,4 +93,3 @@ jobs:
           else
             echo "❌ Site check failed!" && exit 1
           fi
-
