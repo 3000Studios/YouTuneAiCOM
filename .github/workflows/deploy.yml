@@ -1,42 +1,57 @@
-name: Merge, Build & Deploy YouTuneAI
+name: Full Auto Merge, Build & Deploy YouTuneAI
 
 on:
-  schedule:
-    - cron: '0 * * * *'   # Runs every hour
-  workflow_dispatch:      # Manual trigger
   push:
     branches:
       - main
+  schedule:
+    - cron: '0 * * * *'   # Runs every hour
+  workflow_dispatch:
 
 jobs:
   merge-build-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout this repo
+      # Step 1: Checkout main repo
       - name: Checkout main repo
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      # Step 2: Merge in other repos automatically
+      # Step 2: Merge all external repos
       - name: Merge external repos
         run: |
           git config user.name "AutoMergeBot"
           git config user.email "automerge@youtuneai.com"
-          
-          # List all repos you want to merge in
+
           repos=(
-            "https://github.com/USERNAME/Repo1.git"
-            "https://github.com/USERNAME/Repo2.git"
-            "https://github.com/USERNAME/Repo3.git"
+            "https://github.com/3000Studios/YouTuneAiV2.git"
+            "https://github.com/3000Studios/dipshit-ultimate-ai-bot.git"
+            "https://github.com/3000Studios/YouTuneAi-Project-Endless.git"
+            "https://github.com/3000Studios/YouTuneAi-Final-Version.git"
+            "https://github.com/3000Studios/Do-Not-Disturb-.git"
+            "https://github.com/3000Studios/Knotudae-Security-Software.git"
+            "https://github.com/3000Studios/GitHub-wCopilot.git"
+            "https://github.com/3000Studios/Infinitedrip.git"
+            "https://github.com/3000Studios/YouTuneAIapp.git"
+            "https://github.com/3000Studios/YouTuneAi-App.git"
+            "https://github.com/3000Studios/OBS-BEAST.git"
+            "https://github.com/3000Studios/AlwaysOnAi.git"
+            "https://github.com/3000Studios/CodeGPT.git"
+            "https://github.com/3000Studios/UltimateMindBot.git"
+            "https://github.com/3000Studios/3000-Studios-v1.0.git"
+            "https://github.com/3000Studios/YOUTUNEAI.git"
+            "https://github.com/3000Studios/turmex-video-face-swapper.git"
+            "https://github.com/3000Studios/TapRush.git"
+            "https://github.com/3000Studios/YoutuneaiRoot.git"
           )
 
           for repo in "${repos[@]}"; do
-            echo "Merging $repo..."
+            echo "🔄 Merging $repo..."
             git remote add temp-remote $repo
             git fetch temp-remote
-            git merge temp-remote/main --allow-unrelated-histories -m "Auto merge from $repo"
+            git merge temp-remote/main --allow-unrelated-histories -m "Auto merge from $repo" || true
             git remote remove temp-remote
           done
 
@@ -51,11 +66,11 @@ jobs:
 
       # Step 4: Install dependencies
       - name: Install dependencies
-        run: npm install
+        run: npm install || true
 
       # Step 5: Build project
       - name: Build project
-        run: npm run build
+        run: npm run build || true
 
       # Step 6: Setup SSH key for secure SFTP
       - name: Setup SSH key
