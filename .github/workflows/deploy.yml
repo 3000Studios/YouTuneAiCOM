@@ -25,11 +25,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # Step 4: Run build
+      # Step 4: Build project
       - name: Build project
         run: npm run build
 
-      # Step 5: Install SSH key for secure SFTP (Deploy Key stored in GitHub Secrets)
+      # Step 5: Setup SSH key for SFTP (Deploy Key stored in GitHub Secrets)
       - name: Setup SSH key
         run: |
           mkdir -p ~/.ssh
@@ -37,7 +37,7 @@ jobs:
           chmod 600 ~/.ssh/id_ed25519
           ssh-keyscan -p ${{ secrets.SFTP_PORT }} ${{ secrets.SFTP_HOST }} >> ~/.ssh/known_hosts
 
-      # Step 6: Deploy files via SFTP using SSH key (secure)
+      # Step 6: Deploy files via SFTP
       - name: Deploy to Live Server via SFTP
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
@@ -58,3 +58,4 @@ jobs:
           else
             echo "❌ Site check failed!" && exit 1
           fi
+
