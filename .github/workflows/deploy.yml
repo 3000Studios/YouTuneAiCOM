@@ -1,78 +1,75 @@
 name: Full Auto Merge, Build & Deploy YouTuneAI
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
-  schedule:
-    - cron: '0 * * * *'   # Runs every hour
-  workflow_dispatch:
 
 jobs:
   merge-build-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout main repo
+      # 1. Checkout main repo
       - name: Checkout main repo
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          token: ${{ secrets.PAT_TOKEN }}
 
-      # Step 2: Merge all external repos
-      - name: Merge external repos
+      # 2. Checkout all linked repos
+      - name: Checkout YouTuneAiV2
+        uses: actions/checkout@v4
+        with:
+          repository: 3000Studios/YouTuneAiV2
+          token: ${{ secrets.PAT_TOKEN }}
+          path: YouTuneAiV2
+
+      - name: Checkout dipshit-ultimate-ai-bot
+        uses: actions/checkout@v4
+        with:
+          repository: 3000Studios/dipshit-ultimate-ai-bot
+          token: ${{ secrets.PAT_TOKEN }}
+          path: dipshit-ultimate-ai-bot
+
+      - name: Checkout YouTuneAi-Project-Endless
+        uses: actions/checkout@v4
+        with:
+          repository: 3000Studios/YouTuneAi-Project-Endless
+          token: ${{ secrets.PAT_TOKEN }}
+          path: YouTuneAi-Project-Endless
+
+      - name: Checkout YouTuneAi-Final-Version
+        uses: actions/checkout@v4
+        with:
+          repository: 3000Studios/YouTuneAi-Final-Version
+          token: ${{ secrets.PAT_TOKEN }}
+          path: YouTuneAi-Final-Version
+
+      # 3. Merge repos into main directory (adjust paths as needed)
+      - name: Merge all repos
         run: |
-          git config user.name "AutoMergeBot"
-          git config user.email "automerge@youtuneai.com"
+          cp -R YouTuneAiV2/* .
+          cp -R dipshit-ultimate-ai-bot/* .
+          cp -R YouTuneAi-Project-Endless/* .
+          cp -R YouTuneAi-Final-Version/* .
 
-          repos=(
-            "https://github.com/3000Studios/YouTuneAiV2.git"
-            "https://github.com/3000Studios/dipshit-ultimate-ai-bot.git"
-            "https://github.com/3000Studios/YouTuneAi-Project-Endless.git"
-            "https://github.com/3000Studios/YouTuneAi-Final-Version.git"
-            "https://github.com/3000Studios/Do-Not-Disturb-.git"
-            "https://github.com/3000Studios/Knotudae-Security-Software.git"
-            "https://github.com/3000Studios/GitHub-wCopilot.git"
-            "https://github.com/3000Studios/Infinitedrip.git"
-            "https://github.com/3000Studios/YouTuneAIapp.git"
-            "https://github.com/3000Studios/YouTuneAi-App.git"
-            "https://github.com/3000Studios/OBS-BEAST.git"
-            "https://github.com/3000Studios/AlwaysOnAi.git"
-            "https://github.com/3000Studios/CodeGPT.git"
-            "https://github.com/3000Studios/UltimateMindBot.git"
-            "https://github.com/3000Studios/3000-Studios-v1.0.git"
-            "https://github.com/3000Studios/YOUTUNEAI.git"
-            "https://github.com/3000Studios/turmex-video-face-swapper.git"
-            "https://github.com/3000Studios/TapRush.git"
-            "https://github.com/3000Studios/YoutuneaiRoot.git"
-          )
-
-          for repo in "${repos[@]}"; do
-            echo "🔄 Merging $repo..."
-            git remote add temp-remote $repo
-            git fetch temp-remote
-            git merge temp-remote/main --allow-unrelated-histories -m "Auto merge from $repo" || true
-            git remote remove temp-remote
-          done
-
-          git push origin main
-
-      # Step 3: Setup Node.js
+      # 4. Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
           cache: 'npm'
 
-      # Step 4: Install dependencies
+      # 5. Install dependencies
       - name: Install dependencies
         run: npm install || true
 
-      # Step 5: Build project
+      # 6. Build project
       - name: Build project
         run: npm run build || true
 
-      # Step 6: Setup SSH key for secure SFTP
+      # 7. Setup SSH for SFTP deploy
       - name: Setup SSH key
         run: |
           mkdir -p ~/.ssh
@@ -80,14 +77,7 @@ jobs:
           chmod 600 ~/.ssh/id_ed25519
           ssh-keyscan -p ${{ secrets.SFTP_PORT }} ${{ secrets.SFTP_HOST }} >> ~/.ssh/known_hosts
 
-      # Step 7: Backup current live site before deploy
-      - name: Backup live site
-        run: |
-          TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
-          ssh -p ${{ secrets.SFTP_PORT }} -i ~/.ssh/id_ed25519 ${{ secrets.SFTP_USER }}@${{ secrets.SFTP_HOST }} \
-          "mkdir -p ~/backups && cp -r /var/www/html ~/backups/html_$TIMESTAMP"
-
-      # Step 8: Deploy new build
+      # 8. Deploy via SFTP
       - name: Deploy to Live Server via SFTP
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
@@ -95,11 +85,11 @@ jobs:
           server: ${{ secrets.SFTP_HOST }}
           ssh_private_key: ${{ secrets.DEPLOY_KEY }}
           local_path: "./dist"
-          remote_path: "/var/www/html"
+          remote_path: "/"
           port: ${{ secrets.SFTP_PORT }}
           sftp_only: true
 
-      # Step 9: Post-deploy verification
+      # 9. Verify site is live
       - name: Run post-deploy checks
         run: |
           echo "✅ Deployment complete. Running live checks..."
