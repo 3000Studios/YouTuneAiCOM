@@ -2,7 +2,7 @@
 
 HOST="access-5017098454.webspace-host.com"
 PORT="22"
-USER="a1747849"
+USER="a1268463"
 PASS="Gabby3000!!!"
 LOCAL_DIR="./dist"
 REMOTE_DIR="/"
