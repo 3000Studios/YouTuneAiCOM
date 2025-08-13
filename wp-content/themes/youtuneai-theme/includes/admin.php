@@ -84,6 +84,17 @@ function youtuneai_options_page() {
                 
                 <tr>
                     <th scope="row">
+                        <label for="admin_password"><?php _e('Admin Password', 'youtuneai'); ?></label>
+                    </th>
+                    <td>
+                        <input type="password" id="admin_password" name="youtuneai_options[admin_password]" 
+                               value="<?php echo esc_attr($options['admin_password'] ?? 'admin123'); ?>" class="regular-text">
+                        <p class="description"><?php _e('Password for live streaming and admin access', 'youtuneai'); ?></p>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th scope="row">
                         <label for="api_keys"><?php _e('API Keys', 'youtuneai'); ?></label>
                     </th>
                     <td>
@@ -142,6 +153,7 @@ function youtuneai_save_options() {
         'default_avatar' => (int) ($options['default_avatar'] ?? 0),
         'enable_chat' => (int) ($options['enable_chat'] ?? 0),
         'enable_vr' => (int) ($options['enable_vr'] ?? 0),
+        'admin_password' => sanitize_text_field($options['admin_password'] ?? 'admin123'),
         'api_keys' => sanitize_textarea_field($options['api_keys'] ?? ''),
     ];
     

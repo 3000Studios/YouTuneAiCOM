@@ -196,11 +196,38 @@ function youtuneai_create_required_pages() {
 }
 
 /**
- * Add body classes
+ * Add custom menu items
+ */
+add_filter('wp_nav_menu_items', 'youtuneai_add_custom_menu_items', 10, 2);
+
+function youtuneai_add_custom_menu_items($items, $args) {
+    if ($args->theme_location === 'primary') {
+        $live_url = home_url('/live/');
+        $live_item = '<li class="menu-item menu-item-live">
+            <a href="' . esc_url($live_url) . '" class="menu-link live-link">
+                <span class="menu-icon">📺</span>
+                <span class="menu-text">' . __('Live', 'youtuneai') . '</span>
+            </a>
+        </li>';
+        
+        // Add before the last item (typically contact/about)
+        $items = preg_replace('/(<li[^>]*class="[^"]*menu-item[^"]*"[^>]*>.*?<\/li>)(?=<li[^>]*class="[^"]*menu-item[^"]*"[^>]*>.*?<\/li>$)/s', 
+                             '$1' . $live_item, $items, 1);
+    }
+    
+    return $items;
+}
+
+/**
+ * Add custom CSS classes to body for live page
  */
 add_filter('body_class', function($classes) {
     if (is_page_template('page-vr-room.php')) {
         $classes[] = 'vr-enabled';
+    }
+    
+    if (is_page_template('page-live.php') || is_page('live')) {
+        $classes[] = 'live-page';
     }
     
     if (function_exists('is_shop') && is_shop()) {
@@ -216,6 +243,15 @@ add_filter('body_class', function($classes) {
 add_filter('excerpt_length', function() {
     return 30;
 });
+
+/**
+ * Add rewrite rules for custom pages
+ */
+add_action('init', 'youtuneai_add_rewrite_rules');
+
+function youtuneai_add_rewrite_rules() {
+    add_rewrite_rule('^live/?$', 'index.php?pagename=live', 'top');
+}
 
 /**
  * Customize excerpt more
