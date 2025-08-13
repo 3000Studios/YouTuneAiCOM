@@ -11,7 +11,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         app: resolve(__dirname, 'assets/js/app.js'),
-        admin: resolve(__dirname, 'assets/css/admin.css')
+        admin: resolve(__dirname, 'assets/js/admin.js')
       },
       output: {
         assetFileNames: 'css/[name].[hash][extname]',
@@ -21,13 +21,7 @@ export default defineConfig({
     },
     cssCodeSplit: false,
     sourcemap: false,
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true
-      }
-    }
+    minify: 'esbuild'
   },
   server: {
     port: 5173,

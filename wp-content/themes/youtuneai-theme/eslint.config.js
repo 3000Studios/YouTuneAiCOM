@@ -3,6 +3,22 @@ import js from '@eslint/js';
 export default [
   js.configs.recommended,
   {
+    ignores: [
+      'node_modules/**',
+      'assets/.vite/**',
+      'assets/js/*.js',
+      '!assets/js/app.js',
+      '!assets/js/admin.js',
+      '!assets/js/avatar/**',
+      '!assets/js/games/**',
+      '!assets/js/ui/**',
+      '!assets/js/vr/**',
+      '!assets/js/woocommerce/**',
+      '**/*.min.js',
+      '**/*.map',
+    ],
+  },
+  {
     languageOptions: {
       ecmaVersion: 2024,
       sourceType: 'module',
@@ -21,6 +37,7 @@ export default [
         clearTimeout: 'readonly',
         clearInterval: 'readonly',
         youtuneaiData: 'readonly',
+        youtuneaiAdmin: 'readonly',
         ajaxurl: 'readonly',
         THREE: 'readonly',
         gsap: 'readonly',

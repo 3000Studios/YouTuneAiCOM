@@ -1,6 +1,7 @@
 {
   "name": "youtuneai-theme",
   "version": "1.0.0",
+  "type": "module",
   "description": "WordPress theme for YouTuneAI with 3D avatar, VR, and games",
   "main": "assets/js/app.js",
   "scripts": {

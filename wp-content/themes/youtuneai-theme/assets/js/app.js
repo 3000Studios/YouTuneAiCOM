@@ -3,6 +3,9 @@
  * Handles 3D avatar, VR functionality, and site interactions
  */
 
+// Import main styles
+import '../css/style.css';
+
 import './avatar/AvatarSystem.js';
 import './vr/VRRoom.js';
 import './ui/Navigation.js';
