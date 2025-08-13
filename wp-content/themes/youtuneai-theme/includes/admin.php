@@ -35,6 +35,8 @@ function youtuneai_options_page() {
     $options = get_option('youtuneai_options', []);
     ?>
     <div class="wrap">
+        <!-- Enhanced Admin Dashboard will be injected here by JavaScript -->
+        
         <h1><?php echo esc_html(get_admin_page_title()); ?></h1>
         
         <form method="post" action="">
@@ -280,6 +282,11 @@ function youtuneai_dashboard_stats_widget() {
 add_action('admin_head', 'youtuneai_admin_styles');
 
 function youtuneai_admin_styles() {
+    // Only load on YouTuneAI admin pages
+    $screen = get_current_screen();
+    if (!$screen || strpos($screen->id, 'youtuneai') === false) {
+        return;
+    }
     ?>
     <style>
     .youtuneai-admin-header {
@@ -295,6 +302,65 @@ function youtuneai_admin_styles() {
     }
     </style>
     <?php
+}
+
+/**
+ * Enqueue admin dashboard assets
+ */
+add_action('admin_enqueue_scripts', 'youtuneai_admin_enqueue_scripts');
+
+function youtuneai_admin_enqueue_scripts($hook) {
+    // Only load on YouTuneAI admin pages
+    if (strpos($hook, 'youtuneai') === false) {
+        return;
+    }
+    
+    // Enqueue admin dashboard CSS
+    wp_enqueue_style(
+        'youtuneai-admin-dashboard',
+        YOUTUNEAI_URL . '/assets/css/admin-dashboard.css',
+        [],
+        YOUTUNEAI_VERSION
+    );
+    
+    // Check if built version exists, otherwise use source
+    $manifest_path = YOUTUNEAI_PATH . '/assets/.vite/manifest.json';
+    $admin_js_file = '/assets/js/admin/AdminDashboard.js';
+    
+    if (file_exists($manifest_path)) {
+        $manifest = json_decode(file_get_contents($manifest_path), true);
+        if (isset($manifest['assets/js/admin/AdminDashboard.js'])) {
+            $admin_js_file = '/assets/' . $manifest['assets/js/admin/AdminDashboard.js']['file'];
+        }
+    }
+    
+    // Enqueue admin dashboard JavaScript
+    wp_enqueue_script(
+        'youtuneai-admin-dashboard',
+        YOUTUNEAI_URL . $admin_js_file,
+        [],
+        YOUTUNEAI_VERSION,
+        true
+    );
+    
+    // Enqueue progress simulator
+    wp_enqueue_script(
+        'youtuneai-progress-simulator',
+        YOUTUNEAI_URL . '/assets/js/admin/ProgressSimulator.js',
+        ['youtuneai-admin-dashboard'],
+        YOUTUNEAI_VERSION,
+        true
+    );
+    
+    // Localize script with admin data
+    wp_localize_script('youtuneai-admin-dashboard', 'youtuneaiAdmin', [
+        'apiUrl' => rest_url('youtuneai/v1'),
+        'ajaxUrl' => admin_url('admin-ajax.php'),
+        'nonce' => wp_create_nonce('wp_rest'),
+        'themeUrl' => YOUTUNEAI_URL,
+        'currentUser' => wp_get_current_user(),
+        'isProduction' => defined('WP_DEBUG') && !WP_DEBUG
+    ]);
 }
 
 /**

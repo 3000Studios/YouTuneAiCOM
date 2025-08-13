@@ -146,6 +146,7 @@ add_action('admin_enqueue_scripts', function() {
 require_once YOUTUNEAI_PATH . '/includes/cpts.php';
 require_once YOUTUNEAI_PATH . '/includes/api.php';
 require_once YOUTUNEAI_PATH . '/includes/admin.php';
+require_once YOUTUNEAI_PATH . '/includes/admin-api.php';
 require_once YOUTUNEAI_PATH . '/includes/woocommerce.php';
 
 /**

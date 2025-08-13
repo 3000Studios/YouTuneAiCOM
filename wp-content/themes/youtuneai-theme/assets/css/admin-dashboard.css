@@ -1,0 +1,757 @@
+/**
+ * Enhanced Admin Dashboard CSS
+ * BOSS MAN Supreme Experience Styling
+ */
+
+:root {
+  --ytai-primary: #00d4ff;
+  --ytai-secondary: #0099cc;
+  --ytai-accent: #ff6b00;
+  --ytai-bg-gradient: linear-gradient(135deg, #001122 0%, #003366 100%);
+  --ytai-text-primary: #ffffff;
+  --ytai-text-secondary: #b3d9ff;
+  --ytai-shadow: 0 4px 20px rgba(0, 212, 255, 0.3);
+  --ytai-radius: 12px;
+  --ytai-animation-speed: 0.6s;
+}
+
+/* Dashboard Container */
+.ytai-dashboard-wrapper {
+  background: var(--ytai-bg-gradient);
+  border-radius: var(--ytai-radius);
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: var(--ytai-shadow);
+  color: var(--ytai-text-primary);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ytai-dashboard-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    var(--ytai-primary) 30%, 
+    var(--ytai-accent) 50%, 
+    var(--ytai-primary) 70%, 
+    transparent 100%);
+  animation: ytai-scan 3s ease-in-out infinite;
+}
+
+/* Theme Selector */
+.ytai-theme-selector {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--ytai-radius);
+  backdrop-filter: blur(10px);
+}
+
+.ytai-select {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--ytai-primary);
+  color: var(--ytai-text-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all var(--ytai-animation-speed) ease;
+}
+
+.ytai-select:focus {
+  outline: none;
+  border-color: var(--ytai-accent);
+  box-shadow: 0 0 10px rgba(255, 107, 0, 0.5);
+}
+
+.ytai-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all var(--ytai-animation-speed) ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ytai-btn-icon {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--ytai-text-primary);
+  padding: 0.5rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+}
+
+.ytai-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Progress Section */
+.ytai-progress-section {
+  margin-bottom: 3rem;
+}
+
+.ytai-progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.ytai-title {
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, var(--ytai-primary), var(--ytai-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.ytai-status-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.ytai-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  animation: ytai-pulse 2s ease-in-out infinite;
+}
+
+.ytai-status-pending .ytai-status-dot { background: #ffaa00; }
+.ytai-status-in_progress .ytai-status-dot { background: var(--ytai-primary); }
+.ytai-status-complete .ytai-status-dot { background: #00ff88; }
+.ytai-status-error .ytai-status-dot { background: #ff4444; }
+
+/* Progress Container */
+.ytai-progress-container {
+  position: relative;
+  margin: 2rem 0;
+}
+
+.ytai-progress-track {
+  width: 100%;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.ytai-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(45deg, var(--ytai-primary), var(--ytai-accent));
+  border-radius: 30px;
+  position: relative;
+  transition: width var(--ytai-animation-speed) cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  overflow: hidden;
+}
+
+.ytai-progress-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.3) 50%, 
+    transparent 100%);
+  animation: ytai-shine 2s ease-in-out infinite;
+}
+
+.ytai-progress-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.ytai-progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+/* Ready Notification */
+.ytai-ready-notification {
+  background: linear-gradient(135deg, var(--ytai-accent), var(--ytai-primary));
+  border-radius: var(--ytai-radius);
+  padding: 2rem;
+  margin: 2rem 0;
+  text-align: center;
+  animation: ytai-ready-pulse 1s ease-in-out infinite alternate;
+}
+
+.ytai-ready-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ytai-ready-icon {
+  font-size: 4rem;
+  animation: ytai-bounce 1s ease-in-out infinite;
+}
+
+.ytai-ready-text {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.ytai-go-button {
+  background: linear-gradient(45deg, #00ff88, #00cc66);
+  color: #000;
+  border: none;
+  padding: 1rem 3rem;
+  border-radius: 50px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all var(--ytai-animation-speed) ease;
+  box-shadow: 0 8px 20px rgba(0, 255, 136, 0.3);
+}
+
+.ytai-go-button:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 255, 136, 0.5);
+}
+
+/* Agents Section */
+.ytai-agents-section {
+  margin-bottom: 3rem;
+}
+
+.ytai-section-title {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--ytai-text-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid var(--ytai-primary);
+  padding-bottom: 0.5rem;
+}
+
+.ytai-agents-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.ytai-agent-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--ytai-radius);
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all var(--ytai-animation-speed) ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.ytai-agent-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--ytai-primary);
+  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+}
+
+.ytai-agent-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--ytai-primary);
+  transform: scaleX(0);
+  transition: transform var(--ytai-animation-speed) ease;
+}
+
+.ytai-agent-card:hover::before {
+  transform: scaleX(1);
+}
+
+.ytai-agent-avatar {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1rem;
+}
+
+.ytai-agent-icon {
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.ytai-agent-power-ring {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  background: conic-gradient(var(--ytai-primary) 0deg, var(--ytai-primary) calc(var(--power) * 3.6deg), rgba(255, 255, 255, 0.1) calc(var(--power) * 3.6deg));
+  mask: radial-gradient(circle at center, transparent 70%, black 72%);
+}
+
+.ytai-agent-info h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.ytai-agent-task {
+  color: var(--ytai-text-secondary);
+  text-align: center;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.ytai-agent-stats {
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.8rem;
+}
+
+.ytai-agent-pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border: 2px solid var(--ytai-primary);
+  border-radius: 50%;
+  animation: ytai-agent-pulse 2s ease-in-out infinite;
+}
+
+.ytai-agent-active {
+  border-color: var(--ytai-primary);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+}
+
+/* Tasks Section */
+.ytai-tasks-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ytai-task-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--ytai-radius);
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all var(--ytai-animation-speed) ease;
+}
+
+.ytai-task-card:hover {
+  border-color: var(--ytai-secondary);
+  box-shadow: 0 5px 20px rgba(0, 153, 204, 0.2);
+}
+
+.ytai-task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.ytai-task-info h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.ytai-task-info p {
+  color: var(--ytai-text-secondary);
+  font-size: 0.9rem;
+}
+
+.ytai-task-progress-ring {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: conic-gradient(var(--ytai-accent) 0deg, var(--ytai-accent) calc(var(--progress) * 3.6deg), rgba(255, 255, 255, 0.1) calc(var(--progress) * 3.6deg));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.ytai-task-progress-ring::before {
+  content: '';
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: var(--ytai-bg-gradient);
+}
+
+.ytai-task-progress-ring span {
+  position: relative;
+  z-index: 1;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.ytai-task-details {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1rem;
+}
+
+.ytai-task-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.ytai-task-priority {
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.ytai-priority-high { background: #ff4444; color: white; }
+.ytai-priority-medium { background: #ffaa00; color: white; }
+.ytai-priority-low { background: #00ff88; color: black; }
+
+.ytai-toggle-logs {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--ytai-text-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.ytai-logs-content {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.ytai-log-line {
+  font-family: monospace;
+  font-size: 0.8rem;
+  color: #00ff88;
+  margin-bottom: 0.25rem;
+}
+
+/* Settings Panel */
+.ytai-settings-panel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--ytai-bg-gradient);
+  border-radius: var(--ytai-radius);
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  min-width: 300px;
+}
+
+.ytai-settings-content h3 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: var(--ytai-text-primary);
+}
+
+.ytai-setting-group {
+  margin-bottom: 1rem;
+}
+
+.ytai-setting-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--ytai-text-primary);
+}
+
+.ytai-btn-primary {
+  background: linear-gradient(45deg, var(--ytai-primary), var(--ytai-accent));
+  color: white;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Particles */
+.ytai-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--ytai-primary);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.ytai-particle-lightning {
+  animation: ytai-lightning-particle 3s linear infinite;
+  box-shadow: 0 0 6px var(--ytai-primary);
+}
+
+.ytai-particle-pulse {
+  animation: ytai-pulse-particle 2s ease-in-out infinite;
+  background: var(--ytai-accent);
+}
+
+.ytai-particle-circuit {
+  width: 2px;
+  height: 8px;
+  background: linear-gradient(0deg, transparent, var(--ytai-accent));
+  animation: ytai-circuit-particle 4s linear infinite;
+}
+
+.ytai-particle-boss {
+  background: linear-gradient(45deg, #ff6b00, #00d4ff);
+  animation: ytai-boss-particle 1.5s ease-in-out infinite;
+  box-shadow: 0 0 10px currentColor;
+}
+
+/* Power-up Effects */
+.ytai-power-up {
+  animation: ytai-power-surge 2s ease-out;
+}
+
+.ytai-burst-effect {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.ytai-burst-particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: var(--ytai-accent);
+  border-radius: 50%;
+  animation: ytai-burst var(--delay, 0s) 2s ease-out forwards;
+  transform: rotate(var(--angle)) translateX(0);
+}
+
+/* Boss Mode Enhancements */
+.ytai-boss-mode .ytai-dashboard-wrapper {
+  border: 2px solid gold;
+  box-shadow: 0 0 50px rgba(255, 215, 0, 0.5);
+}
+
+.ytai-boss-mode .ytai-progress-bar {
+  background: linear-gradient(45deg, #ffd700, #ff6b00, #00d4ff);
+  background-size: 200% 200%;
+  animation: ytai-boss-gradient 2s ease infinite;
+}
+
+.ytai-boss-mode-notification {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, #ffd700, #ff6b00);
+  border-radius: 20px;
+  padding: 3rem;
+  text-align: center;
+  z-index: 2000;
+  opacity: 0;
+  scale: 0.8;
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.ytai-boss-active {
+  opacity: 1;
+  scale: 1;
+}
+
+.ytai-boss-crown {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  animation: ytai-crown-spin 2s ease-in-out infinite;
+}
+
+.ytai-boss-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+  margin-bottom: 0.5rem;
+}
+
+.ytai-boss-subtitle {
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* Animations */
+@keyframes ytai-scan {
+  0%, 100% { transform: translateX(-100%); }
+  50% { transform: translateX(100%); }
+}
+
+@keyframes ytai-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.2); }
+}
+
+@keyframes ytai-shine {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes ytai-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes ytai-ready-pulse {
+  0% { box-shadow: 0 0 20px rgba(255, 107, 0, 0.5); }
+  100% { box-shadow: 0 0 40px rgba(255, 107, 0, 0.8); }
+}
+
+@keyframes ytai-agent-pulse {
+  0% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(1.5); }
+}
+
+@keyframes ytai-lightning-particle {
+  0% { opacity: 1; transform: translateY(0) rotate(0deg); }
+  100% { opacity: 0; transform: translateY(-30px) rotate(360deg); }
+}
+
+@keyframes ytai-pulse-particle {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.5); }
+}
+
+@keyframes ytai-circuit-particle {
+  0% { opacity: 0; transform: translateY(0); }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-50px); }
+}
+
+@keyframes ytai-boss-particle {
+  0%, 100% { opacity: 0.5; transform: scale(1) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1.3) rotate(180deg); }
+}
+
+@keyframes ytai-power-surge {
+  0% { filter: brightness(1) saturate(1); }
+  50% { filter: brightness(1.5) saturate(1.8); }
+  100% { filter: brightness(1) saturate(1); }
+}
+
+@keyframes ytai-burst {
+  0% { opacity: 1; transform: rotate(var(--angle)) translateX(0) scale(1); }
+  100% { opacity: 0; transform: rotate(var(--angle)) translateX(100px) scale(0); }
+}
+
+@keyframes ytai-boss-gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes ytai-crown-spin {
+  0%, 100% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ytai-dashboard-wrapper {
+    padding: 1rem;
+  }
+  
+  .ytai-title {
+    font-size: 1.5rem;
+  }
+  
+  .ytai-progress-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .ytai-agents-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .ytai-task-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .ytai-settings-panel {
+    left: 1rem;
+    right: 1rem;
+    transform: translateY(-50%);
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .ytai-progress-track {
+    height: 40px;
+  }
+  
+  .ytai-progress-text {
+    font-size: 1.2rem;
+  }
+  
+  .ytai-ready-text {
+    font-size: 1.5rem;
+  }
+  
+  .ytai-go-button {
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+  }
+}

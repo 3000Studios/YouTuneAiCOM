@@ -1,0 +1,37 @@
+{
+  "assets/js/admin/AdminDashboard.js": {
+    "file": "js/admin.DnTgAeLE.js",
+    "name": "admin",
+    "src": "assets/js/admin/AdminDashboard.js",
+    "isEntry": true
+  },
+  "assets/js/app.js": {
+    "file": "js/app.BQqSrgT1.js",
+    "name": "app",
+    "src": "assets/js/app.js",
+    "isEntry": true,
+    "dynamicImports": [
+      "assets/js/avatar/ChatSystem.js",
+      "assets/js/vr/VRSystem.js",
+      "assets/js/games/GameLoader.js"
+    ]
+  },
+  "assets/js/avatar/ChatSystem.js": {
+    "file": "js/ChatSystem.DQf9_PE_.js",
+    "name": "ChatSystem",
+    "src": "assets/js/avatar/ChatSystem.js",
+    "isDynamicEntry": true
+  },
+  "assets/js/games/GameLoader.js": {
+    "file": "js/GameLoader.3aZuqD-A.js",
+    "name": "GameLoader",
+    "src": "assets/js/games/GameLoader.js",
+    "isDynamicEntry": true
+  },
+  "assets/js/vr/VRSystem.js": {
+    "file": "js/VRSystem.AOUBluF3.js",
+    "name": "VRSystem",
+    "src": "assets/js/vr/VRSystem.js",
+    "isDynamicEntry": true
+  }
+}
