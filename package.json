@@ -7,7 +7,8 @@
     "build": "cd wp-content/themes/youtuneai-theme && npm run build",
     "test": "cd wp-content/themes/youtuneai-theme && npm test",
     "lint": "cd wp-content/themes/youtuneai-theme && npm run lint",
-    "install-theme": "cd wp-content/themes/youtuneai-theme && npm ci"
+    "install-theme": "cd wp-content/themes/youtuneai-theme && npm ci",
+    "deploy": "chmod +x scripts/deploy-production.sh && scripts/deploy-production.sh"
   },
   "keywords": [
     "wordpress",
