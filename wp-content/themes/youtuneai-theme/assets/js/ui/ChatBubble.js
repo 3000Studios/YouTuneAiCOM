@@ -3,5 +3,5 @@
  */
 
 export function initializeChatBubble() {
-    console.log('💬 Chat bubble initialized');
+  console.log('💬 Chat bubble initialized');
 }

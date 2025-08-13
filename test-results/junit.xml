@@ -1,0 +1,2275 @@
+<testsuites id="" name="" tests="90" failures="55" skipped="35" errors="0" time="97.488518">
+<testsuite name="admin.spec.ts" timestamp="2025-08-13T14:29:07.998Z" hostname="chromium" tests="7" failures="0" skipped="7" time="0" errors="0">
+<testcase name="Admin Control Center › should access YouTune Admin Control Center" classname="admin.spec.ts" time="0">
+<properties>
+<property name="skip" value="Admin credentials not provided">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Admin Control Center › should have all control cards" classname="admin.spec.ts" time="0">
+<properties>
+<property name="skip" value="Admin credentials not provided">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Admin Control Center › should execute admin actions" classname="admin.spec.ts" time="0">
+<properties>
+<property name="skip" value="Admin credentials not provided">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Custom Post Types Admin › should have Games CPT in admin menu" classname="admin.spec.ts" time="0">
+<properties>
+<property name="skip" value="Admin credentials not provided">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Custom Post Types Admin › should have Streams CPT in admin menu" classname="admin.spec.ts" time="0">
+<properties>
+<property name="skip" value="Admin credentials not provided">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Custom Post Types Admin › should have Avatars CPT in admin menu" classname="admin.spec.ts" time="0">
+<properties>
+<property name="skip" value="Admin credentials not provided">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Custom Post Types Admin › should create new game post" classname="admin.spec.ts" time="0">
+<properties>
+<property name="skip" value="Admin credentials not provided">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="functionality.spec.ts" timestamp="2025-08-13T14:29:07.998Z" hostname="chromium" tests="5" failures="5" skipped="0" time="1.991" errors="0">
+<testcase name="WooCommerce Integration › should navigate to shop page" classname="functionality.spec.ts" time="0.759">
+<failure message="functionality.spec.ts:4:7 should navigate to shop page" type="FAILURE">
+<![CDATA[  [chromium] › functionality.spec.ts:4:7 › WooCommerce Integration › should navigate to shop page ──
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/shop
+    Call log:
+      - navigating to "http://localhost:8080/shop", waiting until "load"
+
+
+      3 | test.describe('WooCommerce Integration', () => {
+      4 |   test('should navigate to shop page', async ({ page }) => {
+    > 5 |     await page.goto('/shop');
+        |                ^
+      6 |     
+      7 |     // Check if shop page loads
+      8 |     await expect(page.locator('.woocommerce')).toBeVisible();
+        at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:5:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/functionality-WooCommerce--cd5a1-hould-navigate-to-shop-page-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/functionality-WooCommerce--cd5a1-hould-navigate-to-shop-page-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|functionality-WooCommerce--cd5a1-hould-navigate-to-shop-page-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|functionality-WooCommerce--cd5a1-hould-navigate-to-shop-page-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="WooCommerce Integration › should display product grid" classname="functionality.spec.ts" time="0.359">
+<failure message="functionality.spec.ts:15:7 should display product grid" type="FAILURE">
+<![CDATA[  [chromium] › functionality.spec.ts:15:7 › WooCommerce Integration › should display product grid ──
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/shop
+    Call log:
+      - navigating to "http://localhost:8080/shop", waiting until "load"
+
+
+      14 |   
+      15 |   test('should display product grid', async ({ page }) => {
+    > 16 |     await page.goto('/shop');
+         |                ^
+      17 |     
+      18 |     // Wait for products to load
+      19 |     const products = page.locator('.woocommerce ul.products li');
+        at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:16:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/functionality-WooCommerce--6bc70-should-display-product-grid-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/functionality-WooCommerce--6bc70-should-display-product-grid-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|functionality-WooCommerce--6bc70-should-display-product-grid-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|functionality-WooCommerce--6bc70-should-display-product-grid-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Custom Post Types › should access games archive" classname="functionality.spec.ts" time="0.338">
+<failure message="functionality.spec.ts:25:7 should access games archive" type="FAILURE">
+<![CDATA[  [chromium] › functionality.spec.ts:25:7 › Custom Post Types › should access games archive ────────
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/games
+    Call log:
+      - navigating to "http://localhost:8080/games", waiting until "load"
+
+
+      24 | test.describe('Custom Post Types', () => {
+      25 |   test('should access games archive', async ({ page }) => {
+    > 26 |     await page.goto('/games');
+         |                ^
+      27 |     
+      28 |     // Should not return 404
+      29 |     await expect(page.locator('body')).not.toHaveClass(/error-404/);
+        at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:26:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/functionality-Custom-Post-Types-should-access-games-archive-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/functionality-Custom-Post-Types-should-access-games-archive-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|functionality-Custom-Post-Types-should-access-games-archive-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|functionality-Custom-Post-Types-should-access-games-archive-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Custom Post Types › should access VR room page" classname="functionality.spec.ts" time="0.277">
+<failure message="functionality.spec.ts:36:7 should access VR room page" type="FAILURE">
+<![CDATA[  [chromium] › functionality.spec.ts:36:7 › Custom Post Types › should access VR room page ─────────
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/vr-room
+    Call log:
+      - navigating to "http://localhost:8080/vr-room", waiting until "load"
+
+
+      35 |   
+      36 |   test('should access VR room page', async ({ page }) => {
+    > 37 |     await page.goto('/vr-room');
+         |                ^
+      38 |     
+      39 |     // Should not return 404
+      40 |     await expect(page.locator('body')).not.toHaveClass(/error-404/);
+        at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:37:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/functionality-Custom-Post-Types-should-access-VR-room-page-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/functionality-Custom-Post-Types-should-access-VR-room-page-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|functionality-Custom-Post-Types-should-access-VR-room-page-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|functionality-Custom-Post-Types-should-access-VR-room-page-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Custom Post Types › should access YouTune Garage" classname="functionality.spec.ts" time="0.258">
+<failure message="functionality.spec.ts:47:7 should access YouTune Garage" type="FAILURE">
+<![CDATA[  [chromium] › functionality.spec.ts:47:7 › Custom Post Types › should access YouTune Garage ───────
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/youtune-garage
+    Call log:
+      - navigating to "http://localhost:8080/youtune-garage", waiting until "load"
+
+
+      46 |   
+      47 |   test('should access YouTune Garage', async ({ page }) => {
+    > 48 |     await page.goto('/youtune-garage');
+         |                ^
+      49 |     
+      50 |     // Should not return 404
+      51 |     await expect(page.locator('body')).not.toHaveClass(/error-404/);
+        at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:48:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/functionality-Custom-Post-Types-should-access-YouTune-Garage-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/functionality-Custom-Post-Types-should-access-YouTune-Garage-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|functionality-Custom-Post-Types-should-access-YouTune-Garage-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|functionality-Custom-Post-Types-should-access-YouTune-Garage-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="homepage.spec.ts" timestamp="2025-08-13T14:29:07.998Z" hostname="chromium" tests="6" failures="6" skipped="0" time="1.824" errors="0">
+<testcase name="YouTuneAI Homepage › should load homepage successfully" classname="homepage.spec.ts" time="0.252">
+<failure message="homepage.spec.ts:4:7 should load homepage successfully" type="FAILURE">
+<![CDATA[  [chromium] › homepage.spec.ts:4:7 › YouTuneAI Homepage › should load homepage successfully ───────
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/
+    Call log:
+      - navigating to "http://localhost:8080/", waiting until "load"
+
+
+      3 | test.describe('YouTuneAI Homepage', () => {
+      4 |   test('should load homepage successfully', async ({ page }) => {
+    > 5 |     await page.goto('/');
+        |                ^
+      6 |     
+      7 |     // Check if page loads
+      8 |     await expect(page).toHaveTitle(/YouTuneAI|YouTune/);
+        at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:5:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/homepage-YouTuneAI-Homepag-d7ea7--load-homepage-successfully-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/homepage-YouTuneAI-Homepag-d7ea7--load-homepage-successfully-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|homepage-YouTuneAI-Homepag-d7ea7--load-homepage-successfully-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|homepage-YouTuneAI-Homepag-d7ea7--load-homepage-successfully-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="YouTuneAI Homepage › should have working navigation menu" classname="homepage.spec.ts" time="0.339">
+<failure message="homepage.spec.ts:19:7 should have working navigation menu" type="FAILURE">
+<![CDATA[  [chromium] › homepage.spec.ts:19:7 › YouTuneAI Homepage › should have working navigation menu ────
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/
+    Call log:
+      - navigating to "http://localhost:8080/", waiting until "load"
+
+
+      18 |   
+      19 |   test('should have working navigation menu', async ({ page }) => {
+    > 20 |     await page.goto('/');
+         |                ^
+      21 |     
+      22 |     // Test mobile menu toggle
+      23 |     await page.setViewportSize({ width: 375, height: 667 });
+        at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:20:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/homepage-YouTuneAI-Homepag-54a51-ave-working-navigation-menu-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/homepage-YouTuneAI-Homepag-54a51-ave-working-navigation-menu-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|homepage-YouTuneAI-Homepag-54a51-ave-working-navigation-menu-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|homepage-YouTuneAI-Homepag-54a51-ave-working-navigation-menu-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Avatar Chat System › should display avatar chat bubble" classname="homepage.spec.ts" time="0.306">
+<failure message="homepage.spec.ts:36:7 should display avatar chat bubble" type="FAILURE">
+<![CDATA[  [chromium] › homepage.spec.ts:36:7 › Avatar Chat System › should display avatar chat bubble ──────
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/
+    Call log:
+      - navigating to "http://localhost:8080/", waiting until "load"
+
+
+      35 | test.describe('Avatar Chat System', () => {
+      36 |   test('should display avatar chat bubble', async ({ page }) => {
+    > 37 |     await page.goto('/');
+         |                ^
+      38 |     
+      39 |     // Wait for chat bubble to appear
+      40 |     const chatBubble = page.locator('#avatar-chat-bubble');
+        at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:37:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/homepage-Avatar-Chat-Syste-9a152--display-avatar-chat-bubble-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/homepage-Avatar-Chat-Syste-9a152--display-avatar-chat-bubble-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|homepage-Avatar-Chat-Syste-9a152--display-avatar-chat-bubble-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|homepage-Avatar-Chat-Syste-9a152--display-avatar-chat-bubble-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Avatar Chat System › should open chat interface on click" classname="homepage.spec.ts" time="0.276">
+<failure message="homepage.spec.ts:44:7 should open chat interface on click" type="FAILURE">
+<![CDATA[  [chromium] › homepage.spec.ts:44:7 › Avatar Chat System › should open chat interface on click ────
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/
+    Call log:
+      - navigating to "http://localhost:8080/", waiting until "load"
+
+
+      43 |   
+      44 |   test('should open chat interface on click', async ({ page }) => {
+    > 45 |     await page.goto('/');
+         |                ^
+      46 |     
+      47 |     // Wait for and click chat bubble
+      48 |     const chatBubble = page.locator('#avatar-chat-bubble');
+        at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:45:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/homepage-Avatar-Chat-Syste-82080-pen-chat-interface-on-click-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/homepage-Avatar-Chat-Syste-82080-pen-chat-interface-on-click-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|homepage-Avatar-Chat-Syste-82080-pen-chat-interface-on-click-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|homepage-Avatar-Chat-Syste-82080-pen-chat-interface-on-click-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Performance › should meet basic performance requirements" classname="homepage.spec.ts" time="0.373">
+<failure message="homepage.spec.ts:64:7 should meet basic performance requirements" type="FAILURE">
+<![CDATA[  [chromium] › homepage.spec.ts:64:7 › Performance › should meet basic performance requirements ────
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/
+    Call log:
+      - navigating to "http://localhost:8080/", waiting until "networkidle"
+
+
+      64 |   test('should meet basic performance requirements', async ({ page }) => {
+      65 |     // Start measuring performance
+    > 66 |     await page.goto('/', { waitUntil: 'networkidle' });
+         |                ^
+      67 |     
+      68 |     // Check if page loaded within reasonable time
+      69 |     const performanceEntries = await page.evaluate(() => {
+        at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:66:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/homepage-Performance-shoul-a6401-ic-performance-requirements-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/homepage-Performance-shoul-a6401-ic-performance-requirements-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|homepage-Performance-shoul-a6401-ic-performance-requirements-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|homepage-Performance-shoul-a6401-ic-performance-requirements-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Performance › should not have console errors" classname="homepage.spec.ts" time="0.278">
+<failure message="homepage.spec.ts:80:7 should not have console errors" type="FAILURE">
+<![CDATA[  [chromium] › homepage.spec.ts:80:7 › Performance › should not have console errors ────────────────
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/
+    Call log:
+      - navigating to "http://localhost:8080/", waiting until "load"
+
+
+      87 |     });
+      88 |     
+    > 89 |     await page.goto('/');
+         |                ^
+      90 |     
+      91 |     // Wait for page to fully load
+      92 |     await page.waitForTimeout(3000);
+        at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:89:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/homepage-Performance-should-not-have-console-errors-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/homepage-Performance-should-not-have-console-errors-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|homepage-Performance-should-not-have-console-errors-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|homepage-Performance-should-not-have-console-errors-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="admin.spec.ts" timestamp="2025-08-13T14:29:07.998Z" hostname="firefox" tests="7" failures="0" skipped="7" time="0" errors="0">
+<testcase name="Admin Control Center › should access YouTune Admin Control Center" classname="admin.spec.ts" time="0">
+<properties>
+<property name="skip" value="Admin credentials not provided">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Admin Control Center › should have all control cards" classname="admin.spec.ts" time="0">
+<properties>
+<property name="skip" value="Admin credentials not provided">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Admin Control Center › should execute admin actions" classname="admin.spec.ts" time="0">
+<properties>
+<property name="skip" value="Admin credentials not provided">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Custom Post Types Admin › should have Games CPT in admin menu" classname="admin.spec.ts" time="0">
+<properties>
+<property name="skip" value="Admin credentials not provided">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Custom Post Types Admin › should have Streams CPT in admin menu" classname="admin.spec.ts" time="0">
+<properties>
+<property name="skip" value="Admin credentials not provided">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Custom Post Types Admin › should have Avatars CPT in admin menu" classname="admin.spec.ts" time="0">
+<properties>
+<property name="skip" value="Admin credentials not provided">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Custom Post Types Admin › should create new game post" classname="admin.spec.ts" time="0">
+<properties>
+<property name="skip" value="Admin credentials not provided">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="functionality.spec.ts" timestamp="2025-08-13T14:29:07.998Z" hostname="firefox" tests="5" failures="5" skipped="0" time="9.068" errors="0">
+<testcase name="WooCommerce Integration › should navigate to shop page" classname="functionality.spec.ts" time="2.184">
+<failure message="functionality.spec.ts:4:7 should navigate to shop page" type="FAILURE">
+<![CDATA[  [firefox] › functionality.spec.ts:4:7 › WooCommerce Integration › should navigate to shop page ───
+
+    Error: page.goto: NS_ERROR_CONNECTION_REFUSED
+    Call log:
+      - navigating to "http://localhost:8080/shop", waiting until "load"
+
+
+      3 | test.describe('WooCommerce Integration', () => {
+      4 |   test('should navigate to shop page', async ({ page }) => {
+    > 5 |     await page.goto('/shop');
+        |                ^
+      6 |     
+      7 |     // Check if shop page loads
+      8 |     await expect(page.locator('.woocommerce')).toBeVisible();
+        at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:5:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/functionality-WooCommerce--cd5a1-hould-navigate-to-shop-page-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/functionality-WooCommerce--cd5a1-hould-navigate-to-shop-page-firefox/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/functionality-WooCommerce--cd5a1-hould-navigate-to-shop-page-firefox/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|functionality-WooCommerce--cd5a1-hould-navigate-to-shop-page-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|functionality-WooCommerce--cd5a1-hould-navigate-to-shop-page-firefox/video.webm]]
+
+[[ATTACHMENT|functionality-WooCommerce--cd5a1-hould-navigate-to-shop-page-firefox/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="WooCommerce Integration › should display product grid" classname="functionality.spec.ts" time="1.854">
+<failure message="functionality.spec.ts:15:7 should display product grid" type="FAILURE">
+<![CDATA[  [firefox] › functionality.spec.ts:15:7 › WooCommerce Integration › should display product grid ───
+
+    Error: page.goto: NS_ERROR_CONNECTION_REFUSED
+    Call log:
+      - navigating to "http://localhost:8080/shop", waiting until "load"
+
+
+      14 |   
+      15 |   test('should display product grid', async ({ page }) => {
+    > 16 |     await page.goto('/shop');
+         |                ^
+      17 |     
+      18 |     // Wait for products to load
+      19 |     const products = page.locator('.woocommerce ul.products li');
+        at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:16:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/functionality-WooCommerce--6bc70-should-display-product-grid-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/functionality-WooCommerce--6bc70-should-display-product-grid-firefox/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/functionality-WooCommerce--6bc70-should-display-product-grid-firefox/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|functionality-WooCommerce--6bc70-should-display-product-grid-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|functionality-WooCommerce--6bc70-should-display-product-grid-firefox/video.webm]]
+
+[[ATTACHMENT|functionality-WooCommerce--6bc70-should-display-product-grid-firefox/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Custom Post Types › should access games archive" classname="functionality.spec.ts" time="1.633">
+<failure message="functionality.spec.ts:25:7 should access games archive" type="FAILURE">
+<![CDATA[  [firefox] › functionality.spec.ts:25:7 › Custom Post Types › should access games archive ─────────
+
+    Error: page.goto: NS_ERROR_CONNECTION_REFUSED
+    Call log:
+      - navigating to "http://localhost:8080/games", waiting until "load"
+
+
+      24 | test.describe('Custom Post Types', () => {
+      25 |   test('should access games archive', async ({ page }) => {
+    > 26 |     await page.goto('/games');
+         |                ^
+      27 |     
+      28 |     // Should not return 404
+      29 |     await expect(page.locator('body')).not.toHaveClass(/error-404/);
+        at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:26:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/functionality-Custom-Post-Types-should-access-games-archive-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/functionality-Custom-Post-Types-should-access-games-archive-firefox/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/functionality-Custom-Post-Types-should-access-games-archive-firefox/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|functionality-Custom-Post-Types-should-access-games-archive-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|functionality-Custom-Post-Types-should-access-games-archive-firefox/video.webm]]
+
+[[ATTACHMENT|functionality-Custom-Post-Types-should-access-games-archive-firefox/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Custom Post Types › should access VR room page" classname="functionality.spec.ts" time="1.631">
+<failure message="functionality.spec.ts:36:7 should access VR room page" type="FAILURE">
+<![CDATA[  [firefox] › functionality.spec.ts:36:7 › Custom Post Types › should access VR room page ──────────
+
+    Error: page.goto: NS_ERROR_CONNECTION_REFUSED
+    Call log:
+      - navigating to "http://localhost:8080/vr-room", waiting until "load"
+
+
+      35 |   
+      36 |   test('should access VR room page', async ({ page }) => {
+    > 37 |     await page.goto('/vr-room');
+         |                ^
+      38 |     
+      39 |     // Should not return 404
+      40 |     await expect(page.locator('body')).not.toHaveClass(/error-404/);
+        at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:37:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/functionality-Custom-Post-Types-should-access-VR-room-page-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/functionality-Custom-Post-Types-should-access-VR-room-page-firefox/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/functionality-Custom-Post-Types-should-access-VR-room-page-firefox/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|functionality-Custom-Post-Types-should-access-VR-room-page-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|functionality-Custom-Post-Types-should-access-VR-room-page-firefox/video.webm]]
+
+[[ATTACHMENT|functionality-Custom-Post-Types-should-access-VR-room-page-firefox/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Custom Post Types › should access YouTune Garage" classname="functionality.spec.ts" time="1.766">
+<failure message="functionality.spec.ts:47:7 should access YouTune Garage" type="FAILURE">
+<![CDATA[  [firefox] › functionality.spec.ts:47:7 › Custom Post Types › should access YouTune Garage ────────
+
+    Error: page.goto: NS_ERROR_CONNECTION_REFUSED
+    Call log:
+      - navigating to "http://localhost:8080/youtune-garage", waiting until "load"
+
+
+      46 |   
+      47 |   test('should access YouTune Garage', async ({ page }) => {
+    > 48 |     await page.goto('/youtune-garage');
+         |                ^
+      49 |     
+      50 |     // Should not return 404
+      51 |     await expect(page.locator('body')).not.toHaveClass(/error-404/);
+        at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:48:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/functionality-Custom-Post-Types-should-access-YouTune-Garage-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/functionality-Custom-Post-Types-should-access-YouTune-Garage-firefox/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/functionality-Custom-Post-Types-should-access-YouTune-Garage-firefox/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|functionality-Custom-Post-Types-should-access-YouTune-Garage-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|functionality-Custom-Post-Types-should-access-YouTune-Garage-firefox/video.webm]]
+
+[[ATTACHMENT|functionality-Custom-Post-Types-should-access-YouTune-Garage-firefox/error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="homepage.spec.ts" timestamp="2025-08-13T14:29:07.998Z" hostname="firefox" tests="6" failures="6" skipped="0" time="9.976" errors="0">
+<testcase name="YouTuneAI Homepage › should load homepage successfully" classname="homepage.spec.ts" time="1.676">
+<failure message="homepage.spec.ts:4:7 should load homepage successfully" type="FAILURE">
+<![CDATA[  [firefox] › homepage.spec.ts:4:7 › YouTuneAI Homepage › should load homepage successfully ────────
+
+    Error: page.goto: NS_ERROR_CONNECTION_REFUSED
+    Call log:
+      - navigating to "http://localhost:8080/", waiting until "load"
+
+
+      3 | test.describe('YouTuneAI Homepage', () => {
+      4 |   test('should load homepage successfully', async ({ page }) => {
+    > 5 |     await page.goto('/');
+        |                ^
+      6 |     
+      7 |     // Check if page loads
+      8 |     await expect(page).toHaveTitle(/YouTuneAI|YouTune/);
+        at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:5:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/homepage-YouTuneAI-Homepag-d7ea7--load-homepage-successfully-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/homepage-YouTuneAI-Homepag-d7ea7--load-homepage-successfully-firefox/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/homepage-YouTuneAI-Homepag-d7ea7--load-homepage-successfully-firefox/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|homepage-YouTuneAI-Homepag-d7ea7--load-homepage-successfully-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|homepage-YouTuneAI-Homepag-d7ea7--load-homepage-successfully-firefox/video.webm]]
+
+[[ATTACHMENT|homepage-YouTuneAI-Homepag-d7ea7--load-homepage-successfully-firefox/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="YouTuneAI Homepage › should have working navigation menu" classname="homepage.spec.ts" time="1.591">
+<failure message="homepage.spec.ts:19:7 should have working navigation menu" type="FAILURE">
+<![CDATA[  [firefox] › homepage.spec.ts:19:7 › YouTuneAI Homepage › should have working navigation menu ─────
+
+    Error: page.goto: NS_ERROR_CONNECTION_REFUSED
+    Call log:
+      - navigating to "http://localhost:8080/", waiting until "load"
+
+
+      18 |   
+      19 |   test('should have working navigation menu', async ({ page }) => {
+    > 20 |     await page.goto('/');
+         |                ^
+      21 |     
+      22 |     // Test mobile menu toggle
+      23 |     await page.setViewportSize({ width: 375, height: 667 });
+        at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:20:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/homepage-YouTuneAI-Homepag-54a51-ave-working-navigation-menu-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/homepage-YouTuneAI-Homepag-54a51-ave-working-navigation-menu-firefox/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/homepage-YouTuneAI-Homepag-54a51-ave-working-navigation-menu-firefox/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|homepage-YouTuneAI-Homepag-54a51-ave-working-navigation-menu-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|homepage-YouTuneAI-Homepag-54a51-ave-working-navigation-menu-firefox/video.webm]]
+
+[[ATTACHMENT|homepage-YouTuneAI-Homepag-54a51-ave-working-navigation-menu-firefox/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Avatar Chat System › should display avatar chat bubble" classname="homepage.spec.ts" time="1.741">
+<failure message="homepage.spec.ts:36:7 should display avatar chat bubble" type="FAILURE">
+<![CDATA[  [firefox] › homepage.spec.ts:36:7 › Avatar Chat System › should display avatar chat bubble ───────
+
+    Error: page.goto: NS_ERROR_CONNECTION_REFUSED
+    Call log:
+      - navigating to "http://localhost:8080/", waiting until "load"
+
+
+      35 | test.describe('Avatar Chat System', () => {
+      36 |   test('should display avatar chat bubble', async ({ page }) => {
+    > 37 |     await page.goto('/');
+         |                ^
+      38 |     
+      39 |     // Wait for chat bubble to appear
+      40 |     const chatBubble = page.locator('#avatar-chat-bubble');
+        at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:37:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/homepage-Avatar-Chat-Syste-9a152--display-avatar-chat-bubble-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/homepage-Avatar-Chat-Syste-9a152--display-avatar-chat-bubble-firefox/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/homepage-Avatar-Chat-Syste-9a152--display-avatar-chat-bubble-firefox/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|homepage-Avatar-Chat-Syste-9a152--display-avatar-chat-bubble-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|homepage-Avatar-Chat-Syste-9a152--display-avatar-chat-bubble-firefox/video.webm]]
+
+[[ATTACHMENT|homepage-Avatar-Chat-Syste-9a152--display-avatar-chat-bubble-firefox/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Avatar Chat System › should open chat interface on click" classname="homepage.spec.ts" time="1.666">
+<failure message="homepage.spec.ts:44:7 should open chat interface on click" type="FAILURE">
+<![CDATA[  [firefox] › homepage.spec.ts:44:7 › Avatar Chat System › should open chat interface on click ─────
+
+    Error: page.goto: NS_ERROR_CONNECTION_REFUSED
+    Call log:
+      - navigating to "http://localhost:8080/", waiting until "load"
+
+
+      43 |   
+      44 |   test('should open chat interface on click', async ({ page }) => {
+    > 45 |     await page.goto('/');
+         |                ^
+      46 |     
+      47 |     // Wait for and click chat bubble
+      48 |     const chatBubble = page.locator('#avatar-chat-bubble');
+        at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:45:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/homepage-Avatar-Chat-Syste-82080-pen-chat-interface-on-click-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/homepage-Avatar-Chat-Syste-82080-pen-chat-interface-on-click-firefox/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/homepage-Avatar-Chat-Syste-82080-pen-chat-interface-on-click-firefox/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|homepage-Avatar-Chat-Syste-82080-pen-chat-interface-on-click-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|homepage-Avatar-Chat-Syste-82080-pen-chat-interface-on-click-firefox/video.webm]]
+
+[[ATTACHMENT|homepage-Avatar-Chat-Syste-82080-pen-chat-interface-on-click-firefox/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Performance › should meet basic performance requirements" classname="homepage.spec.ts" time="1.59">
+<failure message="homepage.spec.ts:64:7 should meet basic performance requirements" type="FAILURE">
+<![CDATA[  [firefox] › homepage.spec.ts:64:7 › Performance › should meet basic performance requirements ─────
+
+    Error: page.goto: NS_ERROR_CONNECTION_REFUSED
+    Call log:
+      - navigating to "http://localhost:8080/", waiting until "networkidle"
+
+
+      64 |   test('should meet basic performance requirements', async ({ page }) => {
+      65 |     // Start measuring performance
+    > 66 |     await page.goto('/', { waitUntil: 'networkidle' });
+         |                ^
+      67 |     
+      68 |     // Check if page loaded within reasonable time
+      69 |     const performanceEntries = await page.evaluate(() => {
+        at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:66:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/homepage-Performance-shoul-a6401-ic-performance-requirements-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/homepage-Performance-shoul-a6401-ic-performance-requirements-firefox/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/homepage-Performance-shoul-a6401-ic-performance-requirements-firefox/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|homepage-Performance-shoul-a6401-ic-performance-requirements-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|homepage-Performance-shoul-a6401-ic-performance-requirements-firefox/video.webm]]
+
+[[ATTACHMENT|homepage-Performance-shoul-a6401-ic-performance-requirements-firefox/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Performance › should not have console errors" classname="homepage.spec.ts" time="1.712">
+<failure message="homepage.spec.ts:80:7 should not have console errors" type="FAILURE">
+<![CDATA[  [firefox] › homepage.spec.ts:80:7 › Performance › should not have console errors ─────────────────
+
+    Error: page.goto: NS_ERROR_CONNECTION_REFUSED
+    Call log:
+      - navigating to "http://localhost:8080/", waiting until "load"
+
+
+      87 |     });
+      88 |     
+    > 89 |     await page.goto('/');
+         |                ^
+      90 |     
+      91 |     // Wait for page to fully load
+      92 |     await page.waitForTimeout(3000);
+        at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:89:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/homepage-Performance-should-not-have-console-errors-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/homepage-Performance-should-not-have-console-errors-firefox/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/homepage-Performance-should-not-have-console-errors-firefox/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|homepage-Performance-should-not-have-console-errors-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|homepage-Performance-should-not-have-console-errors-firefox/video.webm]]
+
+[[ATTACHMENT|homepage-Performance-should-not-have-console-errors-firefox/error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="admin.spec.ts" timestamp="2025-08-13T14:29:07.998Z" hostname="webkit" tests="7" failures="0" skipped="7" time="0" errors="0">
+<testcase name="Admin Control Center › should access YouTune Admin Control Center" classname="admin.spec.ts" time="0">
+<properties>
+<property name="skip" value="Admin credentials not provided">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Admin Control Center › should have all control cards" classname="admin.spec.ts" time="0">
+<properties>
+<property name="skip" value="Admin credentials not provided">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Admin Control Center › should execute admin actions" classname="admin.spec.ts" time="0">
+<properties>
+<property name="skip" value="Admin credentials not provided">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Custom Post Types Admin › should have Games CPT in admin menu" classname="admin.spec.ts" time="0">
+<properties>
+<property name="skip" value="Admin credentials not provided">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Custom Post Types Admin › should have Streams CPT in admin menu" classname="admin.spec.ts" time="0">
+<properties>
+<property name="skip" value="Admin credentials not provided">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Custom Post Types Admin › should have Avatars CPT in admin menu" classname="admin.spec.ts" time="0">
+<properties>
+<property name="skip" value="Admin credentials not provided">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Custom Post Types Admin › should create new game post" classname="admin.spec.ts" time="0">
+<properties>
+<property name="skip" value="Admin credentials not provided">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="functionality.spec.ts" timestamp="2025-08-13T14:29:07.998Z" hostname="webkit" tests="5" failures="5" skipped="0" time="3.847" errors="0">
+<testcase name="WooCommerce Integration › should navigate to shop page" classname="functionality.spec.ts" time="1.568">
+<failure message="functionality.spec.ts:4:7 should navigate to shop page" type="FAILURE">
+<![CDATA[  [webkit] › functionality.spec.ts:4:7 › WooCommerce Integration › should navigate to shop page ────
+
+    Error: page.goto: Could not connect to localhost: Connection refused
+    Call log:
+      - navigating to "http://localhost:8080/shop", waiting until "load"
+
+
+      3 | test.describe('WooCommerce Integration', () => {
+      4 |   test('should navigate to shop page', async ({ page }) => {
+    > 5 |     await page.goto('/shop');
+        |                ^
+      6 |     
+      7 |     // Check if shop page loads
+      8 |     await expect(page.locator('.woocommerce')).toBeVisible();
+        at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:5:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/functionality-WooCommerce--cd5a1-hould-navigate-to-shop-page-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/functionality-WooCommerce--cd5a1-hould-navigate-to-shop-page-webkit/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|functionality-WooCommerce--cd5a1-hould-navigate-to-shop-page-webkit/test-failed-1.png]]
+
+[[ATTACHMENT|functionality-WooCommerce--cd5a1-hould-navigate-to-shop-page-webkit/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="WooCommerce Integration › should display product grid" classname="functionality.spec.ts" time="0.592">
+<failure message="functionality.spec.ts:15:7 should display product grid" type="FAILURE">
+<![CDATA[  [webkit] › functionality.spec.ts:15:7 › WooCommerce Integration › should display product grid ────
+
+    Error: page.goto: Could not connect to localhost: Connection refused
+    Call log:
+      - navigating to "http://localhost:8080/shop", waiting until "load"
+
+
+      14 |   
+      15 |   test('should display product grid', async ({ page }) => {
+    > 16 |     await page.goto('/shop');
+         |                ^
+      17 |     
+      18 |     // Wait for products to load
+      19 |     const products = page.locator('.woocommerce ul.products li');
+        at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:16:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/functionality-WooCommerce--6bc70-should-display-product-grid-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/functionality-WooCommerce--6bc70-should-display-product-grid-webkit/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|functionality-WooCommerce--6bc70-should-display-product-grid-webkit/test-failed-1.png]]
+
+[[ATTACHMENT|functionality-WooCommerce--6bc70-should-display-product-grid-webkit/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Custom Post Types › should access games archive" classname="functionality.spec.ts" time="0.564">
+<failure message="functionality.spec.ts:25:7 should access games archive" type="FAILURE">
+<![CDATA[  [webkit] › functionality.spec.ts:25:7 › Custom Post Types › should access games archive ──────────
+
+    Error: page.goto: Could not connect to localhost: Connection refused
+    Call log:
+      - navigating to "http://localhost:8080/games", waiting until "load"
+
+
+      24 | test.describe('Custom Post Types', () => {
+      25 |   test('should access games archive', async ({ page }) => {
+    > 26 |     await page.goto('/games');
+         |                ^
+      27 |     
+      28 |     // Should not return 404
+      29 |     await expect(page.locator('body')).not.toHaveClass(/error-404/);
+        at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:26:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/functionality-Custom-Post-Types-should-access-games-archive-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/functionality-Custom-Post-Types-should-access-games-archive-webkit/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|functionality-Custom-Post-Types-should-access-games-archive-webkit/test-failed-1.png]]
+
+[[ATTACHMENT|functionality-Custom-Post-Types-should-access-games-archive-webkit/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Custom Post Types › should access VR room page" classname="functionality.spec.ts" time="0.552">
+<failure message="functionality.spec.ts:36:7 should access VR room page" type="FAILURE">
+<![CDATA[  [webkit] › functionality.spec.ts:36:7 › Custom Post Types › should access VR room page ───────────
+
+    Error: page.goto: Could not connect to localhost: Connection refused
+    Call log:
+      - navigating to "http://localhost:8080/vr-room", waiting until "load"
+
+
+      35 |   
+      36 |   test('should access VR room page', async ({ page }) => {
+    > 37 |     await page.goto('/vr-room');
+         |                ^
+      38 |     
+      39 |     // Should not return 404
+      40 |     await expect(page.locator('body')).not.toHaveClass(/error-404/);
+        at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:37:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/functionality-Custom-Post-Types-should-access-VR-room-page-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/functionality-Custom-Post-Types-should-access-VR-room-page-webkit/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|functionality-Custom-Post-Types-should-access-VR-room-page-webkit/test-failed-1.png]]
+
+[[ATTACHMENT|functionality-Custom-Post-Types-should-access-VR-room-page-webkit/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Custom Post Types › should access YouTune Garage" classname="functionality.spec.ts" time="0.571">
+<failure message="functionality.spec.ts:47:7 should access YouTune Garage" type="FAILURE">
+<![CDATA[  [webkit] › functionality.spec.ts:47:7 › Custom Post Types › should access YouTune Garage ─────────
+
+    Error: page.goto: Could not connect to localhost: Connection refused
+    Call log:
+      - navigating to "http://localhost:8080/youtune-garage", waiting until "load"
+
+
+      46 |   
+      47 |   test('should access YouTune Garage', async ({ page }) => {
+    > 48 |     await page.goto('/youtune-garage');
+         |                ^
+      49 |     
+      50 |     // Should not return 404
+      51 |     await expect(page.locator('body')).not.toHaveClass(/error-404/);
+        at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:48:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/functionality-Custom-Post-Types-should-access-YouTune-Garage-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/functionality-Custom-Post-Types-should-access-YouTune-Garage-webkit/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|functionality-Custom-Post-Types-should-access-YouTune-Garage-webkit/test-failed-1.png]]
+
+[[ATTACHMENT|functionality-Custom-Post-Types-should-access-YouTune-Garage-webkit/video.webm]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="homepage.spec.ts" timestamp="2025-08-13T14:29:07.998Z" hostname="webkit" tests="6" failures="6" skipped="0" time="3.634" errors="0">
+<testcase name="YouTuneAI Homepage › should load homepage successfully" classname="homepage.spec.ts" time="0.643">
+<failure message="homepage.spec.ts:4:7 should load homepage successfully" type="FAILURE">
+<![CDATA[  [webkit] › homepage.spec.ts:4:7 › YouTuneAI Homepage › should load homepage successfully ─────────
+
+    Error: page.goto: Could not connect to localhost: Connection refused
+    Call log:
+      - navigating to "http://localhost:8080/", waiting until "load"
+
+
+      3 | test.describe('YouTuneAI Homepage', () => {
+      4 |   test('should load homepage successfully', async ({ page }) => {
+    > 5 |     await page.goto('/');
+        |                ^
+      6 |     
+      7 |     // Check if page loads
+      8 |     await expect(page).toHaveTitle(/YouTuneAI|YouTune/);
+        at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:5:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/homepage-YouTuneAI-Homepag-d7ea7--load-homepage-successfully-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/homepage-YouTuneAI-Homepag-d7ea7--load-homepage-successfully-webkit/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|homepage-YouTuneAI-Homepag-d7ea7--load-homepage-successfully-webkit/test-failed-1.png]]
+
+[[ATTACHMENT|homepage-YouTuneAI-Homepag-d7ea7--load-homepage-successfully-webkit/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="YouTuneAI Homepage › should have working navigation menu" classname="homepage.spec.ts" time="0.633">
+<failure message="homepage.spec.ts:19:7 should have working navigation menu" type="FAILURE">
+<![CDATA[  [webkit] › homepage.spec.ts:19:7 › YouTuneAI Homepage › should have working navigation menu ──────
+
+    Error: page.goto: Could not connect to localhost: Connection refused
+    Call log:
+      - navigating to "http://localhost:8080/", waiting until "load"
+
+
+      18 |   
+      19 |   test('should have working navigation menu', async ({ page }) => {
+    > 20 |     await page.goto('/');
+         |                ^
+      21 |     
+      22 |     // Test mobile menu toggle
+      23 |     await page.setViewportSize({ width: 375, height: 667 });
+        at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:20:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/homepage-YouTuneAI-Homepag-54a51-ave-working-navigation-menu-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/homepage-YouTuneAI-Homepag-54a51-ave-working-navigation-menu-webkit/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|homepage-YouTuneAI-Homepag-54a51-ave-working-navigation-menu-webkit/test-failed-1.png]]
+
+[[ATTACHMENT|homepage-YouTuneAI-Homepag-54a51-ave-working-navigation-menu-webkit/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Avatar Chat System › should display avatar chat bubble" classname="homepage.spec.ts" time="0.616">
+<failure message="homepage.spec.ts:36:7 should display avatar chat bubble" type="FAILURE">
+<![CDATA[  [webkit] › homepage.spec.ts:36:7 › Avatar Chat System › should display avatar chat bubble ────────
+
+    Error: page.goto: Could not connect to localhost: Connection refused
+    Call log:
+      - navigating to "http://localhost:8080/", waiting until "load"
+
+
+      35 | test.describe('Avatar Chat System', () => {
+      36 |   test('should display avatar chat bubble', async ({ page }) => {
+    > 37 |     await page.goto('/');
+         |                ^
+      38 |     
+      39 |     // Wait for chat bubble to appear
+      40 |     const chatBubble = page.locator('#avatar-chat-bubble');
+        at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:37:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/homepage-Avatar-Chat-Syste-9a152--display-avatar-chat-bubble-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/homepage-Avatar-Chat-Syste-9a152--display-avatar-chat-bubble-webkit/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|homepage-Avatar-Chat-Syste-9a152--display-avatar-chat-bubble-webkit/test-failed-1.png]]
+
+[[ATTACHMENT|homepage-Avatar-Chat-Syste-9a152--display-avatar-chat-bubble-webkit/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Avatar Chat System › should open chat interface on click" classname="homepage.spec.ts" time="0.547">
+<failure message="homepage.spec.ts:44:7 should open chat interface on click" type="FAILURE">
+<![CDATA[  [webkit] › homepage.spec.ts:44:7 › Avatar Chat System › should open chat interface on click ──────
+
+    Error: page.goto: Could not connect to localhost: Connection refused
+    Call log:
+      - navigating to "http://localhost:8080/", waiting until "load"
+
+
+      43 |   
+      44 |   test('should open chat interface on click', async ({ page }) => {
+    > 45 |     await page.goto('/');
+         |                ^
+      46 |     
+      47 |     // Wait for and click chat bubble
+      48 |     const chatBubble = page.locator('#avatar-chat-bubble');
+        at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:45:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/homepage-Avatar-Chat-Syste-82080-pen-chat-interface-on-click-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/homepage-Avatar-Chat-Syste-82080-pen-chat-interface-on-click-webkit/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|homepage-Avatar-Chat-Syste-82080-pen-chat-interface-on-click-webkit/test-failed-1.png]]
+
+[[ATTACHMENT|homepage-Avatar-Chat-Syste-82080-pen-chat-interface-on-click-webkit/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Performance › should meet basic performance requirements" classname="homepage.spec.ts" time="0.544">
+<failure message="homepage.spec.ts:64:7 should meet basic performance requirements" type="FAILURE">
+<![CDATA[  [webkit] › homepage.spec.ts:64:7 › Performance › should meet basic performance requirements ──────
+
+    Error: page.goto: Could not connect to localhost: Connection refused
+    Call log:
+      - navigating to "http://localhost:8080/", waiting until "networkidle"
+
+
+      64 |   test('should meet basic performance requirements', async ({ page }) => {
+      65 |     // Start measuring performance
+    > 66 |     await page.goto('/', { waitUntil: 'networkidle' });
+         |                ^
+      67 |     
+      68 |     // Check if page loaded within reasonable time
+      69 |     const performanceEntries = await page.evaluate(() => {
+        at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:66:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/homepage-Performance-shoul-a6401-ic-performance-requirements-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/homepage-Performance-shoul-a6401-ic-performance-requirements-webkit/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|homepage-Performance-shoul-a6401-ic-performance-requirements-webkit/test-failed-1.png]]
+
+[[ATTACHMENT|homepage-Performance-shoul-a6401-ic-performance-requirements-webkit/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Performance › should not have console errors" classname="homepage.spec.ts" time="0.651">
+<failure message="homepage.spec.ts:80:7 should not have console errors" type="FAILURE">
+<![CDATA[  [webkit] › homepage.spec.ts:80:7 › Performance › should not have console errors ──────────────────
+
+    Error: page.goto: Could not connect to localhost: Connection refused
+    Call log:
+      - navigating to "http://localhost:8080/", waiting until "load"
+
+
+      87 |     });
+      88 |     
+    > 89 |     await page.goto('/');
+         |                ^
+      90 |     
+      91 |     // Wait for page to fully load
+      92 |     await page.waitForTimeout(3000);
+        at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:89:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/homepage-Performance-should-not-have-console-errors-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/homepage-Performance-should-not-have-console-errors-webkit/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|homepage-Performance-should-not-have-console-errors-webkit/test-failed-1.png]]
+
+[[ATTACHMENT|homepage-Performance-should-not-have-console-errors-webkit/video.webm]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="admin.spec.ts" timestamp="2025-08-13T14:29:07.998Z" hostname="Mobile Chrome" tests="7" failures="0" skipped="7" time="0" errors="0">
+<testcase name="Admin Control Center › should access YouTune Admin Control Center" classname="admin.spec.ts" time="0">
+<properties>
+<property name="skip" value="Admin credentials not provided">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Admin Control Center › should have all control cards" classname="admin.spec.ts" time="0">
+<properties>
+<property name="skip" value="Admin credentials not provided">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Admin Control Center › should execute admin actions" classname="admin.spec.ts" time="0">
+<properties>
+<property name="skip" value="Admin credentials not provided">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Custom Post Types Admin › should have Games CPT in admin menu" classname="admin.spec.ts" time="0">
+<properties>
+<property name="skip" value="Admin credentials not provided">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Custom Post Types Admin › should have Streams CPT in admin menu" classname="admin.spec.ts" time="0">
+<properties>
+<property name="skip" value="Admin credentials not provided">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Custom Post Types Admin › should have Avatars CPT in admin menu" classname="admin.spec.ts" time="0">
+<properties>
+<property name="skip" value="Admin credentials not provided">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Custom Post Types Admin › should create new game post" classname="admin.spec.ts" time="0">
+<properties>
+<property name="skip" value="Admin credentials not provided">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="functionality.spec.ts" timestamp="2025-08-13T14:29:07.998Z" hostname="Mobile Chrome" tests="5" failures="5" skipped="0" time="1.511" errors="0">
+<testcase name="WooCommerce Integration › should navigate to shop page" classname="functionality.spec.ts" time="0.301">
+<failure message="functionality.spec.ts:4:7 should navigate to shop page" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › functionality.spec.ts:4:7 › WooCommerce Integration › should navigate to shop page 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/shop
+    Call log:
+      - navigating to "http://localhost:8080/shop", waiting until "load"
+
+
+      3 | test.describe('WooCommerce Integration', () => {
+      4 |   test('should navigate to shop page', async ({ page }) => {
+    > 5 |     await page.goto('/shop');
+        |                ^
+      6 |     
+      7 |     // Check if shop page loads
+      8 |     await expect(page.locator('.woocommerce')).toBeVisible();
+        at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:5:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/functionality-WooCommerce--cd5a1-hould-navigate-to-shop-page-Mobile-Chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/functionality-WooCommerce--cd5a1-hould-navigate-to-shop-page-Mobile-Chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|functionality-WooCommerce--cd5a1-hould-navigate-to-shop-page-Mobile-Chrome/test-failed-1.png]]
+
+[[ATTACHMENT|functionality-WooCommerce--cd5a1-hould-navigate-to-shop-page-Mobile-Chrome/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="WooCommerce Integration › should display product grid" classname="functionality.spec.ts" time="0.275">
+<failure message="functionality.spec.ts:15:7 should display product grid" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › functionality.spec.ts:15:7 › WooCommerce Integration › should display product grid 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/shop
+    Call log:
+      - navigating to "http://localhost:8080/shop", waiting until "load"
+
+
+      14 |   
+      15 |   test('should display product grid', async ({ page }) => {
+    > 16 |     await page.goto('/shop');
+         |                ^
+      17 |     
+      18 |     // Wait for products to load
+      19 |     const products = page.locator('.woocommerce ul.products li');
+        at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:16:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/functionality-WooCommerce--6bc70-should-display-product-grid-Mobile-Chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/functionality-WooCommerce--6bc70-should-display-product-grid-Mobile-Chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|functionality-WooCommerce--6bc70-should-display-product-grid-Mobile-Chrome/test-failed-1.png]]
+
+[[ATTACHMENT|functionality-WooCommerce--6bc70-should-display-product-grid-Mobile-Chrome/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Custom Post Types › should access games archive" classname="functionality.spec.ts" time="0.302">
+<failure message="functionality.spec.ts:25:7 should access games archive" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › functionality.spec.ts:25:7 › Custom Post Types › should access games archive ───
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/games
+    Call log:
+      - navigating to "http://localhost:8080/games", waiting until "load"
+
+
+      24 | test.describe('Custom Post Types', () => {
+      25 |   test('should access games archive', async ({ page }) => {
+    > 26 |     await page.goto('/games');
+         |                ^
+      27 |     
+      28 |     // Should not return 404
+      29 |     await expect(page.locator('body')).not.toHaveClass(/error-404/);
+        at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:26:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/functionality-Custom-Post-Types-should-access-games-archive-Mobile-Chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/functionality-Custom-Post-Types-should-access-games-archive-Mobile-Chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|functionality-Custom-Post-Types-should-access-games-archive-Mobile-Chrome/test-failed-1.png]]
+
+[[ATTACHMENT|functionality-Custom-Post-Types-should-access-games-archive-Mobile-Chrome/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Custom Post Types › should access VR room page" classname="functionality.spec.ts" time="0.322">
+<failure message="functionality.spec.ts:36:7 should access VR room page" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › functionality.spec.ts:36:7 › Custom Post Types › should access VR room page ────
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/vr-room
+    Call log:
+      - navigating to "http://localhost:8080/vr-room", waiting until "load"
+
+
+      35 |   
+      36 |   test('should access VR room page', async ({ page }) => {
+    > 37 |     await page.goto('/vr-room');
+         |                ^
+      38 |     
+      39 |     // Should not return 404
+      40 |     await expect(page.locator('body')).not.toHaveClass(/error-404/);
+        at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:37:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/functionality-Custom-Post-Types-should-access-VR-room-page-Mobile-Chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/functionality-Custom-Post-Types-should-access-VR-room-page-Mobile-Chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|functionality-Custom-Post-Types-should-access-VR-room-page-Mobile-Chrome/test-failed-1.png]]
+
+[[ATTACHMENT|functionality-Custom-Post-Types-should-access-VR-room-page-Mobile-Chrome/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Custom Post Types › should access YouTune Garage" classname="functionality.spec.ts" time="0.311">
+<failure message="functionality.spec.ts:47:7 should access YouTune Garage" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › functionality.spec.ts:47:7 › Custom Post Types › should access YouTune Garage ──
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/youtune-garage
+    Call log:
+      - navigating to "http://localhost:8080/youtune-garage", waiting until "load"
+
+
+      46 |   
+      47 |   test('should access YouTune Garage', async ({ page }) => {
+    > 48 |     await page.goto('/youtune-garage');
+         |                ^
+      49 |     
+      50 |     // Should not return 404
+      51 |     await expect(page.locator('body')).not.toHaveClass(/error-404/);
+        at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:48:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/functionality-Custom-Post-Types-should-access-YouTune-Garage-Mobile-Chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/functionality-Custom-Post-Types-should-access-YouTune-Garage-Mobile-Chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|functionality-Custom-Post-Types-should-access-YouTune-Garage-Mobile-Chrome/test-failed-1.png]]
+
+[[ATTACHMENT|functionality-Custom-Post-Types-should-access-YouTune-Garage-Mobile-Chrome/video.webm]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="homepage.spec.ts" timestamp="2025-08-13T14:29:07.998Z" hostname="Mobile Chrome" tests="6" failures="6" skipped="0" time="1.731" errors="0">
+<testcase name="YouTuneAI Homepage › should load homepage successfully" classname="homepage.spec.ts" time="0.28">
+<failure message="homepage.spec.ts:4:7 should load homepage successfully" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › homepage.spec.ts:4:7 › YouTuneAI Homepage › should load homepage successfully ──
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/
+    Call log:
+      - navigating to "http://localhost:8080/", waiting until "load"
+
+
+      3 | test.describe('YouTuneAI Homepage', () => {
+      4 |   test('should load homepage successfully', async ({ page }) => {
+    > 5 |     await page.goto('/');
+        |                ^
+      6 |     
+      7 |     // Check if page loads
+      8 |     await expect(page).toHaveTitle(/YouTuneAI|YouTune/);
+        at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:5:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/homepage-YouTuneAI-Homepag-d7ea7--load-homepage-successfully-Mobile-Chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/homepage-YouTuneAI-Homepag-d7ea7--load-homepage-successfully-Mobile-Chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|homepage-YouTuneAI-Homepag-d7ea7--load-homepage-successfully-Mobile-Chrome/test-failed-1.png]]
+
+[[ATTACHMENT|homepage-YouTuneAI-Homepag-d7ea7--load-homepage-successfully-Mobile-Chrome/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="YouTuneAI Homepage › should have working navigation menu" classname="homepage.spec.ts" time="0.269">
+<failure message="homepage.spec.ts:19:7 should have working navigation menu" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › homepage.spec.ts:19:7 › YouTuneAI Homepage › should have working navigation menu 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/
+    Call log:
+      - navigating to "http://localhost:8080/", waiting until "load"
+
+
+      18 |   
+      19 |   test('should have working navigation menu', async ({ page }) => {
+    > 20 |     await page.goto('/');
+         |                ^
+      21 |     
+      22 |     // Test mobile menu toggle
+      23 |     await page.setViewportSize({ width: 375, height: 667 });
+        at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:20:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/homepage-YouTuneAI-Homepag-54a51-ave-working-navigation-menu-Mobile-Chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|homepage-YouTuneAI-Homepag-54a51-ave-working-navigation-menu-Mobile-Chrome/test-failed-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Avatar Chat System › should display avatar chat bubble" classname="homepage.spec.ts" time="0.285">
+<failure message="homepage.spec.ts:36:7 should display avatar chat bubble" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › homepage.spec.ts:36:7 › Avatar Chat System › should display avatar chat bubble ─
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/
+    Call log:
+      - navigating to "http://localhost:8080/", waiting until "load"
+
+
+      35 | test.describe('Avatar Chat System', () => {
+      36 |   test('should display avatar chat bubble', async ({ page }) => {
+    > 37 |     await page.goto('/');
+         |                ^
+      38 |     
+      39 |     // Wait for chat bubble to appear
+      40 |     const chatBubble = page.locator('#avatar-chat-bubble');
+        at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:37:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/homepage-Avatar-Chat-Syste-9a152--display-avatar-chat-bubble-Mobile-Chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/homepage-Avatar-Chat-Syste-9a152--display-avatar-chat-bubble-Mobile-Chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|homepage-Avatar-Chat-Syste-9a152--display-avatar-chat-bubble-Mobile-Chrome/test-failed-1.png]]
+
+[[ATTACHMENT|homepage-Avatar-Chat-Syste-9a152--display-avatar-chat-bubble-Mobile-Chrome/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Avatar Chat System › should open chat interface on click" classname="homepage.spec.ts" time="0.297">
+<failure message="homepage.spec.ts:44:7 should open chat interface on click" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › homepage.spec.ts:44:7 › Avatar Chat System › should open chat interface on click 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/
+    Call log:
+      - navigating to "http://localhost:8080/", waiting until "load"
+
+
+      43 |   
+      44 |   test('should open chat interface on click', async ({ page }) => {
+    > 45 |     await page.goto('/');
+         |                ^
+      46 |     
+      47 |     // Wait for and click chat bubble
+      48 |     const chatBubble = page.locator('#avatar-chat-bubble');
+        at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:45:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/homepage-Avatar-Chat-Syste-82080-pen-chat-interface-on-click-Mobile-Chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/homepage-Avatar-Chat-Syste-82080-pen-chat-interface-on-click-Mobile-Chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|homepage-Avatar-Chat-Syste-82080-pen-chat-interface-on-click-Mobile-Chrome/test-failed-1.png]]
+
+[[ATTACHMENT|homepage-Avatar-Chat-Syste-82080-pen-chat-interface-on-click-Mobile-Chrome/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Performance › should meet basic performance requirements" classname="homepage.spec.ts" time="0.32">
+<failure message="homepage.spec.ts:64:7 should meet basic performance requirements" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › homepage.spec.ts:64:7 › Performance › should meet basic performance requirements 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/
+    Call log:
+      - navigating to "http://localhost:8080/", waiting until "networkidle"
+
+
+      64 |   test('should meet basic performance requirements', async ({ page }) => {
+      65 |     // Start measuring performance
+    > 66 |     await page.goto('/', { waitUntil: 'networkidle' });
+         |                ^
+      67 |     
+      68 |     // Check if page loaded within reasonable time
+      69 |     const performanceEntries = await page.evaluate(() => {
+        at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:66:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/homepage-Performance-shoul-a6401-ic-performance-requirements-Mobile-Chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/homepage-Performance-shoul-a6401-ic-performance-requirements-Mobile-Chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|homepage-Performance-shoul-a6401-ic-performance-requirements-Mobile-Chrome/test-failed-1.png]]
+
+[[ATTACHMENT|homepage-Performance-shoul-a6401-ic-performance-requirements-Mobile-Chrome/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Performance › should not have console errors" classname="homepage.spec.ts" time="0.28">
+<failure message="homepage.spec.ts:80:7 should not have console errors" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › homepage.spec.ts:80:7 › Performance › should not have console errors ───────────
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/
+    Call log:
+      - navigating to "http://localhost:8080/", waiting until "load"
+
+
+      87 |     });
+      88 |     
+    > 89 |     await page.goto('/');
+         |                ^
+      90 |     
+      91 |     // Wait for page to fully load
+      92 |     await page.waitForTimeout(3000);
+        at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:89:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/homepage-Performance-should-not-have-console-errors-Mobile-Chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/homepage-Performance-should-not-have-console-errors-Mobile-Chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|homepage-Performance-should-not-have-console-errors-Mobile-Chrome/test-failed-1.png]]
+
+[[ATTACHMENT|homepage-Performance-should-not-have-console-errors-Mobile-Chrome/video.webm]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="admin.spec.ts" timestamp="2025-08-13T14:29:07.998Z" hostname="Mobile Safari" tests="7" failures="0" skipped="7" time="0" errors="0">
+<testcase name="Admin Control Center › should access YouTune Admin Control Center" classname="admin.spec.ts" time="0">
+<properties>
+<property name="skip" value="Admin credentials not provided">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Admin Control Center › should have all control cards" classname="admin.spec.ts" time="0">
+<properties>
+<property name="skip" value="Admin credentials not provided">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Admin Control Center › should execute admin actions" classname="admin.spec.ts" time="0">
+<properties>
+<property name="skip" value="Admin credentials not provided">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Custom Post Types Admin › should have Games CPT in admin menu" classname="admin.spec.ts" time="0">
+<properties>
+<property name="skip" value="Admin credentials not provided">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Custom Post Types Admin › should have Streams CPT in admin menu" classname="admin.spec.ts" time="0">
+<properties>
+<property name="skip" value="Admin credentials not provided">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Custom Post Types Admin › should have Avatars CPT in admin menu" classname="admin.spec.ts" time="0">
+<properties>
+<property name="skip" value="Admin credentials not provided">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Custom Post Types Admin › should create new game post" classname="admin.spec.ts" time="0">
+<properties>
+<property name="skip" value="Admin credentials not provided">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="functionality.spec.ts" timestamp="2025-08-13T14:29:07.998Z" hostname="Mobile Safari" tests="5" failures="5" skipped="0" time="2.668" errors="0">
+<testcase name="WooCommerce Integration › should navigate to shop page" classname="functionality.spec.ts" time="0.502">
+<failure message="functionality.spec.ts:4:7 should navigate to shop page" type="FAILURE">
+<![CDATA[  [Mobile Safari] › functionality.spec.ts:4:7 › WooCommerce Integration › should navigate to shop page 
+
+    Error: page.goto: Could not connect to localhost: Connection refused
+    Call log:
+      - navigating to "http://localhost:8080/shop", waiting until "load"
+
+
+      3 | test.describe('WooCommerce Integration', () => {
+      4 |   test('should navigate to shop page', async ({ page }) => {
+    > 5 |     await page.goto('/shop');
+        |                ^
+      6 |     
+      7 |     // Check if shop page loads
+      8 |     await expect(page.locator('.woocommerce')).toBeVisible();
+        at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:5:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/functionality-WooCommerce--cd5a1-hould-navigate-to-shop-page-Mobile-Safari/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/functionality-WooCommerce--cd5a1-hould-navigate-to-shop-page-Mobile-Safari/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|functionality-WooCommerce--cd5a1-hould-navigate-to-shop-page-Mobile-Safari/test-failed-1.png]]
+
+[[ATTACHMENT|functionality-WooCommerce--cd5a1-hould-navigate-to-shop-page-Mobile-Safari/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="WooCommerce Integration › should display product grid" classname="functionality.spec.ts" time="0.561">
+<failure message="functionality.spec.ts:15:7 should display product grid" type="FAILURE">
+<![CDATA[  [Mobile Safari] › functionality.spec.ts:15:7 › WooCommerce Integration › should display product grid 
+
+    Error: page.goto: Could not connect to localhost: Connection refused
+    Call log:
+      - navigating to "http://localhost:8080/shop", waiting until "load"
+
+
+      14 |   
+      15 |   test('should display product grid', async ({ page }) => {
+    > 16 |     await page.goto('/shop');
+         |                ^
+      17 |     
+      18 |     // Wait for products to load
+      19 |     const products = page.locator('.woocommerce ul.products li');
+        at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:16:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/functionality-WooCommerce--6bc70-should-display-product-grid-Mobile-Safari/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/functionality-WooCommerce--6bc70-should-display-product-grid-Mobile-Safari/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|functionality-WooCommerce--6bc70-should-display-product-grid-Mobile-Safari/test-failed-1.png]]
+
+[[ATTACHMENT|functionality-WooCommerce--6bc70-should-display-product-grid-Mobile-Safari/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Custom Post Types › should access games archive" classname="functionality.spec.ts" time="0.609">
+<failure message="functionality.spec.ts:25:7 should access games archive" type="FAILURE">
+<![CDATA[  [Mobile Safari] › functionality.spec.ts:25:7 › Custom Post Types › should access games archive ───
+
+    Error: page.goto: Could not connect to localhost: Connection refused
+    Call log:
+      - navigating to "http://localhost:8080/games", waiting until "load"
+
+
+      24 | test.describe('Custom Post Types', () => {
+      25 |   test('should access games archive', async ({ page }) => {
+    > 26 |     await page.goto('/games');
+         |                ^
+      27 |     
+      28 |     // Should not return 404
+      29 |     await expect(page.locator('body')).not.toHaveClass(/error-404/);
+        at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:26:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/functionality-Custom-Post-Types-should-access-games-archive-Mobile-Safari/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/functionality-Custom-Post-Types-should-access-games-archive-Mobile-Safari/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|functionality-Custom-Post-Types-should-access-games-archive-Mobile-Safari/test-failed-1.png]]
+
+[[ATTACHMENT|functionality-Custom-Post-Types-should-access-games-archive-Mobile-Safari/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Custom Post Types › should access VR room page" classname="functionality.spec.ts" time="0.487">
+<failure message="functionality.spec.ts:36:7 should access VR room page" type="FAILURE">
+<![CDATA[  [Mobile Safari] › functionality.spec.ts:36:7 › Custom Post Types › should access VR room page ────
+
+    Error: page.goto: Could not connect to localhost: Connection refused
+    Call log:
+      - navigating to "http://localhost:8080/vr-room", waiting until "load"
+
+
+      35 |   
+      36 |   test('should access VR room page', async ({ page }) => {
+    > 37 |     await page.goto('/vr-room');
+         |                ^
+      38 |     
+      39 |     // Should not return 404
+      40 |     await expect(page.locator('body')).not.toHaveClass(/error-404/);
+        at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:37:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/functionality-Custom-Post-Types-should-access-VR-room-page-Mobile-Safari/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/functionality-Custom-Post-Types-should-access-VR-room-page-Mobile-Safari/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|functionality-Custom-Post-Types-should-access-VR-room-page-Mobile-Safari/test-failed-1.png]]
+
+[[ATTACHMENT|functionality-Custom-Post-Types-should-access-VR-room-page-Mobile-Safari/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Custom Post Types › should access YouTune Garage" classname="functionality.spec.ts" time="0.509">
+<failure message="functionality.spec.ts:47:7 should access YouTune Garage" type="FAILURE">
+<![CDATA[  [Mobile Safari] › functionality.spec.ts:47:7 › Custom Post Types › should access YouTune Garage ──
+
+    Error: page.goto: Could not connect to localhost: Connection refused
+    Call log:
+      - navigating to "http://localhost:8080/youtune-garage", waiting until "load"
+
+
+      46 |   
+      47 |   test('should access YouTune Garage', async ({ page }) => {
+    > 48 |     await page.goto('/youtune-garage');
+         |                ^
+      49 |     
+      50 |     // Should not return 404
+      51 |     await expect(page.locator('body')).not.toHaveClass(/error-404/);
+        at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:48:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/functionality-Custom-Post-Types-should-access-YouTune-Garage-Mobile-Safari/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/functionality-Custom-Post-Types-should-access-YouTune-Garage-Mobile-Safari/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|functionality-Custom-Post-Types-should-access-YouTune-Garage-Mobile-Safari/test-failed-1.png]]
+
+[[ATTACHMENT|functionality-Custom-Post-Types-should-access-YouTune-Garage-Mobile-Safari/video.webm]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="homepage.spec.ts" timestamp="2025-08-13T14:29:07.998Z" hostname="Mobile Safari" tests="6" failures="6" skipped="0" time="3.299" errors="0">
+<testcase name="YouTuneAI Homepage › should load homepage successfully" classname="homepage.spec.ts" time="0.564">
+<failure message="homepage.spec.ts:4:7 should load homepage successfully" type="FAILURE">
+<![CDATA[  [Mobile Safari] › homepage.spec.ts:4:7 › YouTuneAI Homepage › should load homepage successfully ──
+
+    Error: page.goto: Could not connect to localhost: Connection refused
+    Call log:
+      - navigating to "http://localhost:8080/", waiting until "load"
+
+
+      3 | test.describe('YouTuneAI Homepage', () => {
+      4 |   test('should load homepage successfully', async ({ page }) => {
+    > 5 |     await page.goto('/');
+        |                ^
+      6 |     
+      7 |     // Check if page loads
+      8 |     await expect(page).toHaveTitle(/YouTuneAI|YouTune/);
+        at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:5:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/homepage-YouTuneAI-Homepag-d7ea7--load-homepage-successfully-Mobile-Safari/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/homepage-YouTuneAI-Homepag-d7ea7--load-homepage-successfully-Mobile-Safari/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|homepage-YouTuneAI-Homepag-d7ea7--load-homepage-successfully-Mobile-Safari/test-failed-1.png]]
+
+[[ATTACHMENT|homepage-YouTuneAI-Homepag-d7ea7--load-homepage-successfully-Mobile-Safari/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="YouTuneAI Homepage › should have working navigation menu" classname="homepage.spec.ts" time="0.527">
+<failure message="homepage.spec.ts:19:7 should have working navigation menu" type="FAILURE">
+<![CDATA[  [Mobile Safari] › homepage.spec.ts:19:7 › YouTuneAI Homepage › should have working navigation menu 
+
+    Error: page.goto: Could not connect to localhost: Connection refused
+    Call log:
+      - navigating to "http://localhost:8080/", waiting until "load"
+
+
+      18 |   
+      19 |   test('should have working navigation menu', async ({ page }) => {
+    > 20 |     await page.goto('/');
+         |                ^
+      21 |     
+      22 |     // Test mobile menu toggle
+      23 |     await page.setViewportSize({ width: 375, height: 667 });
+        at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:20:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/homepage-YouTuneAI-Homepag-54a51-ave-working-navigation-menu-Mobile-Safari/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/homepage-YouTuneAI-Homepag-54a51-ave-working-navigation-menu-Mobile-Safari/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|homepage-YouTuneAI-Homepag-54a51-ave-working-navigation-menu-Mobile-Safari/test-failed-1.png]]
+
+[[ATTACHMENT|homepage-YouTuneAI-Homepag-54a51-ave-working-navigation-menu-Mobile-Safari/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Avatar Chat System › should display avatar chat bubble" classname="homepage.spec.ts" time="0.495">
+<failure message="homepage.spec.ts:36:7 should display avatar chat bubble" type="FAILURE">
+<![CDATA[  [Mobile Safari] › homepage.spec.ts:36:7 › Avatar Chat System › should display avatar chat bubble ─
+
+    Error: page.goto: Could not connect to localhost: Connection refused
+    Call log:
+      - navigating to "http://localhost:8080/", waiting until "load"
+
+
+      35 | test.describe('Avatar Chat System', () => {
+      36 |   test('should display avatar chat bubble', async ({ page }) => {
+    > 37 |     await page.goto('/');
+         |                ^
+      38 |     
+      39 |     // Wait for chat bubble to appear
+      40 |     const chatBubble = page.locator('#avatar-chat-bubble');
+        at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:37:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/homepage-Avatar-Chat-Syste-9a152--display-avatar-chat-bubble-Mobile-Safari/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/homepage-Avatar-Chat-Syste-9a152--display-avatar-chat-bubble-Mobile-Safari/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|homepage-Avatar-Chat-Syste-9a152--display-avatar-chat-bubble-Mobile-Safari/test-failed-1.png]]
+
+[[ATTACHMENT|homepage-Avatar-Chat-Syste-9a152--display-avatar-chat-bubble-Mobile-Safari/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Avatar Chat System › should open chat interface on click" classname="homepage.spec.ts" time="0.627">
+<failure message="homepage.spec.ts:44:7 should open chat interface on click" type="FAILURE">
+<![CDATA[  [Mobile Safari] › homepage.spec.ts:44:7 › Avatar Chat System › should open chat interface on click 
+
+    Error: page.goto: Could not connect to localhost: Connection refused
+    Call log:
+      - navigating to "http://localhost:8080/", waiting until "load"
+
+
+      43 |   
+      44 |   test('should open chat interface on click', async ({ page }) => {
+    > 45 |     await page.goto('/');
+         |                ^
+      46 |     
+      47 |     // Wait for and click chat bubble
+      48 |     const chatBubble = page.locator('#avatar-chat-bubble');
+        at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:45:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/homepage-Avatar-Chat-Syste-82080-pen-chat-interface-on-click-Mobile-Safari/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/homepage-Avatar-Chat-Syste-82080-pen-chat-interface-on-click-Mobile-Safari/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|homepage-Avatar-Chat-Syste-82080-pen-chat-interface-on-click-Mobile-Safari/test-failed-1.png]]
+
+[[ATTACHMENT|homepage-Avatar-Chat-Syste-82080-pen-chat-interface-on-click-Mobile-Safari/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Performance › should meet basic performance requirements" classname="homepage.spec.ts" time="0.544">
+<failure message="homepage.spec.ts:64:7 should meet basic performance requirements" type="FAILURE">
+<![CDATA[  [Mobile Safari] › homepage.spec.ts:64:7 › Performance › should meet basic performance requirements 
+
+    Error: page.goto: Could not connect to localhost: Connection refused
+    Call log:
+      - navigating to "http://localhost:8080/", waiting until "networkidle"
+
+
+      64 |   test('should meet basic performance requirements', async ({ page }) => {
+      65 |     // Start measuring performance
+    > 66 |     await page.goto('/', { waitUntil: 'networkidle' });
+         |                ^
+      67 |     
+      68 |     // Check if page loaded within reasonable time
+      69 |     const performanceEntries = await page.evaluate(() => {
+        at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:66:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/homepage-Performance-shoul-a6401-ic-performance-requirements-Mobile-Safari/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/homepage-Performance-shoul-a6401-ic-performance-requirements-Mobile-Safari/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|homepage-Performance-shoul-a6401-ic-performance-requirements-Mobile-Safari/test-failed-1.png]]
+
+[[ATTACHMENT|homepage-Performance-shoul-a6401-ic-performance-requirements-Mobile-Safari/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Performance › should not have console errors" classname="homepage.spec.ts" time="0.542">
+<failure message="homepage.spec.ts:80:7 should not have console errors" type="FAILURE">
+<![CDATA[  [Mobile Safari] › homepage.spec.ts:80:7 › Performance › should not have console errors ───────────
+
+    Error: page.goto: Could not connect to localhost: Connection refused
+    Call log:
+      - navigating to "http://localhost:8080/", waiting until "load"
+
+
+      87 |     });
+      88 |     
+    > 89 |     await page.goto('/');
+         |                ^
+      90 |     
+      91 |     // Wait for page to fully load
+      92 |     await page.waitForTimeout(3000);
+        at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:89:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/homepage-Performance-should-not-have-console-errors-Mobile-Safari/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/homepage-Performance-should-not-have-console-errors-Mobile-Safari/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|homepage-Performance-should-not-have-console-errors-Mobile-Safari/test-failed-1.png]]
+
+[[ATTACHMENT|homepage-Performance-should-not-have-console-errors-Mobile-Safari/video.webm]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

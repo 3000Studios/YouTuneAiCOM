@@ -21,7 +21,10 @@
   "author": "3000Studios",
   "license": "GPL-2.0-or-later",
   "devDependencies": {
-    "@playwright/test": "^1.45.0"
+    "@playwright/test": "^1.54.2",
+    "eslint": "^9.33.0",
+    "eslint-plugin-import": "^2.32.0",
+    "prettier": "^3.6.2"
   },
   "workspaces": [
     "wp-content/themes/youtuneai-theme"
