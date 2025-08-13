@@ -1,22 +1,22 @@
 {
-  "name": "youtuneai-wordpress-site",
+  "name": "youtuneai-modern-app",
   "version": "1.0.0",
-  "description": "YouTuneAI WordPress theme with 3D avatar, VR, games, and e-commerce",
+  "description": "YouTuneAI Modern JavaScript Application with 3D avatar, VR, games, and Admin Control Center",
   "scripts": {
-    "dev": "cd wp-content/themes/youtuneai-theme && npm run dev",
-    "build": "cd wp-content/themes/youtuneai-theme && npm run build",
-    "test": "cd wp-content/themes/youtuneai-theme && npm test",
-    "lint": "cd wp-content/themes/youtuneai-theme && npm run lint",
-    "install-theme": "cd wp-content/themes/youtuneai-theme && npm ci"
+    "dev": "npm run dev --workspace=admin",
+    "build": "npm run build --workspace=admin",
+    "test": "playwright test",
+    "lint": "npm run lint --workspace=admin",
+    "install-all": "npm ci && npm run install --workspace=admin"
   },
   "keywords": [
-    "wordpress",
-    "theme",
     "youtuneai",
     "3d",
     "vr",
     "games",
-    "woocommerce"
+    "admin",
+    "react",
+    "modern-js"
   ],
   "author": "3000Studios",
   "license": "GPL-2.0-or-later",
@@ -24,6 +24,6 @@
     "@playwright/test": "^1.45.0"
   },
   "workspaces": [
-    "wp-content/themes/youtuneai-theme"
+    "admin"
   ]
 }

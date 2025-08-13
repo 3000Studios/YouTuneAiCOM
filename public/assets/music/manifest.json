@@ -1,0 +1,127 @@
+{
+  "name": "Control Center Music Collection",
+  "version": "1.0.0",
+  "description": "Free background music tracks for YouTuneAI Admin Control Center",
+  "tracks": [
+    {
+      "id": "cyber-ambient-1",
+      "title": "Cyber Ambient Atmosphere",
+      "filename": "cyber-ambient-1.mp3",
+      "artist": "Unknown",
+      "duration": 240,
+      "genre": "Ambient",
+      "description": "Futuristic ambient soundscape",
+      "license": "CC0",
+      "volume": 0.6
+    },
+    {
+      "id": "tech-beats-1",
+      "title": "Technological Rhythms",
+      "filename": "tech-beats-1.mp3",
+      "artist": "Unknown",
+      "duration": 180,
+      "genre": "Electronic",
+      "description": "Upbeat tech-inspired electronic music",
+      "license": "CC0",
+      "volume": 0.5
+    },
+    {
+      "id": "space-meditation-1",
+      "title": "Space Meditation",
+      "filename": "space-meditation-1.mp3",
+      "artist": "Unknown",
+      "duration": 300,
+      "genre": "Ambient",
+      "description": "Deep space ambient meditation music",
+      "license": "CC0",
+      "volume": 0.4
+    },
+    {
+      "id": "synthwave-drive-1",
+      "title": "Synthwave Drive",
+      "filename": "synthwave-drive-1.mp3",
+      "artist": "Unknown",
+      "duration": 220,
+      "genre": "Synthwave",
+      "description": "Retro-futuristic synthwave track",
+      "license": "CC0",
+      "volume": 0.5
+    },
+    {
+      "id": "neural-pulses-1",
+      "title": "Neural Pulses",
+      "filename": "neural-pulses-1.mp3",
+      "artist": "Unknown",
+      "duration": 195,
+      "genre": "Experimental",
+      "description": "AI-inspired neural pulse rhythms",
+      "license": "CC0",
+      "volume": 0.6
+    },
+    {
+      "id": "quantum-harmony-1",
+      "title": "Quantum Harmony",
+      "filename": "quantum-harmony-1.mp3",
+      "artist": "Unknown",
+      "duration": 260,
+      "genre": "Ambient",
+      "description": "Peaceful quantum-inspired harmonics",
+      "license": "CC0",
+      "volume": 0.4
+    },
+    {
+      "id": "digital-dreams-1",
+      "title": "Digital Dreams",
+      "filename": "digital-dreams-1.mp3",
+      "artist": "Unknown",
+      "duration": 210,
+      "genre": "Electronic",
+      "description": "Dreamy digital soundscape",
+      "license": "CC0",
+      "volume": 0.5
+    },
+    {
+      "id": "matrix-flow-1",
+      "title": "Matrix Data Flow",
+      "filename": "matrix-flow-1.mp3",
+      "artist": "Unknown",
+      "duration": 185,
+      "genre": "Experimental",
+      "description": "Data flow visualization in audio",
+      "license": "CC0",
+      "volume": 0.6
+    },
+    {
+      "id": "cyber-lounge-1",
+      "title": "Cyber Lounge",
+      "filename": "cyber-lounge-1.mp3",
+      "artist": "Unknown",
+      "duration": 275,
+      "genre": "Chillout",
+      "description": "Relaxed cyberpunk lounge music",
+      "license": "CC0",
+      "volume": 0.4
+    },
+    {
+      "id": "ai-consciousness-1",
+      "title": "AI Consciousness",
+      "filename": "ai-consciousness-1.mp3",
+      "artist": "Unknown",
+      "duration": 230,
+      "genre": "Ambient",
+      "description": "Contemplative AI-themed ambient track",
+      "license": "CC0",
+      "volume": 0.5
+    }
+  ],
+  "rotation": {
+    "enabled": true,
+    "interval": 30000,
+    "shuffle": true,
+    "crossfade": true,
+    "crossfadeDuration": 2000
+  },
+  "defaultVolume": 0.5,
+  "fadeInDuration": 1000,
+  "fadeOutDuration": 1000
+}

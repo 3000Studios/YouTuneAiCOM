@@ -1,0 +1,92 @@
+{
+  "name": "Video Wallpapers Collection",
+  "version": "1.0.0",
+  "description": "Copyright-free video wallpapers for YouTuneAI Admin Control Center",
+  "videos": [
+    {
+      "id": "space-nebula-1",
+      "title": "Space Nebula Formation",
+      "filename": "space-nebula-1.mp4",
+      "duration": 120,
+      "description": "Beautiful space nebula formation in deep space",
+      "license": "CC0"
+    },
+    {
+      "id": "abstract-waves-1",
+      "title": "Abstract Digital Waves",
+      "filename": "abstract-waves-1.mp4",
+      "duration": 90,
+      "description": "Flowing digital waves with neon colors",
+      "license": "CC0"
+    },
+    {
+      "id": "particle-field-1",
+      "title": "Particle Field Animation",
+      "filename": "particle-field-1.mp4",
+      "duration": 110,
+      "description": "Dynamic particle field with energy effects",
+      "license": "CC0"
+    },
+    {
+      "id": "geometric-shapes-1",
+      "title": "Geometric Shapes Motion",
+      "filename": "geometric-shapes-1.mp4",
+      "duration": 95,
+      "description": "Animated geometric shapes with tech aesthetic",
+      "license": "CC0"
+    },
+    {
+      "id": "neural-network-1",
+      "title": "Neural Network Visualization",
+      "filename": "neural-network-1.mp4",
+      "duration": 100,
+      "description": "AI neural network visualization animation",
+      "license": "CC0"
+    },
+    {
+      "id": "cyber-grid-1",
+      "title": "Cyber Grid Matrix",
+      "filename": "cyber-grid-1.mp4",
+      "duration": 130,
+      "description": "Cyberpunk grid matrix with glitch effects",
+      "license": "CC0"
+    },
+    {
+      "id": "plasma-energy-1",
+      "title": "Plasma Energy Flow",
+      "filename": "plasma-energy-1.mp4",
+      "duration": 85,
+      "description": "Flowing plasma energy with electric effects",
+      "license": "CC0"
+    },
+    {
+      "id": "hologram-data-1",
+      "title": "Holographic Data Stream",
+      "filename": "hologram-data-1.mp4",
+      "duration": 115,
+      "description": "Futuristic holographic data visualization",
+      "license": "CC0"
+    },
+    {
+      "id": "quantum-field-1",
+      "title": "Quantum Field Fluctuations",
+      "filename": "quantum-field-1.mp4",
+      "duration": 105,
+      "description": "Quantum field visualization with particle effects",
+      "license": "CC0"
+    },
+    {
+      "id": "digital-rain-1",
+      "title": "Digital Rain Matrix",
+      "filename": "digital-rain-1.mp4",
+      "duration": 140,
+      "description": "Matrix-style digital rain effect",
+      "license": "CC0"
+    }
+  ],
+  "rotation": {
+    "enabled": true,
+    "interval": 60000,
+    "shuffle": true
+  }
+}

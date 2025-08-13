@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom admin styles */
+@layer base {
+  body {
+    @apply bg-black text-white overflow-hidden;
+    font-family: 'Courier New', monospace;
+  }
+}
+
+@layer components {
+  .neon-border {
+    @apply border border-neon-blue shadow-lg;
+    box-shadow: 0 0 10px theme('colors.neon.blue');
+  }
+  
+  .neon-text {
+    @apply text-neon-blue;
+    text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
+  }
+  
+  .glass-panel {
+    @apply bg-black/50 backdrop-blur-md border border-white/20 rounded-lg;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+  
+  .cyber-button {
+    @apply px-6 py-3 bg-gradient-to-r from-neon-blue to-neon-purple text-black font-bold;
+    @apply rounded-md transform transition-all duration-200 hover:scale-105 active:scale-95;
+    @apply shadow-lg hover:shadow-neon-blue/50;
+    background: linear-gradient(45deg, #00ffff, #ff00ff);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  }
+  
+  .explosion-effect {
+    animation: explosion 0.5s ease-out;
+  }
+}
+
+@layer utilities {
+  .text-shadow-neon {
+    text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
+  }
+  
+  .matrix-bg {
+    background-image: 
+      radial-gradient(circle at 20% 50%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(255, 0, 255, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 40% 80%, rgba(0, 255, 0, 0.1) 0%, transparent 50%);
+  }
+}
+
+@keyframes explosion {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
