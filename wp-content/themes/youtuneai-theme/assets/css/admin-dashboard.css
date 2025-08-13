@@ -590,6 +590,44 @@
   animation: ytai-boss-gradient 2s ease infinite;
 }
 
+/* Theme-specific styling */
+.ytai-theme-boss-surge {
+  --ytai-primary: #00d4ff;
+  --ytai-secondary: #0099cc;
+  --ytai-accent: #ff6b00;
+  --ytai-bg-gradient: linear-gradient(135deg, #001122 0%, #003366 100%);
+}
+
+.ytai-theme-hyper-glow {
+  --ytai-primary: #00ff88;
+  --ytai-secondary: #00cc66;
+  --ytai-accent: #ffff00;
+  --ytai-bg-gradient: linear-gradient(135deg, #001100 0%, #003300 100%);
+}
+
+.ytai-theme-turbo-circuit {
+  --ytai-primary: #ff4400;
+  --ytai-secondary: #cc3300;
+  --ytai-accent: #ffaa00;
+  --ytai-bg-gradient: linear-gradient(135deg, #220000 0%, #440000 100%);
+}
+
+.ytai-theme-dark-mode {
+  --ytai-primary: #6366f1;
+  --ytai-secondary: #4f46e5;
+  --ytai-accent: #10b981;
+  --ytai-bg-gradient: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+}
+
+.ytai-theme-light-mode {
+  --ytai-primary: #3b82f6;
+  --ytai-secondary: #2563eb;
+  --ytai-accent: #059669;
+  --ytai-bg-gradient: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+  --ytai-text-primary: #1f2937;
+  --ytai-text-secondary: #6b7280;
+}
+
 .ytai-boss-mode-notification {
   position: fixed;
   top: 50%;
