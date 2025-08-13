@@ -173,7 +173,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:07.999Z",
+                      "startTime": "2025-08-13T14:53:52.789Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -217,7 +217,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:08.152Z",
+                      "startTime": "2025-08-13T14:53:52.796Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -261,7 +261,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:08.156Z",
+                      "startTime": "2025-08-13T14:53:52.800Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -305,7 +305,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:21.175Z",
+                      "startTime": "2025-08-13T14:54:04.847Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -349,7 +349,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:21.181Z",
+                      "startTime": "2025-08-13T14:54:04.856Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -393,7 +393,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:21.185Z",
+                      "startTime": "2025-08-13T14:54:04.862Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -437,7 +437,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:59.631Z",
+                      "startTime": "2025-08-13T14:54:41.904Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -481,7 +481,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:59.634Z",
+                      "startTime": "2025-08-13T14:54:41.918Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -525,7 +525,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:59.638Z",
+                      "startTime": "2025-08-13T14:54:41.925Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -569,7 +569,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:18.722Z",
+                      "startTime": "2025-08-13T14:54:57.832Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -613,7 +613,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:18.726Z",
+                      "startTime": "2025-08-13T14:54:57.838Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -657,7 +657,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:18.729Z",
+                      "startTime": "2025-08-13T14:54:57.840Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -701,7 +701,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:30.491Z",
+                      "startTime": "2025-08-13T14:55:09.700Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -745,7 +745,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:30.498Z",
+                      "startTime": "2025-08-13T14:55:09.704Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -789,7 +789,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:30.503Z",
+                      "startTime": "2025-08-13T14:55:09.707Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -841,7 +841,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:08.161Z",
+                      "startTime": "2025-08-13T14:53:52.802Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -885,7 +885,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:08.165Z",
+                      "startTime": "2025-08-13T14:53:52.806Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -929,7 +929,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:08.168Z",
+                      "startTime": "2025-08-13T14:53:52.810Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -973,7 +973,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:08.172Z",
+                      "startTime": "2025-08-13T14:53:52.813Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1017,7 +1017,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:21.189Z",
+                      "startTime": "2025-08-13T14:54:04.869Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1061,7 +1061,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:21.193Z",
+                      "startTime": "2025-08-13T14:54:04.874Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1105,7 +1105,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:21.195Z",
+                      "startTime": "2025-08-13T14:54:04.883Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1149,7 +1149,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:21.197Z",
+                      "startTime": "2025-08-13T14:54:04.886Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1193,7 +1193,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:59.642Z",
+                      "startTime": "2025-08-13T14:54:41.929Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1237,7 +1237,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:59.645Z",
+                      "startTime": "2025-08-13T14:54:41.939Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1281,7 +1281,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:59.648Z",
+                      "startTime": "2025-08-13T14:54:41.943Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1325,7 +1325,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:59.651Z",
+                      "startTime": "2025-08-13T14:54:41.946Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1369,7 +1369,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:18.732Z",
+                      "startTime": "2025-08-13T14:54:57.844Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1413,7 +1413,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:18.735Z",
+                      "startTime": "2025-08-13T14:54:57.848Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1457,7 +1457,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:18.738Z",
+                      "startTime": "2025-08-13T14:54:57.850Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1501,7 +1501,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:18.741Z",
+                      "startTime": "2025-08-13T14:54:57.856Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1545,7 +1545,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:30.506Z",
+                      "startTime": "2025-08-13T14:55:09.710Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1589,7 +1589,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:30.510Z",
+                      "startTime": "2025-08-13T14:55:09.713Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1633,7 +1633,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:30.513Z",
+                      "startTime": "2025-08-13T14:55:09.717Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1677,7 +1677,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:30.516Z",
+                      "startTime": "2025-08-13T14:55:09.720Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1723,7 +1723,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 759,
+                      "duration": 319,
                       "error": {
                         "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/shop\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/shop\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/shop\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/shop\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:5:16",
@@ -1747,7 +1747,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:08.782Z",
+                      "startTime": "2025-08-13T14:53:53.721Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1792,7 +1792,7 @@
                       "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 359,
+                      "duration": 308,
                       "error": {
                         "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/shop\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/shop\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/shop\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/shop\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:16:16",
@@ -1816,7 +1816,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:11.044Z",
+                      "startTime": "2025-08-13T14:53:54.863Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1861,7 +1861,7 @@
                       "workerIndex": 11,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 2184,
+                      "duration": 1661,
                       "error": {
                         "message": "Error: page.goto: NS_ERROR_CONNECTION_REFUSED\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/shop\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: NS_ERROR_CONNECTION_REFUSED\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/shop\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:5:16",
@@ -1885,7 +1885,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:21.802Z",
+                      "startTime": "2025-08-13T14:54:05.540Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1935,7 +1935,7 @@
                       "workerIndex": 12,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 1854,
+                      "duration": 1704,
                       "error": {
                         "message": "Error: page.goto: NS_ERROR_CONNECTION_REFUSED\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/shop\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: NS_ERROR_CONNECTION_REFUSED\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/shop\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:16:16",
@@ -1959,7 +1959,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:26.837Z",
+                      "startTime": "2025-08-13T14:54:08.961Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -2009,7 +2009,7 @@
                       "workerIndex": 22,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 1568,
+                      "duration": 580,
                       "error": {
                         "message": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/shop\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/shop\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:5:16",
@@ -2033,7 +2033,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:00.267Z",
+                      "startTime": "2025-08-13T14:54:42.646Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -2078,7 +2078,7 @@
                       "workerIndex": 23,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 592,
+                      "duration": 655,
                       "error": {
                         "message": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/shop\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/shop\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:16:16",
@@ -2102,7 +2102,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:05.416Z",
+                      "startTime": "2025-08-13T14:54:44.061Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -2147,7 +2147,7 @@
                       "workerIndex": 33,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 301,
+                      "duration": 299,
                       "error": {
                         "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/shop\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/shop\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/shop\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/shop\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:5:16",
@@ -2171,7 +2171,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:19.399Z",
+                      "startTime": "2025-08-13T14:54:58.502Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -2216,7 +2216,7 @@
                       "workerIndex": 34,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 275,
+                      "duration": 276,
                       "error": {
                         "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/shop\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/shop\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/shop\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/shop\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:16:16",
@@ -2240,7 +2240,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:20.485Z",
+                      "startTime": "2025-08-13T14:54:59.569Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -2285,7 +2285,7 @@
                       "workerIndex": 44,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 502,
+                      "duration": 499,
                       "error": {
                         "message": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/shop\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/shop\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:5:16",
@@ -2309,7 +2309,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:31.157Z",
+                      "startTime": "2025-08-13T14:55:10.367Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -2354,7 +2354,7 @@
                       "workerIndex": 45,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 561,
+                      "duration": 532,
                       "error": {
                         "message": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/shop\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/shop\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:16:16",
@@ -2378,7 +2378,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:32.629Z",
+                      "startTime": "2025-08-13T14:55:11.622Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -2431,7 +2431,7 @@
                       "workerIndex": 2,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 338,
+                      "duration": 265,
                       "error": {
                         "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/games\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/games\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/games\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/games\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:26:16",
@@ -2455,7 +2455,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:12.197Z",
+                      "startTime": "2025-08-13T14:53:56.009Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -2500,7 +2500,7 @@
                       "workerIndex": 3,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 277,
+                      "duration": 271,
                       "error": {
                         "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/vr-room\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/vr-room\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/vr-room\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/vr-room\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:37:16",
@@ -2524,7 +2524,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:13.291Z",
+                      "startTime": "2025-08-13T14:53:57.063Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -2569,7 +2569,7 @@
                       "workerIndex": 4,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 258,
+                      "duration": 269,
                       "error": {
                         "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/youtune-garage\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/youtune-garage\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/youtune-garage\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/youtune-garage\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:48:16",
@@ -2593,7 +2593,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:14.344Z",
+                      "startTime": "2025-08-13T14:53:58.149Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -2638,7 +2638,7 @@
                       "workerIndex": 13,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 1633,
+                      "duration": 1748,
                       "error": {
                         "message": "Error: page.goto: NS_ERROR_CONNECTION_REFUSED\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/games\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: NS_ERROR_CONNECTION_REFUSED\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/games\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:26:16",
@@ -2662,7 +2662,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:30.386Z",
+                      "startTime": "2025-08-13T14:54:12.294Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -2712,7 +2712,7 @@
                       "workerIndex": 14,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 1631,
+                      "duration": 1760,
                       "error": {
                         "message": "Error: page.goto: NS_ERROR_CONNECTION_REFUSED\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/vr-room\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: NS_ERROR_CONNECTION_REFUSED\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/vr-room\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:37:16",
@@ -2736,7 +2736,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:33.703Z",
+                      "startTime": "2025-08-13T14:54:15.653Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -2786,7 +2786,7 @@
                       "workerIndex": 15,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 1766,
+                      "duration": 1742,
                       "error": {
                         "message": "Error: page.goto: NS_ERROR_CONNECTION_REFUSED\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/youtune-garage\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: NS_ERROR_CONNECTION_REFUSED\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/youtune-garage\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:48:16",
@@ -2810,7 +2810,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:36.914Z",
+                      "startTime": "2025-08-13T14:54:19.085Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -2860,7 +2860,7 @@
                       "workerIndex": 24,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 564,
+                      "duration": 581,
                       "error": {
                         "message": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/games\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/games\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:26:16",
@@ -2884,7 +2884,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:06.810Z",
+                      "startTime": "2025-08-13T14:54:45.518Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -2929,7 +2929,7 @@
                       "workerIndex": 25,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 552,
+                      "duration": 602,
                       "error": {
                         "message": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/vr-room\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/vr-room\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:37:16",
@@ -2953,7 +2953,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:08.191Z",
+                      "startTime": "2025-08-13T14:54:47.065Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -2998,7 +2998,7 @@
                       "workerIndex": 26,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 571,
+                      "duration": 627,
                       "error": {
                         "message": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/youtune-garage\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/youtune-garage\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:48:16",
@@ -3022,7 +3022,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:09.507Z",
+                      "startTime": "2025-08-13T14:54:48.477Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -3067,7 +3067,7 @@
                       "workerIndex": 35,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 302,
+                      "duration": 295,
                       "error": {
                         "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/games\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/games\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/games\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/games\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:26:16",
@@ -3091,7 +3091,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:21.540Z",
+                      "startTime": "2025-08-13T14:55:00.622Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -3136,7 +3136,7 @@
                       "workerIndex": 36,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 322,
+                      "duration": 298,
                       "error": {
                         "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/vr-room\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/vr-room\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/vr-room\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/vr-room\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:37:16",
@@ -3160,7 +3160,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:22.661Z",
+                      "startTime": "2025-08-13T14:55:01.703Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -3205,7 +3205,7 @@
                       "workerIndex": 37,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 311,
+                      "duration": 292,
                       "error": {
                         "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/youtune-garage\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/youtune-garage\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/youtune-garage\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/youtune-garage\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:48:16",
@@ -3229,7 +3229,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:23.759Z",
+                      "startTime": "2025-08-13T14:55:02.749Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -3274,7 +3274,7 @@
                       "workerIndex": 46,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 609,
+                      "duration": 486,
                       "error": {
                         "message": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/games\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/games\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:26:16",
@@ -3298,7 +3298,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:33.929Z",
+                      "startTime": "2025-08-13T14:55:12.945Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -3343,7 +3343,7 @@
                       "workerIndex": 47,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 487,
+                      "duration": 584,
                       "error": {
                         "message": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/vr-room\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/vr-room\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:37:16",
@@ -3367,7 +3367,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:35.341Z",
+                      "startTime": "2025-08-13T14:55:14.244Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -3412,7 +3412,7 @@
                       "workerIndex": 48,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 509,
+                      "duration": 543,
                       "error": {
                         "message": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/youtune-garage\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/youtune-garage\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/functionality.spec.ts:48:16",
@@ -3436,7 +3436,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:36.598Z",
+                      "startTime": "2025-08-13T14:55:15.637Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -3498,7 +3498,7 @@
                       "workerIndex": 5,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 252,
+                      "duration": 238,
                       "error": {
                         "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:5:16",
@@ -3522,7 +3522,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:15.355Z",
+                      "startTime": "2025-08-13T14:53:59.175Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -3567,7 +3567,7 @@
                       "workerIndex": 6,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 339,
+                      "duration": 298,
                       "error": {
                         "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:20:16",
@@ -3591,7 +3591,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:16.427Z",
+                      "startTime": "2025-08-13T14:54:00.176Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -3636,7 +3636,7 @@
                       "workerIndex": 16,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 1676,
+                      "duration": 1600,
                       "error": {
                         "message": "Error: page.goto: NS_ERROR_CONNECTION_REFUSED\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: NS_ERROR_CONNECTION_REFUSED\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:5:16",
@@ -3660,7 +3660,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:40.261Z",
+                      "startTime": "2025-08-13T14:54:22.534Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -3710,7 +3710,7 @@
                       "workerIndex": 17,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 1591,
+                      "duration": 1632,
                       "error": {
                         "message": "Error: page.goto: NS_ERROR_CONNECTION_REFUSED\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: NS_ERROR_CONNECTION_REFUSED\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:20:16",
@@ -3734,7 +3734,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:43.652Z",
+                      "startTime": "2025-08-13T14:54:25.834Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -3784,7 +3784,7 @@
                       "workerIndex": 27,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 643,
+                      "duration": 590,
                       "error": {
                         "message": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:5:16",
@@ -3808,7 +3808,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:10.832Z",
+                      "startTime": "2025-08-13T14:54:49.862Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -3853,7 +3853,7 @@
                       "workerIndex": 28,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 633,
+                      "duration": 577,
                       "error": {
                         "message": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:20:16",
@@ -3877,7 +3877,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:12.340Z",
+                      "startTime": "2025-08-13T14:54:51.249Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -3922,7 +3922,7 @@
                       "workerIndex": 38,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 280,
+                      "duration": 328,
                       "error": {
                         "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:5:16",
@@ -3946,7 +3946,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:24.839Z",
+                      "startTime": "2025-08-13T14:55:03.851Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -3991,7 +3991,7 @@
                       "workerIndex": 39,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 269,
+                      "duration": 300,
                       "error": {
                         "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:20:16",
@@ -4015,13 +4015,18 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:25.860Z",
+                      "startTime": "2025-08-13T14:55:04.962Z",
                       "annotations": [],
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
                           "path": "/workspaces/YouTuneAi.COM/test-results/homepage-YouTuneAI-Homepag-54a51-ave-working-navigation-menu-Mobile-Chrome/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/workspaces/YouTuneAi.COM/test-results/homepage-YouTuneAI-Homepag-54a51-ave-working-navigation-menu-Mobile-Chrome/video.webm"
                         }
                       ],
                       "errorLocation": {
@@ -4055,7 +4060,7 @@
                       "workerIndex": 49,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 564,
+                      "duration": 575,
                       "error": {
                         "message": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:5:16",
@@ -4079,7 +4084,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:37.865Z",
+                      "startTime": "2025-08-13T14:55:16.997Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -4124,7 +4129,7 @@
                       "workerIndex": 50,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 527,
+                      "duration": 528,
                       "error": {
                         "message": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:20:16",
@@ -4148,7 +4153,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:39.286Z",
+                      "startTime": "2025-08-13T14:55:18.429Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -4201,7 +4206,7 @@
                       "workerIndex": 7,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 306,
+                      "duration": 269,
                       "error": {
                         "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:37:16",
@@ -4225,7 +4230,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:17.541Z",
+                      "startTime": "2025-08-13T14:54:01.263Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -4270,7 +4275,7 @@
                       "workerIndex": 8,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 276,
+                      "duration": 279,
                       "error": {
                         "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:45:16",
@@ -4294,7 +4299,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:18.622Z",
+                      "startTime": "2025-08-13T14:54:02.328Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -4339,7 +4344,7 @@
                       "workerIndex": 18,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 1741,
+                      "duration": 1609,
                       "error": {
                         "message": "Error: page.goto: NS_ERROR_CONNECTION_REFUSED\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: NS_ERROR_CONNECTION_REFUSED\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:37:16",
@@ -4363,7 +4368,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:46.858Z",
+                      "startTime": "2025-08-13T14:54:29.068Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -4413,7 +4418,7 @@
                       "workerIndex": 19,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 1666,
+                      "duration": 1585,
                       "error": {
                         "message": "Error: page.goto: NS_ERROR_CONNECTION_REFUSED\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: NS_ERROR_CONNECTION_REFUSED\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:45:16",
@@ -4437,7 +4442,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:50.281Z",
+                      "startTime": "2025-08-13T14:54:32.314Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -4487,7 +4492,7 @@
                       "workerIndex": 29,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 616,
+                      "duration": 660,
                       "error": {
                         "message": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:37:16",
@@ -4511,7 +4516,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:13.879Z",
+                      "startTime": "2025-08-13T14:54:52.633Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -4556,7 +4561,7 @@
                       "workerIndex": 30,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 547,
+                      "duration": 592,
                       "error": {
                         "message": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:45:16",
@@ -4580,7 +4585,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:15.278Z",
+                      "startTime": "2025-08-13T14:54:54.096Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -4625,7 +4630,7 @@
                       "workerIndex": 40,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 285,
+                      "duration": 273,
                       "error": {
                         "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:37:16",
@@ -4649,7 +4654,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:26.883Z",
+                      "startTime": "2025-08-13T14:55:06.008Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -4694,7 +4699,7 @@
                       "workerIndex": 41,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 297,
+                      "duration": 407,
                       "error": {
                         "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:45:16",
@@ -4718,7 +4723,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:27.892Z",
+                      "startTime": "2025-08-13T14:55:07.053Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -4763,7 +4768,7 @@
                       "workerIndex": 51,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 495,
+                      "duration": 541,
                       "error": {
                         "message": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:37:16",
@@ -4787,7 +4792,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:40.630Z",
+                      "startTime": "2025-08-13T14:55:19.780Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -4832,7 +4837,7 @@
                       "workerIndex": 52,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 627,
+                      "duration": 501,
                       "error": {
                         "message": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:45:16",
@@ -4856,7 +4861,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:41.892Z",
+                      "startTime": "2025-08-13T14:55:21.142Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -4909,7 +4914,7 @@
                       "workerIndex": 9,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 373,
+                      "duration": 242,
                       "error": {
                         "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"networkidle\"\u001b[22m\n",
                         "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"networkidle\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:66:16",
@@ -4933,7 +4938,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:19.660Z",
+                      "startTime": "2025-08-13T14:54:03.419Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -4978,7 +4983,7 @@
                       "workerIndex": 10,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 278,
+                      "duration": 271,
                       "error": {
                         "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:89:16",
@@ -5002,7 +5007,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:20.775Z",
+                      "startTime": "2025-08-13T14:54:04.416Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -5047,7 +5052,7 @@
                       "workerIndex": 20,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 1590,
+                      "duration": 2087,
                       "error": {
                         "message": "Error: page.goto: NS_ERROR_CONNECTION_REFUSED\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"networkidle\"\u001b[22m\n",
                         "stack": "Error: page.goto: NS_ERROR_CONNECTION_REFUSED\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"networkidle\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:66:16",
@@ -5071,7 +5076,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:53.672Z",
+                      "startTime": "2025-08-13T14:54:35.499Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -5121,7 +5126,7 @@
                       "workerIndex": 21,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 1712,
+                      "duration": 1737,
                       "error": {
                         "message": "Error: page.goto: NS_ERROR_CONNECTION_REFUSED\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: NS_ERROR_CONNECTION_REFUSED\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:89:16",
@@ -5145,7 +5150,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:29:56.928Z",
+                      "startTime": "2025-08-13T14:54:39.176Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -5195,7 +5200,7 @@
                       "workerIndex": 31,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 544,
+                      "duration": 577,
                       "error": {
                         "message": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"networkidle\"\u001b[22m\n",
                         "stack": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"networkidle\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:66:16",
@@ -5219,7 +5224,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:16.598Z",
+                      "startTime": "2025-08-13T14:54:55.504Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -5264,7 +5269,7 @@
                       "workerIndex": 32,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 651,
+                      "duration": 776,
                       "error": {
                         "message": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:89:16",
@@ -5288,7 +5293,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:17.943Z",
+                      "startTime": "2025-08-13T14:54:56.919Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -5333,7 +5338,7 @@
                       "workerIndex": 42,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 320,
+                      "duration": 275,
                       "error": {
                         "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"networkidle\"\u001b[22m\n",
                         "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"networkidle\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:66:16",
@@ -5357,7 +5362,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:29.015Z",
+                      "startTime": "2025-08-13T14:55:08.241Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -5402,7 +5407,7 @@
                       "workerIndex": 43,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 280,
+                      "duration": 296,
                       "error": {
                         "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:89:16",
@@ -5426,7 +5431,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:30.099Z",
+                      "startTime": "2025-08-13T14:55:09.268Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -5471,7 +5476,7 @@
                       "workerIndex": 53,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 544,
+                      "duration": 514,
                       "error": {
                         "message": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"networkidle\"\u001b[22m\n",
                         "stack": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"networkidle\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:66:16",
@@ -5495,7 +5500,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:43.265Z",
+                      "startTime": "2025-08-13T14:55:22.441Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -5540,7 +5545,7 @@
                       "workerIndex": 54,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 542,
+                      "duration": 492,
                       "error": {
                         "message": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n",
                         "stack": "Error: page.goto: Could not connect to localhost: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/\", waiting until \"load\"\u001b[22m\n\n    at /workspaces/YouTuneAi.COM/tests/playwright/homepage.spec.ts:89:16",
@@ -5564,7 +5569,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-13T14:30:44.635Z",
+                      "startTime": "2025-08-13T14:55:23.722Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -5600,8 +5605,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-08-13T14:29:07.859Z",
-    "duration": 97488.518,
+    "startTime": "2025-08-13T14:53:52.727Z",
+    "duration": 91644.622,
     "expected": 0,
     "skipped": 35,
     "unexpected": 55,

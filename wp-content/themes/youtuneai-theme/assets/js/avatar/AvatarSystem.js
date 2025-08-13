@@ -95,7 +95,7 @@ export class AvatarSystem {
         // Find idle animation or use first animation
         const idleAnimation = gltf.animations.find(anim =>
           anim.name.toLowerCase().includes('idle') ||
-                    anim.name.toLowerCase().includes('breathing'),
+          anim.name.toLowerCase().includes('breathing'),
         ) || gltf.animations[0];
 
         if (idleAnimation) {

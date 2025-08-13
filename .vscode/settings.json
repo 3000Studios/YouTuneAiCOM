@@ -1,8 +1,10 @@
 {
   "editor.formatOnSave": true,
-  "editor.codeActionsOnSave": {
-  },
-  "eslint.validate": ["javascript", "typescript"],
+  "editor.codeActionsOnSave": {},
+  "eslint.validate": [
+    "javascript",
+    "typescript"
+  ],
   "prettier.requireConfig": true,
   "files.exclude": {
     "**/.DS_Store": true,

@@ -13,10 +13,18 @@
     "ecmaVersion": 2021,
     "sourceType": "module"
   },
-  "plugins": ["import"],
+  "plugins": [
+    "import"
+  ],
   "rules": {
     "no-unused-vars": "warn",
     "no-console": "off"
   },
-  "ignorePatterns": ["node_modules/", "dist/", "build/", "test-results/", "*.min.js"]
+  "ignorePatterns": [
+    "node_modules/",
+    "dist/",
+    "build/",
+    "test-results/",
+    "*.min.js"
+  ]
 }
