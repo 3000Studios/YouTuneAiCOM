@@ -3,10 +3,10 @@
  */
 
 export class GarageConfigurator {
-    constructor(container, options = {}) {
-        this.container = container;
-        this.options = options;
-        
-        console.log('🏗️ Garage configurator initialized');
-    }
+  constructor(container, options = {}) {
+    this.container = container;
+    this.options = options;
+
+    console.log('🏗️ Garage configurator initialized');
+  }
 }

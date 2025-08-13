@@ -3,5 +3,5 @@
  */
 
 export function initializeVRRoom() {
-    console.log('🏠 VR Room initialized');
+  console.log('🏠 VR Room initialized');
 }

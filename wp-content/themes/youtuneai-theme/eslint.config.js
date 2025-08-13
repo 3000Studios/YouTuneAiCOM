@@ -3,6 +3,7 @@ import js from '@eslint/js';
 export default [
   js.configs.recommended,
   {
+    ignores: ['assets/**/*.*.js', 'assets/.vite/**', 'node_modules/**'],
     languageOptions: {
       ecmaVersion: 2024,
       sourceType: 'module',
@@ -20,6 +21,7 @@ export default [
         setInterval: 'readonly',
         clearTimeout: 'readonly',
         clearInterval: 'readonly',
+        sessionStorage: 'readonly',
         youtuneaiData: 'readonly',
         ajaxurl: 'readonly',
         THREE: 'readonly',
