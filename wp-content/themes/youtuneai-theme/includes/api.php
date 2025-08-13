@@ -105,6 +105,73 @@ function youtuneai_register_api_routes() {
         ],
     ]);
 
+    // Authentication endpoint
+    register_rest_route('yta/v1', '/auth/verify', [
+        'methods' => 'POST',
+        'callback' => 'youtuneai_api_auth_verify',
+        'permission_callback' => '__return_true',
+        'args' => [
+            'password' => [
+                'required' => true,
+                'type' => 'string',
+                'sanitize_callback' => 'sanitize_text_field',
+            ],
+        ],
+    ]);
+
+    // Live stream management endpoints
+    register_rest_route('yta/v1', '/stream/create', [
+        'methods' => 'POST',
+        'callback' => 'youtuneai_api_stream_create',
+        'permission_callback' => 'youtuneai_verify_auth_token',
+        'args' => [
+            'title' => [
+                'required' => true,
+                'type' => 'string',
+                'sanitize_callback' => 'sanitize_text_field',
+            ],
+            'description' => [
+                'required' => false,
+                'type' => 'string',
+                'sanitize_callback' => 'sanitize_textarea_field',
+            ],
+            'type' => [
+                'required' => false,
+                'type' => 'string',
+                'default' => 'webrtc',
+            ],
+        ],
+    ]);
+
+    register_rest_route('yta/v1', '/stream/end', [
+        'methods' => 'POST',
+        'callback' => 'youtuneai_api_stream_end',
+        'permission_callback' => 'youtuneai_verify_auth_token',
+        'args' => [
+            'stream_id' => [
+                'required' => true,
+                'type' => 'integer',
+            ],
+        ],
+    ]);
+
+    register_rest_route('yta/v1', '/stream/logs', [
+        'methods' => 'GET',
+        'callback' => 'youtuneai_api_stream_logs',
+        'permission_callback' => 'youtuneai_verify_auth_token',
+        'args' => [
+            'stream_id' => [
+                'required' => false,
+                'type' => 'integer',
+            ],
+            'limit' => [
+                'required' => false,
+                'type' => 'integer',
+                'default' => 50,
+            ],
+        ],
+    ]);
+
     // Admin actions (protected)
     register_rest_route('yta/v1', '/admin/(?P<action>[a-zA-Z0-9_-]+)', [
         'methods' => 'POST',
@@ -405,6 +472,196 @@ function youtuneai_api_vr_room(WP_REST_Request $request) {
         'success' => true,
         'room' => $config,
     ], 200);
+}
+
+/**
+ * Verify authentication token
+ */
+function youtuneai_verify_auth_token() {
+    $auth_header = $_SERVER['HTTP_AUTHORIZATION'] ?? '';
+    
+    if (!$auth_header || !preg_match('/Bearer\s+(.*)$/i', $auth_header, $matches)) {
+        return false;
+    }
+    
+    $token = $matches[1];
+    $stored_token = get_transient('youtuneai_auth_token_' . wp_hash($token));
+    
+    return $stored_token !== false;
+}
+
+/**
+ * Authentication verification endpoint
+ */
+function youtuneai_api_auth_verify(WP_REST_Request $request) {
+    $password = $request->get_param('password');
+    
+    // Get admin password from theme options
+    $options = get_option('youtuneai_options', []);
+    $admin_password = $options['admin_password'] ?? 'admin123'; // Default password
+    
+    if ($password === $admin_password) {
+        // Generate auth token
+        $token = wp_generate_uuid4();
+        $token_hash = wp_hash($token);
+        
+        // Store token for 24 hours
+        set_transient('youtuneai_auth_token_' . $token_hash, time(), 24 * HOUR_IN_SECONDS);
+        
+        // Log successful authentication
+        do_action('youtuneai_auth_success', $password);
+        
+        return new WP_REST_Response([
+            'success' => true,
+            'token' => $token,
+            'message' => 'Authentication successful',
+        ], 200);
+    } else {
+        // Log failed attempt
+        do_action('youtuneai_auth_failed', $password);
+        
+        return new WP_REST_Response([
+            'success' => false,
+            'message' => 'Invalid password',
+        ], 401);
+    }
+}
+
+/**
+ * Create new live stream session
+ */
+function youtuneai_api_stream_create(WP_REST_Request $request) {
+    $title = $request->get_param('title');
+    $description = $request->get_param('description');
+    $type = $request->get_param('type');
+    
+    // Create stream post
+    $stream_id = wp_insert_post([
+        'post_title' => $title,
+        'post_content' => $description,
+        'post_status' => 'publish',
+        'post_type' => 'stream',
+        'meta_input' => [
+            '_stream_type' => $type,
+            '_stream_start_time' => current_time('mysql'),
+            '_stream_status' => 'live',
+            '_stream_viewer_count' => 0,
+        ],
+    ]);
+    
+    if (is_wp_error($stream_id)) {
+        return new WP_REST_Response([
+            'success' => false,
+            'message' => 'Failed to create stream',
+        ], 500);
+    }
+    
+    // Log stream start
+    youtuneai_log_stream_event($stream_id, 'stream_started', [
+        'title' => $title,
+        'type' => $type,
+    ]);
+    
+    return new WP_REST_Response([
+        'success' => true,
+        'stream_id' => $stream_id,
+        'message' => 'Stream created successfully',
+    ], 201);
+}
+
+/**
+ * End live stream session
+ */
+function youtuneai_api_stream_end(WP_REST_Request $request) {
+    $stream_id = $request->get_param('stream_id');
+    
+    if (!$stream_id || !get_post($stream_id)) {
+        return new WP_REST_Response([
+            'success' => false,
+            'message' => 'Stream not found',
+        ], 404);
+    }
+    
+    // Update stream metadata
+    $start_time = get_post_meta($stream_id, '_stream_start_time', true);
+    $end_time = current_time('mysql');
+    $duration = strtotime($end_time) - strtotime($start_time);
+    
+    update_post_meta($stream_id, '_stream_end_time', $end_time);
+    update_post_meta($stream_id, '_stream_duration', $duration);
+    update_post_meta($stream_id, '_stream_status', 'ended');
+    
+    // Log stream end
+    youtuneai_log_stream_event($stream_id, 'stream_ended', [
+        'duration' => $duration,
+        'end_time' => $end_time,
+    ]);
+    
+    return new WP_REST_Response([
+        'success' => true,
+        'message' => 'Stream ended successfully',
+        'duration' => $duration,
+    ], 200);
+}
+
+/**
+ * Get stream logs
+ */
+function youtuneai_api_stream_logs(WP_REST_Request $request) {
+    $stream_id = $request->get_param('stream_id');
+    $limit = $request->get_param('limit');
+    
+    $args = [
+        'post_type' => 'stream_log',
+        'posts_per_page' => $limit,
+        'orderby' => 'date',
+        'order' => 'DESC',
+    ];
+    
+    if ($stream_id) {
+        $args['meta_query'] = [
+            [
+                'key' => '_stream_id',
+                'value' => $stream_id,
+                'compare' => '=',
+            ],
+        ];
+    }
+    
+    $logs = get_posts($args);
+    $log_data = [];
+    
+    foreach ($logs as $log) {
+        $log_data[] = [
+            'id' => $log->ID,
+            'stream_id' => get_post_meta($log->ID, '_stream_id', true),
+            'event_type' => get_post_meta($log->ID, '_event_type', true),
+            'event_data' => json_decode(get_post_meta($log->ID, '_event_data', true), true),
+            'timestamp' => $log->post_date,
+        ];
+    }
+    
+    return new WP_REST_Response([
+        'success' => true,
+        'logs' => $log_data,
+    ], 200);
+}
+
+/**
+ * Log stream events
+ */
+function youtuneai_log_stream_event($stream_id, $event_type, $event_data = []) {
+    wp_insert_post([
+        'post_title' => "Stream Event: {$event_type}",
+        'post_content' => json_encode($event_data),
+        'post_status' => 'publish',
+        'post_type' => 'stream_log',
+        'meta_input' => [
+            '_stream_id' => $stream_id,
+            '_event_type' => $event_type,
+            '_event_data' => json_encode($event_data),
+        ],
+    ]);
 }
 
 /**

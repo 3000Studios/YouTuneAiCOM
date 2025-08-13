@@ -7,6 +7,7 @@ import './avatar/AvatarSystem.js';
 import './vr/VRRoom.js';
 import './ui/Navigation.js';
 import './ui/ChatBubble.js';
+import './ui/LiveStreaming.js';
 import './woocommerce/GarageConfigurator.js';
 
 // Initialize when DOM is ready

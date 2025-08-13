@@ -1,0 +1,31 @@
+{
+  "assets/js/app.js": {
+    "file": "js/app.Dr21UpxO.js",
+    "name": "app",
+    "src": "assets/js/app.js",
+    "isEntry": true,
+    "dynamicImports": [
+      "assets/js/avatar/ChatSystem.js",
+      "assets/js/vr/VRSystem.js",
+      "assets/js/games/GameLoader.js"
+    ]
+  },
+  "assets/js/avatar/ChatSystem.js": {
+    "file": "js/ChatSystem.B2i7OKx2.js",
+    "name": "ChatSystem",
+    "src": "assets/js/avatar/ChatSystem.js",
+    "isDynamicEntry": true
+  },
+  "assets/js/games/GameLoader.js": {
+    "file": "js/GameLoader.Ds6F6VRS.js",
+    "name": "GameLoader",
+    "src": "assets/js/games/GameLoader.js",
+    "isDynamicEntry": true
+  },
+  "assets/js/vr/VRSystem.js": {
+    "file": "js/VRSystem.IMTFdNS4.js",
+    "name": "VRSystem",
+    "src": "assets/js/vr/VRSystem.js",
+    "isDynamicEntry": true
+  }
+}

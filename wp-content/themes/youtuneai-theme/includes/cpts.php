@@ -134,6 +134,27 @@ function youtuneai_register_post_types() {
         'rewrite' => ['slug' => 'garage-parts'],
         'menu_position' => 24,
     ]);
+
+    // Stream Log CPT (for logging stream events)
+    register_post_type('stream_log', [
+        'label' => __('Stream Logs', 'youtuneai'),
+        'labels' => [
+            'name' => __('Stream Logs', 'youtuneai'),
+            'singular_name' => __('Stream Log', 'youtuneai'),
+            'search_items' => __('Search Logs', 'youtuneai'),
+            'not_found' => __('No logs found', 'youtuneai'),
+        ],
+        'public' => false,
+        'show_ui' => true,
+        'show_in_menu' => 'edit.php?post_type=stream',
+        'menu_icon' => 'dashicons-list-view',
+        'supports' => ['title', 'editor', 'custom-fields'],
+        'capabilities' => [
+            'create_posts' => false,
+        ],
+        'map_meta_cap' => true,
+        'menu_position' => 25,
+    ]);
 }
 
 /**
