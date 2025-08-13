@@ -137,3 +137,15 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Generated deployment directories
+deployment-ready/
+deployment-package/
+
+# WordPress uploads (if using local WordPress)
+wp-content/uploads/
+
+# Built assets in theme (these are rebuilt)
+wp-content/themes/youtuneai-theme/assets/.vite/
+wp-content/themes/youtuneai-theme/assets/js/*.js
+!wp-content/themes/youtuneai-theme/assets/js/app.js

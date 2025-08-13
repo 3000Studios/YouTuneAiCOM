@@ -25,6 +25,10 @@
     "dist/",
     "build/",
     "test-results/",
-    "*.min.js"
+    "*.min.js",
+    "assets/js/*.js",
+    "!assets/js/app.js",
+    "!assets/js/**/*.js",
+    "assets/js/**/*.*.js"
   ]
 }

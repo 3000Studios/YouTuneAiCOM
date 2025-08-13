@@ -144,18 +144,52 @@ npx playwright test --update-snapshots
 
 ## 🚢 Deployment
 
-### Automated Deployment
-- **Trigger** - Push to `main` branch
-- **Process** - GitHub Actions → Build → SFTP → IONOS
-- **Features** - Blue/green deployment, rollback support, verification
+### Unified Deployment Structure
+YouTuneAI uses a unified deployment approach that consolidates all files into a single deployment-ready directory:
+
+```bash
+# Build unified deployment package
+npm run build
+
+# This creates deployment-ready/wp-theme-youtuneai/ with:
+# - WordPress theme files
+# - Built assets (CSS, JS)
+# - MU plugins
+# - Configuration files
+```
+
+### IONOS Deploy Now Setup
+1. **Repository Settings:**
+   - Set public folder path to: `/deployment-ready/wp-theme-youtuneai`
+   - Entry file: `index.php`
+   - Build command: `npm run build`
+
+2. **GitHub Actions Deployment:**
+   - **Trigger** - Push to `main` branch  
+   - **Process** - Build → Test → Deploy to IONOS
+   - **Features** - Atomic deployment, rollback support, verification
 
 ### Manual Deployment
 ```bash
-# Build production assets
+# Build production deployment package
 npm run build
 
 # Deploy via Admin Control Center
 # Go to wp-admin → YouTune Admin → Deploy Now
+
+# Or manually upload deployment-ready/wp-theme-youtuneai/ content
+```
+
+### Deployment Structure
+```
+deployment-ready/wp-theme-youtuneai/
+├── index.php                    # Entry point
+├── wp-content/
+│   ├── themes/
+│   │   └── youtuneai-theme/    # Main theme with built assets
+│   └── mu-plugins/
+│       └── youtune-admin/      # Admin control center
+└── DEPLOYMENT_MANIFEST.md      # Deployment documentation
 ```
 
 ## 🎨 Customization

@@ -10,8 +10,7 @@ export default defineConfig({
     manifest: true,
     rollupOptions: {
       input: {
-        app: resolve(__dirname, 'assets/js/app.js'),
-        admin: resolve(__dirname, 'assets/css/admin.css')
+        app: resolve(__dirname, 'assets/js/app.js')
       },
       output: {
         assetFileNames: 'css/[name].[hash][extname]',

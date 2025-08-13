@@ -4,7 +4,8 @@
   "description": "YouTuneAI WordPress theme with 3D avatar, VR, games, and e-commerce",
   "scripts": {
     "dev": "cd wp-content/themes/youtuneai-theme && npm run dev",
-    "build": "cd wp-content/themes/youtuneai-theme && npm run build",
+    "build": "./scripts/build-deployment.sh",
+    "build-theme-only": "cd wp-content/themes/youtuneai-theme && npm run build",
     "test": "cd wp-content/themes/youtuneai-theme && npm test",
     "lint": "cd wp-content/themes/youtuneai-theme && npm run lint",
     "install-theme": "cd wp-content/themes/youtuneai-theme && npm ci"
