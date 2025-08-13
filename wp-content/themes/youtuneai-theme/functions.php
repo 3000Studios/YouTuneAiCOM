@@ -81,7 +81,7 @@ add_action('wp_enqueue_scripts', function() {
         wp_enqueue_script('youtuneai-app', 'http://localhost:5173/assets/js/app.js', ['vite-client'], null, true);
     } else {
         // Production mode - use built assets
-        $manifest_path = YOUTUNEAI_PATH . '/assets/.vite/manifest.json';
+        $manifest_path = YOUTUNEAI_PATH . '/dist/.vite/manifest.json';
         if (file_exists($manifest_path)) {
             $manifest = json_decode(file_get_contents($manifest_path), true);
             $entry = $manifest['assets/js/app.js'] ?? null;
@@ -89,7 +89,7 @@ add_action('wp_enqueue_scripts', function() {
             if ($entry) {
                 wp_enqueue_script(
                     'youtuneai-app',
-                    YOUTUNEAI_URL . '/assets/' . $entry['file'],
+                    YOUTUNEAI_URL . '/dist/' . $entry['file'],
                     [],
                     YOUTUNEAI_VERSION,
                     true
@@ -100,7 +100,7 @@ add_action('wp_enqueue_scripts', function() {
                     foreach ($entry['css'] as $css_file) {
                         wp_enqueue_style(
                             'youtuneai-style-' . md5($css_file),
-                            YOUTUNEAI_URL . '/assets/' . $css_file,
+                            YOUTUNEAI_URL . '/dist/' . $css_file,
                             [],
                             YOUTUNEAI_VERSION
                         );

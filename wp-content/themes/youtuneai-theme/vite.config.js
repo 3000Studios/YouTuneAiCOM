@@ -1,17 +1,18 @@
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
+import tailwindcss from 'tailwindcss'
+import autoprefixer from 'autoprefixer'
 
 export default defineConfig({
   root: '.',
   base: '',
   build: {
-    outDir: 'assets',
-    emptyOutDir: false,
+    outDir: 'dist',
+    emptyOutDir: true,
     manifest: true,
     rollupOptions: {
       input: {
-        app: resolve(__dirname, 'assets/js/app.js'),
-        admin: resolve(__dirname, 'assets/css/admin.css')
+        app: resolve(__dirname, 'assets/js/app.js')
       },
       output: {
         assetFileNames: 'css/[name].[hash][extname]',
@@ -38,8 +39,8 @@ export default defineConfig({
   css: {
     postcss: {
       plugins: [
-        require('tailwindcss'),
-        require('autoprefixer')
+        tailwindcss,
+        autoprefixer
       ]
     }
   },

@@ -2,13 +2,14 @@
   "name": "youtuneai-theme",
   "version": "1.0.0",
   "description": "WordPress theme for YouTuneAI with 3D avatar, VR, and games",
+  "type": "module",
   "main": "assets/js/app.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint assets/js --ext .js",
-    "lint:fix": "eslint assets/js --ext .js --fix"
+    "lint": "eslint assets/js --ext .js --ignore-pattern 'assets/js/**/*.*.js'",
+    "lint:fix": "eslint assets/js --ext .js --ignore-pattern 'assets/js/**/*.*.js' --fix"
   },
   "keywords": [
     "wordpress",
@@ -29,6 +30,7 @@
     "postcss": "^8.4.39",
     "prettier": "^3.6.2",
     "tailwindcss": "^3.4.6",
+    "terser": "^5.43.1",
     "vite": "^7.1.2"
   },
   "dependencies": {
