@@ -80,7 +80,9 @@ out
 
 # Nuxt.js build / generate output
 .nuxt
-dist
+
+# Theme dist output - keep for deployment
+# wp-content/themes/youtuneai-theme/dist
 
 # Gatsby files
 .cache/
