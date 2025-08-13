@@ -72,27 +72,17 @@ jobs:
         working-directory: wp-content/themes/youtuneai-theme
         run: npm run build
         
-      - name: Create deployment artifact
+      - name: Create unified deployment package
         run: |
-          mkdir -p deployment-package
-          
-          # Copy WordPress theme
-          cp -r wp-content/themes/youtuneai-theme deployment-package/youtuneai-theme
-          
-          # Copy MU plugins
-          mkdir -p deployment-package/mu-plugins
-          cp -r wp-content/mu-plugins/* deployment-package/mu-plugins/
-          
-          # Remove node_modules and dev files
-          find deployment-package -name "node_modules" -type d -exec rm -rf {} + 2>/dev/null || true
-          find deployment-package -name "*.map" -delete
-          find deployment-package -name ".git*" -delete
+          # Use the unified deployment build script
+          chmod +x ./scripts/build-deployment.sh
+          ./scripts/build-deployment.sh
           
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
           name: wordpress-theme-${{ github.sha }}
-          path: deployment-package/
+          path: deployment-ready/wp-theme-youtuneai/
           retention-days: 30
 
   deploy:
@@ -107,7 +97,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: wordpress-theme-${{ github.sha }}
-          path: deployment-package/
+          path: deployment-ready/wp-theme-youtuneai/
           
       - name: Setup SFTP deployment
         run: |
@@ -134,20 +124,16 @@ jobs:
           # Create release directory
           mkdir -p $RELEASE_DIR
           
-          # Upload theme files
-          mirror -R --verbose deployment-package/youtuneai-theme $RELEASE_DIR/wp-content/themes/youtuneai-theme
-          
-          # Upload MU plugins
-          mirror -R --verbose deployment-package/mu-plugins $RELEASE_DIR/wp-content/mu-plugins
+          # Upload unified deployment package
+          mirror -R --verbose . $RELEASE_DIR/
           
           # Atomic deployment - update current symlink
           cd /
-          rm -f wp-content/themes/youtuneai-theme-current
-          ln -sf $RELEASE_DIR/wp-content/themes/youtuneai-theme wp-content/themes/youtuneai-theme-current
+          rm -f current-deployment
+          ln -sf $RELEASE_DIR current-deployment
           
-          # Update actual theme directory (fallback if symlinks not supported)
-          mirror -R --delete deployment-package/youtuneai-theme wp-content/themes/youtuneai-theme
-          mirror -R --delete deployment-package/mu-plugins wp-content/mu-plugins
+          # Update actual deployment directory (fallback if symlinks not supported)
+          mirror -R --delete . ./
           
           # Cleanup old releases (keep last 5)
           cd /releases

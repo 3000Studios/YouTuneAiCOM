@@ -1,0 +1,6 @@
+# Built assets (generated files)
+assets/js/*.*.js
+assets/.vite/
+node_modules/
+test-results/
+*.min.js

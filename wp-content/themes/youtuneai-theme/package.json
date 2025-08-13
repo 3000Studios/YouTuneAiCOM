@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint assets/js --ext .js",
+    "lint": "eslint assets/js/app.js assets/js/avatar assets/js/games assets/js/ui assets/js/vr assets/js/woocommerce --ext .js",
     "lint:fix": "eslint assets/js --ext .js --fix"
   },
   "keywords": [
@@ -29,6 +29,7 @@
     "postcss": "^8.4.39",
     "prettier": "^3.6.2",
     "tailwindcss": "^3.4.6",
+    "terser": "^5.43.1",
     "vite": "^5.3.4"
   },
   "dependencies": {
