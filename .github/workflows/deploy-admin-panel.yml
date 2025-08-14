@@ -1,0 +1,52 @@
+name: Deploy Admin Panel to IONOS Deploy Now
+
+on:
+  push:
+    branches:
+      - main
+      - YouTuneAi.COM
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: |
+          cd admin-panel
+          npm install
+
+      - name: Build admin panel
+        run: |
+          cd admin-panel
+          npm run build
+          cd ..
+          rm -rf public/admin
+          mkdir -p public/admin
+          cp -r admin-panel/dist/* public/admin/
+
+      - name: Setup SFTP deployment (lftp)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y lftp
+
+      - name: Deploy to IONOS via SFTP
+        env:
+          SFTP_HOST: ${{ secrets.IONOS_HOST }}
+          SFTP_USER: ${{ secrets.IONOS_USER }}
+          SFTP_PASS: ${{ secrets.IONOS_PASS }}
+        run: |
+          echo "🚀 Deploying built site to IONOS via SFTP..."
+          lftp -u "$SFTP_USER","$SFTP_PASS" sftp://$SFTP_HOST <<'EOF'
+          set sftp:auto-confirm yes
+          set cmd:fail-exit yes
+          mirror -R --delete --verbose public /
+          bye
+          EOF

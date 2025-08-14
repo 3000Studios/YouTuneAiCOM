@@ -1,15 +1,39 @@
 {
+  // --- Editor UX ---
   "editor.formatOnSave": true,
-  "editor.codeActionsOnSave": {},
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
+  },
   "eslint.validate": [
     "javascript",
-    "typescript"
+    "typescript",
+    "json",
+    "jsonc"
   ],
   "prettier.requireConfig": true,
+  "prettier.useEditorConfig": true,
+  // --- Git quality of life ---
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.pruneOnFetch": true,
+  // "git.postCommitCommand": "sync", // deprecated in newer VS Code, handled by enableSmartCommit
+  // --- Search/Explorer hygiene ---
   "files.exclude": {
     "**/.DS_Store": true,
     "**/node_modules": true,
     "**/dist": true,
     "**/build": true
-  }
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/build": true
+  },
+  // --- Inline AI suggestions (Copilot/etc.) ---
+  "editor.inlineSuggest.enabled": true,
+  "workbench.startupEditor": "none",
+  "workbench.editor.enablePreview": false
 }
