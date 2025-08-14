@@ -1,92 +1,108 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from 'react';
+import { API_BASE, pingAI, sendVoiceCommand } from './lib/api';
 
 export default function App() {
-  const [transcript, setTranscript] = useState("");
-  const [isListening, setIsListening] = useState(false);
-  const [previewUrl, setPreviewUrl] = useState("");
-  const recognitionRef = useRef(null);
+  const [status, setStatus] = useState('idle');
+  const [aiOnline, setAiOnline] = useState(null);
+  const [command, setCommand] = useState('');
+  const [file, setFile] = useState('public/index.html');
+  const [commit, setCommit] = useState('AI: voice command');
+  const [result, setResult] = useState(null);
+  const [error, setError] = useState('');
+  const recRef = useRef(null);
 
-  const startListening = () => {
-    if (!('webkitSpeechRecognition' in window || 'SpeechRecognition' in window)) {
-      alert('Web Speech API not supported in this browser.');
-      return;
-    }
-    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-    const recognition = new SpeechRecognition();
-    recognition.lang = 'en-US';
-    recognition.interimResults = false;
-    recognition.onresult = (event) => {
-      setTranscript(event.results[0][0].transcript);
+  useEffect(() => {
+    (async () => {
+      try {
+        const j = await pingAI();
+        setAiOnline(!!j.ok);
+      } catch { setAiOnline(false); }
+    })();
+  }, []);
+
+  function startVoice() {
+    const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SR) { alert('Web Speech API not supported here'); return; }
+    const r = new SR();
+    r.lang = 'en-US';
+    r.interimResults = true;
+    r.continuous = false;
+    recRef.current = r;
+    setStatus('listening');
+    r.onresult = (e) => {
+      const text = Array.from(e.results).map(x => x[0].transcript).join(' ');
+      setCommand(text);
     };
-    recognition.onend = () => setIsListening(false);
-    recognitionRef.current = recognition;
-    setIsListening(true);
-    recognition.start();
-  };
+    r.onerror = () => setStatus('error');
+    r.onend = () => setStatus('idle');
+    r.start();
+  }
 
-  const stopListening = () => {
-    recognitionRef.current?.stop();
-    setIsListening(false);
-  };
-
-  const sendCommand = async () => {
+  async function run() {
+    setError(''); setResult(null);
     try {
-      const response = await fetch('http://localhost:4000/api/command', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ command: transcript })
-      });
-      const data = await response.json();
-      setPreviewUrl(data.previewUrl);
-    } catch (err) {
-      alert('Failed to contact backend: ' + err.message);
+      const j = await sendVoiceCommand({ command, file, commitMessage: commit });
+      setResult(j);
+    } catch (e) {
+      setError(String(e.message || e));
     }
-  };
-
-  const approveChange = async () => {
-    try {
-      const response = await fetch('http://localhost:4000/api/approve', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' }
-      });
-      const data = await response.json();
-      alert(`Approved! Status: ${data.status}, Deployed: ${data.deployed}`);
-    } catch (err) {
-      alert('Failed to contact backend: ' + err.message);
-    }
-  };
+  }
 
   return (
-    <div style={{ maxWidth: 600, margin: "2rem auto", fontFamily: "sans-serif" }}>
-      <h1>YouTuneAI Admin Panel</h1>
-      <div style={{ marginBottom: 16 }}>
-        <button onClick={isListening ? stopListening : startListening}>
-          {isListening ? "Stop Listening" : "Start Voice Command"}
-        </button>
-        <input
-          type="text"
-          value={transcript}
-          onChange={e => setTranscript(e.target.value)}
-          placeholder="Or type your command here"
-          style={{ width: "70%", marginLeft: 8 }}
-        />
-        <button onClick={sendCommand} disabled={!transcript} style={{ marginLeft: 8 }}>
-          Send
-        </button>
-      </div>
-      {previewUrl && (
-        <div style={{ margin: "2rem 0" }}>
-          <h2>Live Preview</h2>
-          <iframe
-            src={previewUrl}
-            title="Live Preview"
-            style={{ width: "100%", height: 400, border: "1px solid #ccc" }}
-          />
-          <button onClick={approveChange} style={{ marginTop: 16 }}>
-            Approve & Deploy
-          </button>
+    <div style={{ maxWidth: 900, margin: '40px auto', fontFamily: 'system-ui, sans-serif' }}>
+      <h1>Admin Command Center</h1>
+
+      <p>
+        API: <code>{API_BASE}</code>{' '}
+        <span style={{
+          padding: '2px 8px', border: '1px solid #ddd', borderRadius: 999, marginLeft: 8,
+          color: aiOnline === null ? '#555' : aiOnline ? '#0a0' : '#a00'
+        }}>
+          {aiOnline === null ? 'checking…' : aiOnline ? 'AI Online' : 'AI Offline'}
+        </span>
+      </p>
+
+      <div style={{ display: 'grid', gap: 12 }}>
+        <div>
+          <button onClick={startVoice}>🎤 Voice</button>
+          <span style={{ marginLeft: 10, opacity: .7 }}>Status: {status}</span>
         </div>
-      )}
+
+        <label>
+          <div><b>Command</b></div>
+          <textarea rows={3} value={command} onChange={e => setCommand(e.target.value)}
+            placeholder={`e.g., Change the hero headline to "Welcome to YouTuneAI"`} />
+        </label>
+
+        <label>
+          <div><b>Target file (in repo)</b></div>
+          <input value={file} onChange={e => setFile(e.target.value)} />
+        </label>
+
+        <label>
+          <div><b>Commit message</b></div>
+          <input value={commit} onChange={e => setCommit(e.target.value)} />
+        </label>
+
+        <div style={{ display: 'flex', gap: 12 }}>
+          <button onClick={run}>🚀 Propose & Deploy</button>
+        </div>
+
+        {error && <pre style={{ color: '#a00', whiteSpace: 'pre-wrap' }}>{error}</pre>}
+
+        {result && (
+          <div style={{ border: '1px solid #eee', padding: 12, borderRadius: 8 }}>
+            <h3>Result</h3>
+            <pre style={{ whiteSpace: 'pre-wrap' }}>{JSON.stringify(result, null, 2)}</pre>
+            {result.pull_url && (
+              <p><a href={result.pull_url} target="_blank">Open PR</a></p>
+            )}
+            {result.preview_url && (
+              <p><a href={result.preview_url} target="_blank">Preview</a></p>
+            )}
+          </div>
+        )}
+      </div>
     </div>
   );
 }

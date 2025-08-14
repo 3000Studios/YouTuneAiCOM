@@ -1,0 +1,4 @@
+{
+    "command": "Add a comment at the top of admin-panel/src/App.jsx that says 'Voice automation test.'",
+    "file": "admin-panel/src/App.jsx"
+}

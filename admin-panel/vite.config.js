@@ -6,5 +6,9 @@ export default defineConfig({
   server: {
     port: 5173,
     open: true,
+    proxy: {
+      '/debug': 'http://localhost:5000',
+      '/voice-command': 'http://localhost:5000'
+    }
   },
 });
