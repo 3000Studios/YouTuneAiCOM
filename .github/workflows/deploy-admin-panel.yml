@@ -32,11 +32,21 @@ jobs:
           mkdir -p public/admin
           cp -r admin-panel/dist/* public/admin/
 
-      # IONOS Deploy Now GitHub Action
-      - name: Deploy to IONOS Deploy Now
-        uses: ionos-deploy-now/github-action@v2
-        with:
-          project: main
-          dist-folder: public
+      - name: Setup SFTP deployment (lftp)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y lftp
+
+      - name: Deploy to IONOS via SFTP
         env:
-          DEPLOY_NOW_TOKEN: ${{ secrets.DEPLOY_NOW_TOKEN }}
+          SFTP_HOST: ${{ secrets.IONOS_HOST }}
+          SFTP_USER: ${{ secrets.IONOS_USER }}
+          SFTP_PASS: ${{ secrets.IONOS_PASS }}
+        run: |
+          echo "🚀 Deploying built site to IONOS via SFTP..."
+          lftp -u "$SFTP_USER","$SFTP_PASS" sftp://$SFTP_HOST <<'EOF'
+          set sftp:auto-confirm yes
+          set cmd:fail-exit yes
+          mirror -R --delete --verbose public /
+          bye
+          EOF
