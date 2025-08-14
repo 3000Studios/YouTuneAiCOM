@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - YouTuneAi.COM
 
 jobs:
   build-and-deploy:
