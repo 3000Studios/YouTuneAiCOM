@@ -1,5 +1,5 @@
-<testsuites id="" name="" tests="90" failures="55" skipped="35" errors="0" time="91.644622">
-<testsuite name="admin.spec.ts" timestamp="2025-08-13T14:53:52.788Z" hostname="chromium" tests="7" failures="0" skipped="7" time="0" errors="0">
+<testsuites id="" name="" tests="90" failures="55" skipped="35" errors="0" time="90.81126100000002">
+<testsuite name="admin.spec.ts" timestamp="2025-08-13T15:10:37.224Z" hostname="chromium" tests="7" failures="0" skipped="7" time="0" errors="0">
 <testcase name="Admin Control Center › should access YouTune Admin Control Center" classname="admin.spec.ts" time="0">
 <properties>
 <property name="skip" value="Admin credentials not provided">
@@ -57,8 +57,8 @@
 </skipped>
 </testcase>
 </testsuite>
-<testsuite name="functionality.spec.ts" timestamp="2025-08-13T14:53:52.788Z" hostname="chromium" tests="5" failures="5" skipped="0" time="1.432" errors="0">
-<testcase name="WooCommerce Integration › should navigate to shop page" classname="functionality.spec.ts" time="0.319">
+<testsuite name="functionality.spec.ts" timestamp="2025-08-13T15:10:37.224Z" hostname="chromium" tests="5" failures="5" skipped="0" time="1.283" errors="0">
+<testcase name="WooCommerce Integration › should navigate to shop page" classname="functionality.spec.ts" time="0.275">
 <failure message="functionality.spec.ts:4:7 should navigate to shop page" type="FAILURE">
 <![CDATA[  [chromium] › functionality.spec.ts:4:7 › WooCommerce Integration › should navigate to shop page ──
 
@@ -93,7 +93,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="WooCommerce Integration › should display product grid" classname="functionality.spec.ts" time="0.308">
+<testcase name="WooCommerce Integration › should display product grid" classname="functionality.spec.ts" time="0.256">
 <failure message="functionality.spec.ts:15:7 should display product grid" type="FAILURE">
 <![CDATA[  [chromium] › functionality.spec.ts:15:7 › WooCommerce Integration › should display product grid ──
 
@@ -128,7 +128,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Custom Post Types › should access games archive" classname="functionality.spec.ts" time="0.265">
+<testcase name="Custom Post Types › should access games archive" classname="functionality.spec.ts" time="0.25">
 <failure message="functionality.spec.ts:25:7 should access games archive" type="FAILURE">
 <![CDATA[  [chromium] › functionality.spec.ts:25:7 › Custom Post Types › should access games archive ────────
 
@@ -163,7 +163,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Custom Post Types › should access VR room page" classname="functionality.spec.ts" time="0.271">
+<testcase name="Custom Post Types › should access VR room page" classname="functionality.spec.ts" time="0.237">
 <failure message="functionality.spec.ts:36:7 should access VR room page" type="FAILURE">
 <![CDATA[  [chromium] › functionality.spec.ts:36:7 › Custom Post Types › should access VR room page ─────────
 
@@ -198,7 +198,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Custom Post Types › should access YouTune Garage" classname="functionality.spec.ts" time="0.269">
+<testcase name="Custom Post Types › should access YouTune Garage" classname="functionality.spec.ts" time="0.265">
 <failure message="functionality.spec.ts:47:7 should access YouTune Garage" type="FAILURE">
 <![CDATA[  [chromium] › functionality.spec.ts:47:7 › Custom Post Types › should access YouTune Garage ───────
 
@@ -234,8 +234,8 @@
 </system-out>
 </testcase>
 </testsuite>
-<testsuite name="homepage.spec.ts" timestamp="2025-08-13T14:53:52.788Z" hostname="chromium" tests="6" failures="6" skipped="0" time="1.597" errors="0">
-<testcase name="YouTuneAI Homepage › should load homepage successfully" classname="homepage.spec.ts" time="0.238">
+<testsuite name="homepage.spec.ts" timestamp="2025-08-13T15:10:37.224Z" hostname="chromium" tests="6" failures="6" skipped="0" time="1.658" errors="0">
+<testcase name="YouTuneAI Homepage › should load homepage successfully" classname="homepage.spec.ts" time="0.236">
 <failure message="homepage.spec.ts:4:7 should load homepage successfully" type="FAILURE">
 <![CDATA[  [chromium] › homepage.spec.ts:4:7 › YouTuneAI Homepage › should load homepage successfully ───────
 
@@ -270,7 +270,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="YouTuneAI Homepage › should have working navigation menu" classname="homepage.spec.ts" time="0.298">
+<testcase name="YouTuneAI Homepage › should have working navigation menu" classname="homepage.spec.ts" time="0.248">
 <failure message="homepage.spec.ts:19:7 should have working navigation menu" type="FAILURE">
 <![CDATA[  [chromium] › homepage.spec.ts:19:7 › YouTuneAI Homepage › should have working navigation menu ────
 
@@ -305,7 +305,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Avatar Chat System › should display avatar chat bubble" classname="homepage.spec.ts" time="0.269">
+<testcase name="Avatar Chat System › should display avatar chat bubble" classname="homepage.spec.ts" time="0.261">
 <failure message="homepage.spec.ts:36:7 should display avatar chat bubble" type="FAILURE">
 <![CDATA[  [chromium] › homepage.spec.ts:36:7 › Avatar Chat System › should display avatar chat bubble ──────
 
@@ -340,7 +340,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Avatar Chat System › should open chat interface on click" classname="homepage.spec.ts" time="0.279">
+<testcase name="Avatar Chat System › should open chat interface on click" classname="homepage.spec.ts" time="0.312">
 <failure message="homepage.spec.ts:44:7 should open chat interface on click" type="FAILURE">
 <![CDATA[  [chromium] › homepage.spec.ts:44:7 › Avatar Chat System › should open chat interface on click ────
 
@@ -375,7 +375,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Performance › should meet basic performance requirements" classname="homepage.spec.ts" time="0.242">
+<testcase name="Performance › should meet basic performance requirements" classname="homepage.spec.ts" time="0.311">
 <failure message="homepage.spec.ts:64:7 should meet basic performance requirements" type="FAILURE">
 <![CDATA[  [chromium] › homepage.spec.ts:64:7 › Performance › should meet basic performance requirements ────
 
@@ -410,7 +410,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Performance › should not have console errors" classname="homepage.spec.ts" time="0.271">
+<testcase name="Performance › should not have console errors" classname="homepage.spec.ts" time="0.29">
 <failure message="homepage.spec.ts:80:7 should not have console errors" type="FAILURE">
 <![CDATA[  [chromium] › homepage.spec.ts:80:7 › Performance › should not have console errors ────────────────
 
@@ -446,7 +446,7 @@
 </system-out>
 </testcase>
 </testsuite>
-<testsuite name="admin.spec.ts" timestamp="2025-08-13T14:53:52.788Z" hostname="firefox" tests="7" failures="0" skipped="7" time="0" errors="0">
+<testsuite name="admin.spec.ts" timestamp="2025-08-13T15:10:37.224Z" hostname="firefox" tests="7" failures="0" skipped="7" time="0" errors="0">
 <testcase name="Admin Control Center › should access YouTune Admin Control Center" classname="admin.spec.ts" time="0">
 <properties>
 <property name="skip" value="Admin credentials not provided">
@@ -504,8 +504,8 @@
 </skipped>
 </testcase>
 </testsuite>
-<testsuite name="functionality.spec.ts" timestamp="2025-08-13T14:53:52.788Z" hostname="firefox" tests="5" failures="5" skipped="0" time="8.615" errors="0">
-<testcase name="WooCommerce Integration › should navigate to shop page" classname="functionality.spec.ts" time="1.661">
+<testsuite name="functionality.spec.ts" timestamp="2025-08-13T15:10:37.224Z" hostname="firefox" tests="5" failures="5" skipped="0" time="8.565" errors="0">
+<testcase name="WooCommerce Integration › should navigate to shop page" classname="functionality.spec.ts" time="1.837">
 <failure message="functionality.spec.ts:4:7 should navigate to shop page" type="FAILURE">
 <![CDATA[  [firefox] › functionality.spec.ts:4:7 › WooCommerce Integration › should navigate to shop page ───
 
@@ -544,7 +544,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="WooCommerce Integration › should display product grid" classname="functionality.spec.ts" time="1.704">
+<testcase name="WooCommerce Integration › should display product grid" classname="functionality.spec.ts" time="1.577">
 <failure message="functionality.spec.ts:15:7 should display product grid" type="FAILURE">
 <![CDATA[  [firefox] › functionality.spec.ts:15:7 › WooCommerce Integration › should display product grid ───
 
@@ -583,7 +583,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Custom Post Types › should access games archive" classname="functionality.spec.ts" time="1.748">
+<testcase name="Custom Post Types › should access games archive" classname="functionality.spec.ts" time="1.6">
 <failure message="functionality.spec.ts:25:7 should access games archive" type="FAILURE">
 <![CDATA[  [firefox] › functionality.spec.ts:25:7 › Custom Post Types › should access games archive ─────────
 
@@ -622,7 +622,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Custom Post Types › should access VR room page" classname="functionality.spec.ts" time="1.76">
+<testcase name="Custom Post Types › should access VR room page" classname="functionality.spec.ts" time="1.764">
 <failure message="functionality.spec.ts:36:7 should access VR room page" type="FAILURE">
 <![CDATA[  [firefox] › functionality.spec.ts:36:7 › Custom Post Types › should access VR room page ──────────
 
@@ -661,7 +661,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Custom Post Types › should access YouTune Garage" classname="functionality.spec.ts" time="1.742">
+<testcase name="Custom Post Types › should access YouTune Garage" classname="functionality.spec.ts" time="1.787">
 <failure message="functionality.spec.ts:47:7 should access YouTune Garage" type="FAILURE">
 <![CDATA[  [firefox] › functionality.spec.ts:47:7 › Custom Post Types › should access YouTune Garage ────────
 
@@ -701,8 +701,8 @@
 </system-out>
 </testcase>
 </testsuite>
-<testsuite name="homepage.spec.ts" timestamp="2025-08-13T14:53:52.788Z" hostname="firefox" tests="6" failures="6" skipped="0" time="10.25" errors="0">
-<testcase name="YouTuneAI Homepage › should load homepage successfully" classname="homepage.spec.ts" time="1.6">
+<testsuite name="homepage.spec.ts" timestamp="2025-08-13T15:10:37.224Z" hostname="firefox" tests="6" failures="6" skipped="0" time="10.174" errors="0">
+<testcase name="YouTuneAI Homepage › should load homepage successfully" classname="homepage.spec.ts" time="1.67">
 <failure message="homepage.spec.ts:4:7 should load homepage successfully" type="FAILURE">
 <![CDATA[  [firefox] › homepage.spec.ts:4:7 › YouTuneAI Homepage › should load homepage successfully ────────
 
@@ -741,7 +741,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="YouTuneAI Homepage › should have working navigation menu" classname="homepage.spec.ts" time="1.632">
+<testcase name="YouTuneAI Homepage › should have working navigation menu" classname="homepage.spec.ts" time="1.762">
 <failure message="homepage.spec.ts:19:7 should have working navigation menu" type="FAILURE">
 <![CDATA[  [firefox] › homepage.spec.ts:19:7 › YouTuneAI Homepage › should have working navigation menu ─────
 
@@ -780,7 +780,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Avatar Chat System › should display avatar chat bubble" classname="homepage.spec.ts" time="1.609">
+<testcase name="Avatar Chat System › should display avatar chat bubble" classname="homepage.spec.ts" time="1.784">
 <failure message="homepage.spec.ts:36:7 should display avatar chat bubble" type="FAILURE">
 <![CDATA[  [firefox] › homepage.spec.ts:36:7 › Avatar Chat System › should display avatar chat bubble ───────
 
@@ -819,7 +819,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Avatar Chat System › should open chat interface on click" classname="homepage.spec.ts" time="1.585">
+<testcase name="Avatar Chat System › should open chat interface on click" classname="homepage.spec.ts" time="1.519">
 <failure message="homepage.spec.ts:44:7 should open chat interface on click" type="FAILURE">
 <![CDATA[  [firefox] › homepage.spec.ts:44:7 › Avatar Chat System › should open chat interface on click ─────
 
@@ -858,7 +858,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Performance › should meet basic performance requirements" classname="homepage.spec.ts" time="2.087">
+<testcase name="Performance › should meet basic performance requirements" classname="homepage.spec.ts" time="1.868">
 <failure message="homepage.spec.ts:64:7 should meet basic performance requirements" type="FAILURE">
 <![CDATA[  [firefox] › homepage.spec.ts:64:7 › Performance › should meet basic performance requirements ─────
 
@@ -897,7 +897,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Performance › should not have console errors" classname="homepage.spec.ts" time="1.737">
+<testcase name="Performance › should not have console errors" classname="homepage.spec.ts" time="1.571">
 <failure message="homepage.spec.ts:80:7 should not have console errors" type="FAILURE">
 <![CDATA[  [firefox] › homepage.spec.ts:80:7 › Performance › should not have console errors ─────────────────
 
@@ -937,7 +937,7 @@
 </system-out>
 </testcase>
 </testsuite>
-<testsuite name="admin.spec.ts" timestamp="2025-08-13T14:53:52.788Z" hostname="webkit" tests="7" failures="0" skipped="7" time="0" errors="0">
+<testsuite name="admin.spec.ts" timestamp="2025-08-13T15:10:37.224Z" hostname="webkit" tests="7" failures="0" skipped="7" time="0" errors="0">
 <testcase name="Admin Control Center › should access YouTune Admin Control Center" classname="admin.spec.ts" time="0">
 <properties>
 <property name="skip" value="Admin credentials not provided">
@@ -995,8 +995,8 @@
 </skipped>
 </testcase>
 </testsuite>
-<testsuite name="functionality.spec.ts" timestamp="2025-08-13T14:53:52.788Z" hostname="webkit" tests="5" failures="5" skipped="0" time="3.045" errors="0">
-<testcase name="WooCommerce Integration › should navigate to shop page" classname="functionality.spec.ts" time="0.58">
+<testsuite name="functionality.spec.ts" timestamp="2025-08-13T15:10:37.224Z" hostname="webkit" tests="5" failures="5" skipped="0" time="2.935" errors="0">
+<testcase name="WooCommerce Integration › should navigate to shop page" classname="functionality.spec.ts" time="0.669">
 <failure message="functionality.spec.ts:4:7 should navigate to shop page" type="FAILURE">
 <![CDATA[  [webkit] › functionality.spec.ts:4:7 › WooCommerce Integration › should navigate to shop page ────
 
@@ -1031,7 +1031,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="WooCommerce Integration › should display product grid" classname="functionality.spec.ts" time="0.655">
+<testcase name="WooCommerce Integration › should display product grid" classname="functionality.spec.ts" time="0.561">
 <failure message="functionality.spec.ts:15:7 should display product grid" type="FAILURE">
 <![CDATA[  [webkit] › functionality.spec.ts:15:7 › WooCommerce Integration › should display product grid ────
 
@@ -1066,7 +1066,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Custom Post Types › should access games archive" classname="functionality.spec.ts" time="0.581">
+<testcase name="Custom Post Types › should access games archive" classname="functionality.spec.ts" time="0.561">
 <failure message="functionality.spec.ts:25:7 should access games archive" type="FAILURE">
 <![CDATA[  [webkit] › functionality.spec.ts:25:7 › Custom Post Types › should access games archive ──────────
 
@@ -1101,7 +1101,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Custom Post Types › should access VR room page" classname="functionality.spec.ts" time="0.602">
+<testcase name="Custom Post Types › should access VR room page" classname="functionality.spec.ts" time="0.558">
 <failure message="functionality.spec.ts:36:7 should access VR room page" type="FAILURE">
 <![CDATA[  [webkit] › functionality.spec.ts:36:7 › Custom Post Types › should access VR room page ───────────
 
@@ -1136,7 +1136,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Custom Post Types › should access YouTune Garage" classname="functionality.spec.ts" time="0.627">
+<testcase name="Custom Post Types › should access YouTune Garage" classname="functionality.spec.ts" time="0.586">
 <failure message="functionality.spec.ts:47:7 should access YouTune Garage" type="FAILURE">
 <![CDATA[  [webkit] › functionality.spec.ts:47:7 › Custom Post Types › should access YouTune Garage ─────────
 
@@ -1172,8 +1172,8 @@
 </system-out>
 </testcase>
 </testsuite>
-<testsuite name="homepage.spec.ts" timestamp="2025-08-13T14:53:52.788Z" hostname="webkit" tests="6" failures="6" skipped="0" time="3.772" errors="0">
-<testcase name="YouTuneAI Homepage › should load homepage successfully" classname="homepage.spec.ts" time="0.59">
+<testsuite name="homepage.spec.ts" timestamp="2025-08-13T15:10:37.224Z" hostname="webkit" tests="6" failures="6" skipped="0" time="3.343" errors="0">
+<testcase name="YouTuneAI Homepage › should load homepage successfully" classname="homepage.spec.ts" time="0.575">
 <failure message="homepage.spec.ts:4:7 should load homepage successfully" type="FAILURE">
 <![CDATA[  [webkit] › homepage.spec.ts:4:7 › YouTuneAI Homepage › should load homepage successfully ─────────
 
@@ -1208,7 +1208,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="YouTuneAI Homepage › should have working navigation menu" classname="homepage.spec.ts" time="0.577">
+<testcase name="YouTuneAI Homepage › should have working navigation menu" classname="homepage.spec.ts" time="0.592">
 <failure message="homepage.spec.ts:19:7 should have working navigation menu" type="FAILURE">
 <![CDATA[  [webkit] › homepage.spec.ts:19:7 › YouTuneAI Homepage › should have working navigation menu ──────
 
@@ -1243,7 +1243,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Avatar Chat System › should display avatar chat bubble" classname="homepage.spec.ts" time="0.66">
+<testcase name="Avatar Chat System › should display avatar chat bubble" classname="homepage.spec.ts" time="0.549">
 <failure message="homepage.spec.ts:36:7 should display avatar chat bubble" type="FAILURE">
 <![CDATA[  [webkit] › homepage.spec.ts:36:7 › Avatar Chat System › should display avatar chat bubble ────────
 
@@ -1278,7 +1278,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Avatar Chat System › should open chat interface on click" classname="homepage.spec.ts" time="0.592">
+<testcase name="Avatar Chat System › should open chat interface on click" classname="homepage.spec.ts" time="0.543">
 <failure message="homepage.spec.ts:44:7 should open chat interface on click" type="FAILURE">
 <![CDATA[  [webkit] › homepage.spec.ts:44:7 › Avatar Chat System › should open chat interface on click ──────
 
@@ -1313,7 +1313,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Performance › should meet basic performance requirements" classname="homepage.spec.ts" time="0.577">
+<testcase name="Performance › should meet basic performance requirements" classname="homepage.spec.ts" time="0.538">
 <failure message="homepage.spec.ts:64:7 should meet basic performance requirements" type="FAILURE">
 <![CDATA[  [webkit] › homepage.spec.ts:64:7 › Performance › should meet basic performance requirements ──────
 
@@ -1348,7 +1348,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Performance › should not have console errors" classname="homepage.spec.ts" time="0.776">
+<testcase name="Performance › should not have console errors" classname="homepage.spec.ts" time="0.546">
 <failure message="homepage.spec.ts:80:7 should not have console errors" type="FAILURE">
 <![CDATA[  [webkit] › homepage.spec.ts:80:7 › Performance › should not have console errors ──────────────────
 
@@ -1384,7 +1384,7 @@
 </system-out>
 </testcase>
 </testsuite>
-<testsuite name="admin.spec.ts" timestamp="2025-08-13T14:53:52.788Z" hostname="Mobile Chrome" tests="7" failures="0" skipped="7" time="0" errors="0">
+<testsuite name="admin.spec.ts" timestamp="2025-08-13T15:10:37.224Z" hostname="Mobile Chrome" tests="7" failures="0" skipped="7" time="0" errors="0">
 <testcase name="Admin Control Center › should access YouTune Admin Control Center" classname="admin.spec.ts" time="0">
 <properties>
 <property name="skip" value="Admin credentials not provided">
@@ -1442,8 +1442,8 @@
 </skipped>
 </testcase>
 </testsuite>
-<testsuite name="functionality.spec.ts" timestamp="2025-08-13T14:53:52.788Z" hostname="Mobile Chrome" tests="5" failures="5" skipped="0" time="1.46" errors="0">
-<testcase name="WooCommerce Integration › should navigate to shop page" classname="functionality.spec.ts" time="0.299">
+<testsuite name="functionality.spec.ts" timestamp="2025-08-13T15:10:37.224Z" hostname="Mobile Chrome" tests="5" failures="5" skipped="0" time="1.513" errors="0">
+<testcase name="WooCommerce Integration › should navigate to shop page" classname="functionality.spec.ts" time="0.3">
 <failure message="functionality.spec.ts:4:7 should navigate to shop page" type="FAILURE">
 <![CDATA[  [Mobile Chrome] › functionality.spec.ts:4:7 › WooCommerce Integration › should navigate to shop page 
 
@@ -1478,7 +1478,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="WooCommerce Integration › should display product grid" classname="functionality.spec.ts" time="0.276">
+<testcase name="WooCommerce Integration › should display product grid" classname="functionality.spec.ts" time="0.355">
 <failure message="functionality.spec.ts:15:7 should display product grid" type="FAILURE">
 <![CDATA[  [Mobile Chrome] › functionality.spec.ts:15:7 › WooCommerce Integration › should display product grid 
 
@@ -1513,7 +1513,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Custom Post Types › should access games archive" classname="functionality.spec.ts" time="0.295">
+<testcase name="Custom Post Types › should access games archive" classname="functionality.spec.ts" time="0.283">
 <failure message="functionality.spec.ts:25:7 should access games archive" type="FAILURE">
 <![CDATA[  [Mobile Chrome] › functionality.spec.ts:25:7 › Custom Post Types › should access games archive ───
 
@@ -1548,7 +1548,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Custom Post Types › should access VR room page" classname="functionality.spec.ts" time="0.298">
+<testcase name="Custom Post Types › should access VR room page" classname="functionality.spec.ts" time="0.292">
 <failure message="functionality.spec.ts:36:7 should access VR room page" type="FAILURE">
 <![CDATA[  [Mobile Chrome] › functionality.spec.ts:36:7 › Custom Post Types › should access VR room page ────
 
@@ -1583,7 +1583,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Custom Post Types › should access YouTune Garage" classname="functionality.spec.ts" time="0.292">
+<testcase name="Custom Post Types › should access YouTune Garage" classname="functionality.spec.ts" time="0.283">
 <failure message="functionality.spec.ts:47:7 should access YouTune Garage" type="FAILURE">
 <![CDATA[  [Mobile Chrome] › functionality.spec.ts:47:7 › Custom Post Types › should access YouTune Garage ──
 
@@ -1619,8 +1619,8 @@
 </system-out>
 </testcase>
 </testsuite>
-<testsuite name="homepage.spec.ts" timestamp="2025-08-13T14:53:52.788Z" hostname="Mobile Chrome" tests="6" failures="6" skipped="0" time="1.879" errors="0">
-<testcase name="YouTuneAI Homepage › should load homepage successfully" classname="homepage.spec.ts" time="0.328">
+<testsuite name="homepage.spec.ts" timestamp="2025-08-13T15:10:37.224Z" hostname="Mobile Chrome" tests="6" failures="6" skipped="0" time="1.81" errors="0">
+<testcase name="YouTuneAI Homepage › should load homepage successfully" classname="homepage.spec.ts" time="0.309">
 <failure message="homepage.spec.ts:4:7 should load homepage successfully" type="FAILURE">
 <![CDATA[  [Mobile Chrome] › homepage.spec.ts:4:7 › YouTuneAI Homepage › should load homepage successfully ──
 
@@ -1655,7 +1655,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="YouTuneAI Homepage › should have working navigation menu" classname="homepage.spec.ts" time="0.3">
+<testcase name="YouTuneAI Homepage › should have working navigation menu" classname="homepage.spec.ts" time="0.339">
 <failure message="homepage.spec.ts:19:7 should have working navigation menu" type="FAILURE">
 <![CDATA[  [Mobile Chrome] › homepage.spec.ts:19:7 › YouTuneAI Homepage › should have working navigation menu 
 
@@ -1690,7 +1690,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Avatar Chat System › should display avatar chat bubble" classname="homepage.spec.ts" time="0.273">
+<testcase name="Avatar Chat System › should display avatar chat bubble" classname="homepage.spec.ts" time="0.291">
 <failure message="homepage.spec.ts:36:7 should display avatar chat bubble" type="FAILURE">
 <![CDATA[  [Mobile Chrome] › homepage.spec.ts:36:7 › Avatar Chat System › should display avatar chat bubble ─
 
@@ -1725,7 +1725,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Avatar Chat System › should open chat interface on click" classname="homepage.spec.ts" time="0.407">
+<testcase name="Avatar Chat System › should open chat interface on click" classname="homepage.spec.ts" time="0.301">
 <failure message="homepage.spec.ts:44:7 should open chat interface on click" type="FAILURE">
 <![CDATA[  [Mobile Chrome] › homepage.spec.ts:44:7 › Avatar Chat System › should open chat interface on click 
 
@@ -1760,7 +1760,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Performance › should meet basic performance requirements" classname="homepage.spec.ts" time="0.275">
+<testcase name="Performance › should meet basic performance requirements" classname="homepage.spec.ts" time="0.28">
 <failure message="homepage.spec.ts:64:7 should meet basic performance requirements" type="FAILURE">
 <![CDATA[  [Mobile Chrome] › homepage.spec.ts:64:7 › Performance › should meet basic performance requirements 
 
@@ -1795,7 +1795,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Performance › should not have console errors" classname="homepage.spec.ts" time="0.296">
+<testcase name="Performance › should not have console errors" classname="homepage.spec.ts" time="0.29">
 <failure message="homepage.spec.ts:80:7 should not have console errors" type="FAILURE">
 <![CDATA[  [Mobile Chrome] › homepage.spec.ts:80:7 › Performance › should not have console errors ───────────
 
@@ -1831,7 +1831,7 @@
 </system-out>
 </testcase>
 </testsuite>
-<testsuite name="admin.spec.ts" timestamp="2025-08-13T14:53:52.788Z" hostname="Mobile Safari" tests="7" failures="0" skipped="7" time="0" errors="0">
+<testsuite name="admin.spec.ts" timestamp="2025-08-13T15:10:37.224Z" hostname="Mobile Safari" tests="7" failures="0" skipped="7" time="0" errors="0">
 <testcase name="Admin Control Center › should access YouTune Admin Control Center" classname="admin.spec.ts" time="0">
 <properties>
 <property name="skip" value="Admin credentials not provided">
@@ -1889,8 +1889,8 @@
 </skipped>
 </testcase>
 </testsuite>
-<testsuite name="functionality.spec.ts" timestamp="2025-08-13T14:53:52.788Z" hostname="Mobile Safari" tests="5" failures="5" skipped="0" time="2.644" errors="0">
-<testcase name="WooCommerce Integration › should navigate to shop page" classname="functionality.spec.ts" time="0.499">
+<testsuite name="functionality.spec.ts" timestamp="2025-08-13T15:10:37.224Z" hostname="Mobile Safari" tests="5" failures="5" skipped="0" time="2.602" errors="0">
+<testcase name="WooCommerce Integration › should navigate to shop page" classname="functionality.spec.ts" time="0.535">
 <failure message="functionality.spec.ts:4:7 should navigate to shop page" type="FAILURE">
 <![CDATA[  [Mobile Safari] › functionality.spec.ts:4:7 › WooCommerce Integration › should navigate to shop page 
 
@@ -1925,7 +1925,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="WooCommerce Integration › should display product grid" classname="functionality.spec.ts" time="0.532">
+<testcase name="WooCommerce Integration › should display product grid" classname="functionality.spec.ts" time="0.521">
 <failure message="functionality.spec.ts:15:7 should display product grid" type="FAILURE">
 <![CDATA[  [Mobile Safari] › functionality.spec.ts:15:7 › WooCommerce Integration › should display product grid 
 
@@ -1960,7 +1960,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Custom Post Types › should access games archive" classname="functionality.spec.ts" time="0.486">
+<testcase name="Custom Post Types › should access games archive" classname="functionality.spec.ts" time="0.51">
 <failure message="functionality.spec.ts:25:7 should access games archive" type="FAILURE">
 <![CDATA[  [Mobile Safari] › functionality.spec.ts:25:7 › Custom Post Types › should access games archive ───
 
@@ -1995,7 +1995,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Custom Post Types › should access VR room page" classname="functionality.spec.ts" time="0.584">
+<testcase name="Custom Post Types › should access VR room page" classname="functionality.spec.ts" time="0.494">
 <failure message="functionality.spec.ts:36:7 should access VR room page" type="FAILURE">
 <![CDATA[  [Mobile Safari] › functionality.spec.ts:36:7 › Custom Post Types › should access VR room page ────
 
@@ -2030,7 +2030,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Custom Post Types › should access YouTune Garage" classname="functionality.spec.ts" time="0.543">
+<testcase name="Custom Post Types › should access YouTune Garage" classname="functionality.spec.ts" time="0.542">
 <failure message="functionality.spec.ts:47:7 should access YouTune Garage" type="FAILURE">
 <![CDATA[  [Mobile Safari] › functionality.spec.ts:47:7 › Custom Post Types › should access YouTune Garage ──
 
@@ -2066,8 +2066,8 @@
 </system-out>
 </testcase>
 </testsuite>
-<testsuite name="homepage.spec.ts" timestamp="2025-08-13T14:53:52.788Z" hostname="Mobile Safari" tests="6" failures="6" skipped="0" time="3.151" errors="0">
-<testcase name="YouTuneAI Homepage › should load homepage successfully" classname="homepage.spec.ts" time="0.575">
+<testsuite name="homepage.spec.ts" timestamp="2025-08-13T15:10:37.224Z" hostname="Mobile Safari" tests="6" failures="6" skipped="0" time="3.168" errors="0">
+<testcase name="YouTuneAI Homepage › should load homepage successfully" classname="homepage.spec.ts" time="0.518">
 <failure message="homepage.spec.ts:4:7 should load homepage successfully" type="FAILURE">
 <![CDATA[  [Mobile Safari] › homepage.spec.ts:4:7 › YouTuneAI Homepage › should load homepage successfully ──
 
@@ -2102,7 +2102,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="YouTuneAI Homepage › should have working navigation menu" classname="homepage.spec.ts" time="0.528">
+<testcase name="YouTuneAI Homepage › should have working navigation menu" classname="homepage.spec.ts" time="0.504">
 <failure message="homepage.spec.ts:19:7 should have working navigation menu" type="FAILURE">
 <![CDATA[  [Mobile Safari] › homepage.spec.ts:19:7 › YouTuneAI Homepage › should have working navigation menu 
 
@@ -2137,7 +2137,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Avatar Chat System › should display avatar chat bubble" classname="homepage.spec.ts" time="0.541">
+<testcase name="Avatar Chat System › should display avatar chat bubble" classname="homepage.spec.ts" time="0.501">
 <failure message="homepage.spec.ts:36:7 should display avatar chat bubble" type="FAILURE">
 <![CDATA[  [Mobile Safari] › homepage.spec.ts:36:7 › Avatar Chat System › should display avatar chat bubble ─
 
@@ -2172,7 +2172,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Avatar Chat System › should open chat interface on click" classname="homepage.spec.ts" time="0.501">
+<testcase name="Avatar Chat System › should open chat interface on click" classname="homepage.spec.ts" time="0.551">
 <failure message="homepage.spec.ts:44:7 should open chat interface on click" type="FAILURE">
 <![CDATA[  [Mobile Safari] › homepage.spec.ts:44:7 › Avatar Chat System › should open chat interface on click 
 
@@ -2207,7 +2207,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Performance › should meet basic performance requirements" classname="homepage.spec.ts" time="0.514">
+<testcase name="Performance › should meet basic performance requirements" classname="homepage.spec.ts" time="0.569">
 <failure message="homepage.spec.ts:64:7 should meet basic performance requirements" type="FAILURE">
 <![CDATA[  [Mobile Safari] › homepage.spec.ts:64:7 › Performance › should meet basic performance requirements 
 
@@ -2242,7 +2242,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Performance › should not have console errors" classname="homepage.spec.ts" time="0.492">
+<testcase name="Performance › should not have console errors" classname="homepage.spec.ts" time="0.525">
 <failure message="homepage.spec.ts:80:7 should not have console errors" type="FAILURE">
 <![CDATA[  [Mobile Safari] › homepage.spec.ts:80:7 › Performance › should not have console errors ───────────
 
