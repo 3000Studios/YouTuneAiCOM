@@ -1,0 +1,41 @@
+name: Deploy Admin Panel to IONOS Deploy Now
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: |
+          cd admin-panel
+          npm install
+
+      - name: Build admin panel
+        run: |
+          cd admin-panel
+          npm run build
+          cd ..
+          rm -rf public/admin
+          mkdir -p public/admin
+          cp -r admin-panel/dist/* public/admin/
+
+      # IONOS Deploy Now GitHub Action
+      - name: Deploy to IONOS Deploy Now
+        uses: ionos-deploy-now/github-action@v2
+        with:
+          project: main
+          dist-folder: public
+        env:
+          DEPLOY_NOW_TOKEN: ${{ secrets.DEPLOY_NOW_TOKEN }}

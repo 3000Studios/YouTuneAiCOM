@@ -1,7 +1,7 @@
 {
-  "name": "youtuneai-wordpress-site",
+  "name": "youtuneai.com",
   "version": "1.0.0",
-  "description": "YouTuneAI WordPress theme with 3D avatar, VR, games, and e-commerce",
+  "description": "YouTuneAI web app with 3D avatar, VR, games, and e-commerce. Static/Node.js deployment.",
   "scripts": {
     "dev": "cd wp-content/themes/youtuneai-theme && npm run dev",
     "build": "cd wp-content/themes/youtuneai-theme && npm run build",
@@ -19,7 +19,7 @@
     "woocommerce"
   ],
   "author": "3000Studios",
-  "license": "GPL-2.0-or-later",
+  "license": "MIT",
   "devDependencies": {
     "@playwright/test": "^1.54.2",
     "eslint": "^9.33.0",

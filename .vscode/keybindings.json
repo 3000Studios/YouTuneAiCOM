@@ -1,0 +1,7 @@
+[
+  {
+    "key": "ctrl+shift+d",
+    "command": "workbench.action.tasks.runTask",
+    "args": "Deploy Now: commit & push main"
+  }
+]

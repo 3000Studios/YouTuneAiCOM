@@ -1,0 +1,15 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Deploy Now: commit & push main",
+      "type": "shell",
+      "command": "git add . && git commit -m \"voice: update $(date +'%Y-%m-%d %H:%M:%S')\" || echo 'no changes' && git push origin HEAD:main && echo 'Pushed to main. Deploy Now will pick this up.'",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    }
+  ]
+}
