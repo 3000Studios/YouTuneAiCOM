@@ -84,6 +84,26 @@ function youtuneai_options_page() {
                 
                 <tr>
                     <th scope="row">
+                        <label for="github_token"><?php _e('GitHub Token', 'youtuneai'); ?></label>
+                    </th>
+                    <td>
+                        <?php $has_token = !empty(get_option('youtune_github_token', '')); ?>
+                        <input type="password" id="github_token" name="youtuneai_options[github_token]" 
+                               value="<?php echo $has_token ? '••••••••••••••••••••••••••••••••••••••••' : ''; ?>" 
+                               class="regular-text" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx">
+                        <?php if ($has_token) : ?>
+                            <p class="description" style="color: green;">
+                                ✅ <?php _e('GitHub token is configured and ready for deployments.', 'youtuneai'); ?>
+                            </p>
+                        <?php endif; ?>
+                        <p class="description">
+                            <?php _e('Personal Access Token for GitHub API (required for automated deployments). Generate at: GitHub → Settings → Developer settings → Personal access tokens. Required scopes: repo, actions.', 'youtuneai'); ?>
+                        </p>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th scope="row">
                         <label for="api_keys"><?php _e('API Keys', 'youtuneai'); ?></label>
                     </th>
                     <td>
@@ -143,7 +163,16 @@ function youtuneai_save_options() {
         'enable_chat' => (int) ($options['enable_chat'] ?? 0),
         'enable_vr' => (int) ($options['enable_vr'] ?? 0),
         'api_keys' => sanitize_textarea_field($options['api_keys'] ?? ''),
+        'github_token' => sanitize_text_field($options['github_token'] ?? ''),
     ];
+    
+    // Store GitHub token separately with stronger security
+    if (!empty($sanitized_options['github_token'])) {
+        update_option('youtune_github_token', $sanitized_options['github_token']);
+        unset($sanitized_options['github_token']); // Don't store in main options
+    } else {
+        delete_option('youtune_github_token');
+    }
     
     update_option('youtuneai_options', $sanitized_options);
     

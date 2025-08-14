@@ -98,12 +98,22 @@ class YouTuneAdminCenter {
                     </div>
                     <div class="card-body">
                         <p><?php _e('Trigger GitHub Action deployment with latest code changes.', 'youtuneai'); ?></p>
-                        <div class="card-actions">
-                            <button class="button button-primary admin-action-btn" data-action="deploy">
-                                <?php _e('Deploy Now', 'youtuneai'); ?>
-                            </button>
-                            <small class="description"><?php _e('Deploys to IONOS via SFTP', 'youtuneai'); ?></small>
-                        </div>
+                        <?php $has_github_token = !empty(get_option('youtune_github_token', '')); ?>
+                        <?php if ($has_github_token) : ?>
+                            <div class="card-actions">
+                                <button class="button button-primary admin-action-btn" data-action="deploy">
+                                    <?php _e('Deploy Now', 'youtuneai'); ?>
+                                </button>
+                                <small class="description" style="color: green;">✅ <?php _e('Ready - GitHub token configured', 'youtuneai'); ?></small>
+                            </div>
+                        <?php else : ?>
+                            <div class="card-actions">
+                                <button class="button button-secondary" disabled>
+                                    <?php _e('Deploy Now', 'youtuneai'); ?>
+                                </button>
+                                <small class="description" style="color: orange;">⚠️ <?php _e('Configure GitHub token in Settings → YouTuneAI Options', 'youtuneai'); ?></small>
+                            </div>
+                        <?php endif; ?>
                     </div>
                 </div>
 
@@ -247,17 +257,63 @@ class YouTuneAdminCenter {
         $log = "🚀 Initiating deployment...\n";
         $log .= "📅 " . current_time('mysql') . "\n";
         
-        // Trigger GitHub Action via webhook (placeholder)
-        $webhook_url = get_option('youtune_github_webhook', '');
-        if ($webhook_url) {
-            $log .= "📡 Dispatching GitHub Action...\n";
-            // In production, this would make an actual HTTP request to GitHub
-            $log .= "✅ GitHub Action triggered successfully\n";
+        // Trigger GitHub Action via repository dispatch
+        $github_token = get_option('youtune_github_token', '');
+        $repo_owner = '3000Studios';
+        $repo_name = 'YouTuneAi.COM';
+        
+        if ($github_token) {
+            $log .= "📡 Dispatching GitHub Action workflow...\n";
+            
+            $webhook_url = "https://api.github.com/repos/{$repo_owner}/{$repo_name}/dispatches";
+            $headers = [
+                'Authorization: token ' . $github_token,
+                'Accept: application/vnd.github.v3+json',
+                'Content-Type: application/json',
+                'User-Agent: YouTuneAI-Admin/1.0'
+            ];
+            
+            $payload = json_encode([
+                'event_type' => 'deploy-request',
+                'client_payload' => [
+                    'triggered_by' => get_current_user_id(),
+                    'triggered_at' => current_time('c'),
+                    'source' => 'admin-panel'
+                ]
+            ]);
+            
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, $webhook_url);
+            curl_setopt($ch, CURLOPT_POST, 1);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
+            curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+            curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
+            
+            $response = curl_exec($ch);
+            $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+            $curl_error = curl_error($ch);
+            curl_close($ch);
+            
+            if ($curl_error) {
+                $log .= "❌ CURL Error: " . $curl_error . "\n";
+            } elseif ($http_code === 204) {
+                $log .= "✅ GitHub Action triggered successfully\n";
+                $log .= "🔄 Workflow dispatched - check Actions tab on GitHub for progress\n";
+            } else {
+                $log .= "⚠️ GitHub API returned HTTP {$http_code}\n";
+                $log .= "Response: " . substr($response, 0, 200) . "\n";
+            }
         } else {
-            $log .= "⚠️ GitHub webhook URL not configured\n";
+            $log .= "⚠️ GitHub token not configured\n";
+            $log .= "💡 To enable automated deployment:\n";
+            $log .= "   1. Create a Personal Access Token on GitHub\n";
+            $log .= "   2. Add it to wp-admin → Settings → YouTuneAI Options\n";
+            $log .= "   3. Grant 'repo' and 'actions' permissions\n";
         }
         
-        $log .= "📊 Deployment status: In progress\n";
+        $log .= "📊 Deployment request processed\n";
         
         wp_send_json_success(['log' => $log]);
     }

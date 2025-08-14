@@ -7,6 +7,11 @@
 
 get_header(); ?>
 
+<!-- Deployment Test Indicator -->
+<div style="position: fixed; top: 10px; right: 10px; background: #28a745; color: white; padding: 8px 12px; border-radius: 4px; font-size: 12px; z-index: 9999; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+    ✅ Auto-Deploy Working - <?php echo date('M d, Y H:i'); ?>
+</div>
+
 <main id="main" class="site-main">
     <div class="container">
         <?php if (have_posts()) : ?>
