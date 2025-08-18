@@ -29,6 +29,6 @@
     "assets/js/*.js",
     "!assets/js/app.js",
     "!assets/js/**/*.js",
-    "assets/js/**/*.*.js"
+    "assets/js/**/*.min.js"
   ]
 }
