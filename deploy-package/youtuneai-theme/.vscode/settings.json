@@ -1,0 +1,14 @@
+{
+  "editor.formatOnSave": true,
+  "eslint.validate": [
+    "javascript",
+    "typescript"
+  ],
+  "prettier.requireConfig": true,
+  "files.exclude": {
+    "**/.DS_Store": true,
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/build": true
+  }
+}
