@@ -8,8 +8,12 @@ export default defineConfig({
     port: 5173,
     open: true,
     proxy: {
-      '/debug': 'http://localhost:5000',
-      '/voice-command': 'http://localhost:5000'
+      '/debug': 'https://youtuneai.com',
+      '/voice-command': 'https://youtuneai.com'
     }
   },
+  build: {
+    outDir: 'dist',
+    emptyOutDir: true
+  }
 });

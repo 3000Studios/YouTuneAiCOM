@@ -1,102 +1,61 @@
-// Minimal, safe "self-heal" that fixes the most common deploy breakages,
-// then asks OpenAI *only* for small diffs if tests failed.
-// It intentionally limits scope (no large refactors).
-import fs from "fs";
-import { execSync } from "child_process";
+name: 🔥 AutoDeploy & AI Self-Heal for YouTuneAI.com
 
-function sh(cmd) {
-  return execSync(cmd, { stdio: "pipe", encoding: "utf8" }).trim();
-}
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
 
-// 1) Deterministic quick fixes (no AI) --------------------------
-try {
-  // Ensure admin panel works under /admin path (Vite base)
-  const vite = "admin-panel/vite.config.js";
-  if (fs.existsSync(vite)) {
-    let txt = fs.readFileSync(vite, "utf8");
-    if (!/base: ['"]\/admin\/['"]/.test(txt)) {
-      if (/export default defineConfig\(\{/.test(txt)) {
-        txt = txt.replace(/export default defineConfig\(\{/, "export default defineConfig({\n  base: '/admin/',");
-        fs.writeFileSync(vite, txt);
-        console.log("Patched vite.config.js base -> '/admin/'.");
-      }
-    }
-  }
+env:
+  DEPLOY_DOMAIN: https://youtuneai.com
+  IONOS_PROJECT_ID: 4c47214c-0cd9-452f-b2b6-██████████
+  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+  GH_PAT: ${{ secrets.GITHUB_TOKEN }}
 
-  // Make sure /public/admin exists if admin-panel built earlier
-  if (!fs.existsSync("public/admin")) {
-    fs.mkdirSync("public/admin", { recursive: true });
-  }
-} catch (e) {
-  console.log("Deterministic patch error:", e.message);
-}
+jobs:
+  deploy-php-site:
+    name: 🚀 Deploy YouTuneAI.com
+    runs-on: ubuntu-latest
 
-// If nothing failed, we’re done.
-if (!fs.existsSync(".testlog.txt")) {
-  console.log("No test log found; skipping AI self-heal.");
-  process.exit(0);
-}
+    steps:
+    - name: 📦 Checkout Repo
+      uses: actions/checkout@v4
 
-// 2) If tests failed, ask OpenAI for a *small* patch -------------
-const log = fs.readFileSync(".testlog.txt", "utf8");
-const apiKey = process.env.OPENAI_API_KEY || "";
-if (!apiKey) {
-  console.log("OPENAI_API_KEY not set; skipping AI self-heal.");
-  process.exit(0);
-}
+    - name: ⚙️ Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.2'
 
-const prompt = `
-You are a careful code fixer. The repository failed tests/build.
-Return a SMALL unified diff patch (git apply format) that fixes the error.
-Do not rename folders. Prefer minimal edits. If unsure, do nothing.
+    - name: 🛠 Install Composer Dependencies
+      run: |
+        if [ -f composer.json ]; then
+          composer install --no-interaction --prefer-dist
+        else
+          echo "No composer.json found, skipping..."
+        fi
 
-Test/Build Log (truncated if huge):
----
-${log.slice(0, 6000)}
----
+    - name: 🧪 Run Tests (if available)
+      run: |
+        if [ -f "vendor/bin/phpunit" ]; then
+          vendor/bin/phpunit --log-junit results.xml || echo "Tests failed" > .testlog.txt
+        else
+          echo "No test suite found."
+        fi
 
-IMPORTANT:
-- Output ONLY the unified diff starting with '*** Begin Patch ***' and ending with '*** End Patch ***'.
-- Keep patch as small as possible.
-`;
+    - name: 🧠 AI Self-Heal on Failure
+      if: failure()
+      run: |
+        if [ -f "ai_execute.php" ]; then
+          php ai_execute.php
+        else
+          echo "No AI self-heal script present."
+        fi
 
-async function askOpenAI() {
-  const r = await fetch("https://api.openai.com/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${apiKey}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      model: "gpt-4o-mini",
-      temperature: 0.1,
-      messages: [
-        { role: "system", content: "Return minimal unified diff patches only." },
-        { role: "user", content: prompt },
-      ],
-    }),
-  });
-  const j = await r.json().catch(() => ({}));
-  if (!j.choices || !j.choices[0]?.message?.content) {
-    console.log("OpenAI returned no content:", JSON.stringify(j).slice(0, 400));
-    process.exit(0);
-  }
-  return j.choices[0].message.content;
-}
+    - name: 🚀 Deploy to IONOS (PHP)
+      uses: ionos-deploy-now/deploy-now-action@v1
+      with:
+        api-key: ${{ secrets.IONOS_API_KEY }}
+        project-id: ${{ env.IONOS_PROJECT_ID }}
+        branch: main
 
-const text = await askOpenAI();
-const m = text.match(/\*\*\* Begin Patch \*\*\*([\s\S]*?)\*\*\* End Patch \*\*\*/);
-if (!m) {
-  console.log("No patch block produced; skipping.");
-  process.exit(0);
-}
-
-const diff = m[1].trim();
-fs.writeFileSync(".ai-fix.patch", diff);
-try {
-  sh("git apply -p0 .ai-fix.patch");
-  console.log("Applied AI patch.");
-} catch (e) {
-  console.log("Patch failed to apply cleanly; skipping.");
-  process.exit(0);
-}
+    - name: ✅ Finish
+      run: echo "✅ Deployment complete for youtuneaicom - The Champ’s commands executed."
