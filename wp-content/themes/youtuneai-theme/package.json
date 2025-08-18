@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint assets/js/app.js assets/js/avatar assets/js/games assets/js/ui assets/js/vr assets/js/woocommerce --ext .js",
+    "lint": "eslint \"assets/js/**/*.js\" --ext .js",
     "lint:fix": "eslint assets/js --ext .js --fix"
   },
   "keywords": [
