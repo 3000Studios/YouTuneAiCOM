@@ -22,7 +22,7 @@
   "author": "3000Studios",
   "license": "MIT",
   "devDependencies": {
-    "@playwright/test": "^1.54.2",
+    "@playwright/test": "^1.59.1",
     "eslint": "^9.33.0",
     "eslint-plugin-import": "^2.32.0",
     "prettier": "^3.6.2"
